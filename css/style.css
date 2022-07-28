@@ -1,0 +1,289 @@
+/*la fuente es de 100bold y 700italic*/
+@media screen and (min-width: 300px) {
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .container {
+    width: 100vw;
+    height: 90vh;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, white), to(rgba(165, 157, 157, 0.5))), url(../image/fondo.jpeg);
+    background-image: linear-gradient(top, white 30%, rgba(165, 157, 157, 0.5)), url(../image/fondo.jpeg);
+  }
+  .container .portada {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .container .portada h1 {
+    font-size: 5em;
+    font-style: italic;
+    margin: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .portada h1 span {
+    font-size: .2em;
+  }
+  .container .portada i {
+    font-size: 5em;
+    margin: 10px;
+  }
+  .container .portada p {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-style: italic;
+    margin: 10px;
+    letter-spacing: 3px;
+  }
+  .container .portada button {
+    font-size: 1.2em;
+    width: 150px;
+    height: 30px;
+    background-color: black;
+    border: none;
+    outline: none;
+    margin: 0;
+    cursor: pointer;
+    font-family: "Roboto Mono", monospace;
+    font-style: italic;
+    border-radius: 6px;
+  }
+  .container .portada button a {
+    text-decoration: none;
+    color: white;
+  }
+  .container .portada button:active {
+    background: white;
+    border: 1px solid black;
+  }
+  .container .portada button:active a {
+    color: black;
+  }
+  footer {
+    width: 100vw;
+    height: 10vh;
+  }
+  footer * {
+    color: white;
+    background-color: black;
+  }
+  footer div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  footer div ul {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer div ul li {
+    list-style: none;
+  }
+  /*------------------------------------------------*/
+  .container_nav {
+    width: 100vw;
+    height: 10vh;
+    border: 1px solid black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container_nav nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+  }
+  .container_nav nav div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border: 1px solid black;
+    width: 100%;
+    height: 40%;
+    margin-bottom: 0px;
+    background-color: #000;
+  }
+  .container_nav nav div ul {
+    width: 80%;
+    height: 100%;
+    border: 1px solid black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .container_nav nav div ul li {
+    list-style: none;
+    margin: auto;
+  }
+  .container_nav nav div ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  .container_nav nav div .carrito {
+    font-size: 1.2em;
+    color: white;
+    margin: auto;
+  }
+  .productos {
+    border: 1px solid red;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-image: url(../image/fondodos.jpeg);
+  }
+  .productos .cajaProduc {
+    border: 1px solid #080cf6;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: white;
+  }
+  .productos .cajaProduc h3 {
+    letter-spacing: 5px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+    font-style: italic;
+  }
+  .productos .cajaProduc .cajaDeOpcion {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid red;
+    margin: 15px 0;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual h5 {
+    font-size: 1em;
+    font-family: "Roboto Mono", monospace;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */
