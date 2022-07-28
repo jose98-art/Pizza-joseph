@@ -8,7 +8,8 @@
     }
     .container{
         width: 100vw;
-        height: 90vh;
+        height: 85vh;
+        overflow: hidden;
         background-image: linear-gradient(top, rgb(255, 255, 255) 30%, rgba(165, 157, 157, 0.5)), url(../image/fondo.jpeg);
         .portada{
             width: 100%;
@@ -73,7 +74,7 @@
             background-color: black;
         }
         width: 100vw;
-        height: 10vh;
+        height: 15vh;
         div{
             display: flex;
             flex-direction: column;
@@ -81,7 +82,11 @@
             align-items: center;
             width: 100%;
             height: 100%;
+            h4{
+                margin: 5px;
+            }
             ul{
+                margin: 10px;
                 width: 50%;
                 display: flex;
                 flex-direction: row;
@@ -104,6 +109,7 @@
         flex-direction:column;
         justify-content:center;
         align-items:center;
+        z-index: 10;
         nav{
             display: flex;
             flex-direction: column;
@@ -127,6 +133,9 @@
                     border: 1px solid black;
                     display: flex;
                     flex-direction: row;
+                    .marca{
+                        border-bottom: 2px solid white;
+                    }
                     li{
                         list-style: none;
                         margin: auto;
@@ -147,25 +156,31 @@
     }
 
     .productos{
-        border: 1px solid red;
         width: 100vw;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-image:url(../image/fondodos.jpeg) ;
+        /*background-image:url(../image/fondodos.jpeg) ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;*/
+        padding: 0 0 50px 0;
         .cajaProduc{
-            border: 1px solid rgb(8, 12, 246);
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: white;
+            justify-content: space-between;
+            color: rgb(6, 5, 5);
+            margin: 40px 0;
+            
             h3{
                 letter-spacing: 5px;
                 font-family: $fuenteuno;
                 font-weight: 700;
                 font-style: italic;
+                margin: 5px;
             }
             .cajaDeOpcion{
                 width: 100%;
@@ -176,11 +191,11 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    border: 1px solid red;
-                    margin: 15px 0;
                     h5{
                         font-size: 1em;
                         font-family: $fuenteuno;
+                        font-style: italic;
+                        font-weight: 300;
                     }
                     img{
                         width: 100px;
@@ -192,12 +207,49 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    
+                    p{
+                        font-size: .7em;
+                        font-family: $fuenteuno;
+                        ul{
+                            li{
+                                list-style: none;
+                            }
+                        }
+                    }
+                    .precio{
+                        color: white;
+                        font-style: oblique;
+                        select{
+                            border-radius:5px ;
+                            background-color: black;
+                            color: white;
+                            outline: none;
+                        }
+                        
+                    }
+                    button{
+                        background-color: black;
+                        color: white;
+                        border-radius: 5px;
+                        padding: 5px;
+                        outline: none;
+                    }
+                
                     } 
                 }
                 
             }
         }
+    }
+    .pagar{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #000;
+        color: wheat;
+        font-size: .7em;
+        outline: none;
+
     }
 
 

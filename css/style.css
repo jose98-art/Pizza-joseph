@@ -8,7 +8,8 @@
   }
   .container {
     width: 100vw;
-    height: 90vh;
+    height: 85vh;
+    overflow: hidden;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, white), to(rgba(165, 157, 157, 0.5))), url(../image/fondo.jpeg);
     background-image: linear-gradient(top, white 30%, rgba(165, 157, 157, 0.5)), url(../image/fondo.jpeg);
   }
@@ -81,7 +82,7 @@
   }
   footer {
     width: 100vw;
-    height: 10vh;
+    height: 15vh;
   }
   footer * {
     color: white;
@@ -104,7 +105,11 @@
     width: 100%;
     height: 100%;
   }
+  footer div h4 {
+    margin: 5px;
+  }
   footer div ul {
+    margin: 10px;
     width: 50%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -141,6 +146,7 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    z-index: 10;
   }
   .container_nav nav {
     display: -webkit-box;
@@ -186,6 +192,9 @@
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .container_nav nav div ul .marca {
+    border-bottom: 2px solid white;
+  }
   .container_nav nav div ul li {
     list-style: none;
     margin: auto;
@@ -200,7 +209,6 @@
     margin: auto;
   }
   .productos {
-    border: 1px solid red;
     width: 100vw;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -215,10 +223,13 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-image: url(../image/fondodos.jpeg);
+    /*background-image:url(../image/fondodos.jpeg) ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;*/
+    padding: 0 0 50px 0;
   }
   .productos .cajaProduc {
-    border: 1px solid #080cf6;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -230,13 +241,18 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    color: white;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: #060505;
+    margin: 40px 0;
   }
   .productos .cajaProduc h3 {
     letter-spacing: 5px;
     font-family: "Roboto Mono", monospace;
     font-weight: 700;
     font-style: italic;
+    margin: 5px;
   }
   .productos .cajaProduc .cajaDeOpcion {
     width: 100%;
@@ -261,12 +277,12 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border: 1px solid red;
-    margin: 15px 0;
   }
   .productos .cajaProduc .cajaDeOpcion .cajaIndividual h5 {
     font-size: 1em;
     font-family: "Roboto Mono", monospace;
+    font-style: italic;
+    font-weight: 300;
   }
   .productos .cajaProduc .cajaDeOpcion .cajaIndividual img {
     width: 100px;
@@ -284,6 +300,39 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription p {
+    font-size: .7em;
+    font-family: "Roboto Mono", monospace;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription p ul li {
+    list-style: none;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .precio {
+    color: white;
+    font-style: oblique;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .precio select {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    outline: none;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription button {
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
+  }
+  .pagar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000;
+    color: wheat;
+    font-size: .7em;
+    outline: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

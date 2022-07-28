@@ -8,6 +8,11 @@
     <script src="https://kit.fontawesome.com/979475b1c3.js" crossorigin="anonymous"></script>
     <!--style-->
     <link rel="stylesheet" href="../css/style.css">
+    <!--animacion-->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <!--fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -21,9 +26,9 @@
             <div>
                 <ul>
                     <li class="marca" ><a href="">Pizzas</a></li>
-                    <li><a href="">Bebidas</a></li>
+                    <li><a href="../index.html">Bebidas</a></li>
                 </ul>
-                <a class="carrito" href="#"> <i class="fa-solid fa-cart-shopping"></i></a>
+                <a class="carrito " href="#"> <i class="fa-solid fa-cart-shopping"></i></a>
 
             </div>
         </nav>
@@ -40,12 +45,12 @@
 
                     <img src="../image/pizza.jpeg" alt="">
                     <div class="cajaDescription">
-                        <p>ingredientes <ul>
+                        <p>Ingredientes <ul>
                             <li>ingre</li>
                             <li>ingre</li>
                             <li>ingre</li>
                         </ul></p>
-                        <p>$00.00
+                        <p class="precio">$00.00
                         <select name="" id="">
                             <option value="uno" selected>1</option>
                             <option value="uno">2</option>
@@ -61,12 +66,14 @@
 
                 <img src="../image/pizza.jpeg" alt="">
                 <div class="cajaDescription">
-                    <p>ingredientes <ul>
-                        <li>ingre</li>
-                        <li>ingre</li>
-                        <li>ingre</li>
-                    </ul></p>
-                    <p>$00.00
+                    <p>Ingredientes 
+                        <ul>
+                            <li>ingre</li>
+                            <li>ingre</li>
+                            <li>ingre</li>
+                        </ul>
+                    </p>
+                    <p class="precio">$00.00
                     <select name="" id="">
                         <option value="uno" selected>1</option>
                         <option value="uno">2</option>
@@ -82,12 +89,12 @@
 
                 <img src="../image/pizza.jpeg" alt="">
                 <div class="cajaDescription">
-                    <p>ingredientes <ul>
+                    <p>Ingredientes <ul>
                         <li>ingre</li>
                         <li>ingre</li>
                         <li>ingre</li>
                     </ul></p>
-                    <p>$00.00
+                    <p class="precio">$00.00
                     <select name="" id="">
                         <option value="uno" selected>1</option>
                         <option value="uno">2</option>
@@ -97,127 +104,156 @@
                     <button>Agregar al carrito  <i class="fa-solid fa-cart-plus"></i></button>
                 </div>
                </div>
-
             </div>
+
         </div>
-<!------------------------------------------------>
-        <div>
+        <div class="cajaProduc">
             <h3>MEXICANA</h3>
-            <div>
+            <div class="cajaDeOpcion">
 
-               <div>
-                <h5>FAMILIAR</h5>
+               <div class="cajaIndividual">
+                    <h5>FAMILIAR</h5>
 
-                <img src="" alt="">
-                <div>
-                    <p>descripcion</p>
-                    <p>$</p>
+                    <img src="../image/pizza.jpeg" alt="">
+                    <div class="cajaDescription">
+                        <p>Ingredientes <ul>
+                            <li>ingre</li>
+                            <li>ingre</li>
+                            <li>ingre</li>
+                        </ul></p>
+                        <p class="precio">$00.00
+                        <select name="" id="">
+                            <option value="uno" selected>1</option>
+                            <option value="uno">2</option>
+                            <option value="uno">3</option>
+                            <option value="uno">4</option>
+                        </select></p> 
+                        <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
+                    </div>
+               </div>
+
+               <div class="cajaIndividual">
+                <h5>GRANDE</h5>
+
+                <img src="../image/pizza.jpeg" alt="">
+                <div class="cajaDescription">
+                    <p>Ingredientes 
+                        <ul>
+                            <li>ingre</li>
+                            <li>ingre</li>
+                            <li>ingre</li>
+                        </ul>
+                    </p>
+                    <p class="precio">$00.00
                     <select name="" id="">
                         <option value="uno" selected>1</option>
                         <option value="uno">2</option>
                         <option value="uno">3</option>
                         <option value="uno">4</option>
-                    </select>  
+                    </select> </p> 
                     <button>Agregar al carrito <i class="fa-solid fa-cart-plus"></i></button>
                 </div>
                </div>
 
-               <div>
-                <h5>GRANDE</h5>
-
-                <img src="" alt="">
-                <div>
-                    <p>descripcion</p>
-                    <p>$</p>
-                    <select name="" id="">
-                        <option value="uno" selected>1</option>
-                        <option value="uno">2</option>
-                        <option value="uno">3</option>
-                        <option value="uno">4</option>
-                    </select>  
-                    <button>Agregar al carrito  <i class="fa-solid fa-cart-plus"></i></button>
-                </div>
-               </div>
-
-               <div>
+               <div class="cajaIndividual">
                 <h5>CHICA</h5>
 
-                <img src="" alt="">
-                <div>
-                    <p>descripcion</p>
-                    <p>$</p>
+                <img src="../image/pizza.jpeg" alt="">
+                <div class="cajaDescription">
+                    <p>Ingredientes <ul>
+                        <li>ingre</li>
+                        <li>ingre</li>
+                        <li>ingre</li>
+                    </ul></p>
+                    <p class="precio">$00.00
                     <select name="" id="">
                         <option value="uno" selected>1</option>
                         <option value="uno">2</option>
                         <option value="uno">3</option>
                         <option value="uno">4</option>
-                    </select>  
+                    </select></p>  
                     <button>Agregar al carrito  <i class="fa-solid fa-cart-plus"></i></button>
                 </div>
                </div>
-
             </div>
+
         </div>
-<!------------------------------------------------>
-        <div>
+        <div class="cajaProduc">
             <h3>AMERICANA</h3>
-            <div>
+            <div class="cajaDeOpcion">
 
-               <div>
-                <h5>FAMILIAR</h5>
+               <div class="cajaIndividual">
+                    <h5>FAMILIAR</h5>
 
-                <img src="" alt="">
-                <div>
-                    <p>descripcion</p>
-                    <p>$</p>
-                    <select name="" id="">
-                        <option value="uno" selected>1</option>
-                        <option value="uno">2</option>
-                        <option value="uno">3</option>
-                        <option value="uno">4</option>
-                    </select>  
-                    <button>Agregar al carrito  <i class="fa-solid fa-cart-plus"></i></button>
-                </div>
+                    <img src="../image/pizza.jpeg" alt="">
+                    <div class="cajaDescription">
+                        <p>Ingredientes <ul>
+                            <li>ingre</li>
+                            <li>ingre</li>
+                            <li>ingre</li>
+                        </ul></p>
+                        <p class="precio">$00.00
+                        <select name="" id="">
+                            <option value="uno" selected>1</option>
+                            <option value="uno">2</option>
+                            <option value="uno">3</option>
+                            <option value="uno">4</option>
+                        </select></p> 
+                        <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
+                    </div>
                </div>
 
-               <div>
+               <div class="cajaIndividual">
                 <h5>GRANDE</h5>
 
-                <img src="" alt="">
-                <div>
-                    <p>descripcion</p>
-                    <p>$</p>
+                <img src="../image/pizza.jpeg" alt="">
+                <div class="cajaDescription">
+                    <p>Ingredientes 
+                        <ul>
+                            <li>ingre</li>
+                            <li>ingre</li>
+                            <li>ingre</li>
+                        </ul>
+                    </p>
+                    <p class="precio">$00.00
                     <select name="" id="">
                         <option value="uno" selected>1</option>
                         <option value="uno">2</option>
                         <option value="uno">3</option>
                         <option value="uno">4</option>
-                    </select>  
-                    <button>Agregar al carrito  <i class="fa-solid fa-cart-plus"></i></button>
+                    </select> </p> 
+                    <button>Agregar al carrito <i class="fa-solid fa-cart-plus"></i></button>
                 </div>
                </div>
 
-               <div>
+               <div class="cajaIndividual">
                 <h5>CHICA</h5>
 
-                <img src="" alt="">
-                <div>
-                    <p>descripcion</p>
-                    <p>$</p>
+                <img src="../image/pizza.jpeg" alt="">
+                <div class="cajaDescription">
+                    <p>Ingredientes <ul>
+                        <li>ingre</li>
+                        <li>ingre</li>
+                        <li>ingre</li>
+                    </ul></p>
+                    <p class="precio">$00.00
                     <select name="" id="">
                         <option value="uno" selected>1</option>
                         <option value="uno">2</option>
                         <option value="uno">3</option>
                         <option value="uno">4</option>
-                    </select>  
+                    </select></p>  
                     <button>Agregar al carrito  <i class="fa-solid fa-cart-plus"></i></button>
                 </div>
                </div>
-
             </div>
+
         </div>
 
+        
+    <button class="pagar">PAGAR</button>
 
     </section>
+
 </body>
 </html>
