@@ -259,37 +259,38 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    background-color: rgba(242, 242, 242, 0.7);
+    margin-bottom: 20px;
   }
   .productos .cajaProduc .cajaDeOpcion .cajaIndividual {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual h5 {
-    font-size: 1em;
-    font-family: "Roboto Mono", monospace;
-    font-style: italic;
-    font-weight: 300;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .productos .cajaProduc .cajaDeOpcion .cajaIndividual img {
-    width: 100px;
-    height: 100px;
+    width: 30%;
+    height: 30%;
     border-radius: 50%;
+    margin: 10px;
   }
   .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription {
+    width: 65%;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -300,30 +301,72 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription p {
-    font-size: .7em;
-    font-family: "Roboto Mono", monospace;
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription h5 {
+    margin: 5px 0;
   }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription p ul li {
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 10px;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .listIngredien h4 {
+    text-align: center;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .listIngredien ul li {
     list-style: none;
+    text-align: left;
+    font-size: .7em;
   }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .precio {
-    color: white;
-    font-style: oblique;
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio {
+    margin: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .precio select {
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio p {
+    margin: auto;
+    font-size: .9em;
+    letter-spacing: 1px;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio p select {
+    width: 50px;
+    font-size: .8em;
+    border: 1px solid rgba(16, 15, 15, 0.3);
     border-radius: 5px;
-    background-color: black;
-    color: white;
     outline: none;
   }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription button {
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio button {
+    margin: 10px;
+    padding: 4px;
     outline: none;
+    font-size: .7em;
+    border: 1px solid rgba(231, 224, 224, 0.3);
+    border-radius: 5px;
+    background-color: rgba(246, 241, 241, 0.9);
+    -webkit-backdrop-filter: 20px;
+            backdrop-filter: 20px;
+  }
+  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio button i {
+    font-size: 1.3em;
+    margin-left: 4px;
   }
   .pagar {
     width: 50px;

@@ -1,7 +1,5 @@
-debugger
-
 let nombre = prompt("¡Ingrese su nombre!, para tener una pizza personalizada")
-alert("¡Te damos la bienvenida a joseph´sPIZZA, "+ nombre + "!")
+alert("¡Te damos la bienvenida a joseph´sPIZZA,  "+ nombre + "!")
 let promocion = prompt("¡Hay una promocion que no te la puedes perder! '\n' ¿Quieres participar? '\n' inserte un 'si'o 'no' " )
 
 if (promocion === "si"){
@@ -27,4 +25,4 @@ if (promocion === "si"){
 }else{
     alert("¡Gracias por su visita!")
 }
-alert("¡BIENVENIDO!",+ nombre.toUpperCase)
+alert("¡Bienvenido  " + nombre + " !")
