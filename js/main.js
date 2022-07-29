@@ -1,8 +1,8 @@
 let nombre = prompt("¡Ingrese su nombre!, para tener una pizza personalizada")
 alert("¡Te damos la bienvenida a joseph´sPIZZA,  "+ nombre + "!")
-let promocion = prompt("¡Hay una promocion que no te la puedes perder! '\n' ¿Quieres participar? '\n' inserte un 'si'o 'no' " )
-
-if (promocion === "si"){
+let promocion =  prompt("¡Hay una promocion que no te la puedes perder! '\n' ¿Quieres participar? '\n' inserte un 'si'o 'no' " )
+let respuesta = promocion.toLowerCase()
+if (respuesta == "si"){
     let pregunta = parseInt(prompt("¡Ingresa tu número de la suerte para ver la promo!, elige entre el 1 y 5"))
        console.log(darPromo(pregunta))
 
