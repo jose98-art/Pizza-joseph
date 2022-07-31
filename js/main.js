@@ -34,7 +34,8 @@ function preguntas(){
 while (promocion2){
     if(promocion2 == "no"){
         let pregunta3 = prompt("quieres salir?")
-        if(pregunta3 === "no"){
+        let pregunt = pregunta3.toLowerCase()
+        if(pregunt === "no"){
             preguntas()
             break
         }else{
