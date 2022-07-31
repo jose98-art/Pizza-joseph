@@ -1,7 +1,7 @@
 let nombre = prompt("¡Ingrese su nombre!, para tener una pizza personalizada")
 alert("¡Te damos la bienvenida a JOSEPH´s PIZZA,  "+ nombre.toUpperCase() + "!")
 let promocion =  prompt("¡Hay una promocion que no te la puedes perder! \n ¿Quieres participar? '\n inserte un 'si'o 'no' " )
-
+let promocion2 = promocion.toLowerCase()
 
 function preguntas(){
     
@@ -31,8 +31,8 @@ function preguntas(){
     
 }
 
-while (promocion){
-    if(promocion == "no"){
+while (promocion2){
+    if(promocion2 == "no"){
         let pregunta3 = prompt("quieres salir?")
         if(pregunta3 === "no"){
             preguntas()
