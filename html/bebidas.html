@@ -7,7 +7,7 @@
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/979475b1c3.js" crossorigin="anonymous"></script>
     <!--style-->
-    <link rel="stylesheet" href="../archivosSTYLE/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <!--fuentes-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -15,32 +15,35 @@
     <title>MENÚ | BEBIDAS</title>
 </head>
 <body>
-    <head>
+    <header class="container_nav">
         <nav>
-            <h1>PIZZA</h1>
+            <h1><span>Joseph´s </span> PIZZA  </h1>
             <div>
                 <ul>
-                    <li><a href="">Pizzas</a></li>
-                    <li class="marca"><a href="">Bebidas</a></li>
+                    <li><a href="../html/pizzas.html">Pizzas</a></li>
+                    <li  class="marca" ><a href="../html/bebidas.html">Bebidas</a></li>
+                    <li><a href="../html/nosotros.html">Acerca de Nosotros</a></li>
                 </ul>
+                <a class="carrito " href="#"> <i class="fa-solid fa-cart-shopping"></i></a>
+
             </div>
         </nav>
-    </head>
+    </header>
 <!--------------------------------CONTENIDO--------------------------------------------------------->
-    <section>
+    <section class="cajaBebidas">
         
-        <div>
+        <div class="cajas">
 
             <h3>AGUAS</h3>
 
-            <div>
+            <div class="cajaDescrip" >
                 <h5>SANDÍA</h5>
-                <img src="" alt="">
-                <div>
+                <img src="../image/aguaSandia.jpg" alt="foto">
+                <div class="cajaDeBebidas">
                     <P>selecciona el tamaño y la cantidad</P>
                     <form action="">
                         <label for="">
-                            <input type="checkbox">3lt  <span>$ </span>
+                            <input type="checkbox">3lt  <br> <span>$00.00 </span>
                             <select name="corona" id="#">
                                 <option value="uno" selected>1</option>
                                 <option value="uno">2</option>
@@ -49,7 +52,7 @@
                             </select>
                         </label>
                         <label for="">
-                            <input type="checkbox">2lt <span>$ </span>
+                            <input type="checkbox">2lt <br> <span>$00.00 </span>
                             <select name="corona" id="#">
                                 <option value="uno" selected>1</option>
                                 <option value="uno">2</option>
@@ -58,7 +61,7 @@
                             </select>
                         </label>
                         <label for="">
-                            <input type="checkbox">500ml <span>$ </span>
+                            <input type="checkbox">500ml <br> <span>$00.00 </span>
                             <select name="corona" id="#">
                                 <option value="uno" selected>1</option>
                                 <option value="uno">2</option>
@@ -67,11 +70,11 @@
                             </select>
                         </label>
                     </form>
-                    <button>Agregar al carrito  <i class="fa-solid fa-cart-plus"></i></button>
+                    <button>Agregar al carrito  <i class="fa-solid fa-cart-plus"></i></button> <p>total = $</p>
                 </div>
             </div>
 
-            <div>
+            <!--<div>
                 <h5>LIMÓN</h5>
                 <img src="" alt="">
                 <div>
@@ -147,10 +150,10 @@
                     
                     <button>Agregar al carrito  <i class="fa-solid fa-cart-plus"></i></button>
                 </div>
-            </div>
+            </div>-->
         </div>
 <!----------------------------------------------------------------------------------------->
-        <div>
+        <!--<div>
 
             <h3>SODAS</h3>
 
@@ -194,7 +197,7 @@
             </div>
 
             <div>
-                <h5>LIMÓN</h5>
+                <h5>pepsi</h5>
                 <img src="" alt="">
                 <div>
                     <P>selecciona el tamaño y la cantidad</P>
@@ -233,7 +236,7 @@
             </div>
 
             <div>
-                <h5>NARANJA</h5>
+                <h5>fanta</h5>
                 <img src="" alt="">
                 <div>
                     <P>selecciona el tamaño y la cantidad</P>
@@ -270,9 +273,9 @@
                     <button>Agregar al carrito  <i class="fa-solid fa-cart-plus"></i></button>
                 </div>
             </div>
-        </div>
+        </div>-->
 <!----------------------------------------------------------------------------------------->
-        <div>
+       <!--<div>
 
             <h3>CERVEZAS</h3>
 
@@ -316,7 +319,7 @@
             </div>
 
             <div>
-                <h5>VIKTORIA</h5>
+                <h5>VICTORIA</h5>
                 <img src="" alt="">
                 <div>
                     <P>selecciona el tamaño y la cantidad</P>
@@ -392,7 +395,7 @@
                     <button>Agregar al carrito  <i class="fa-solid fa-cart-plus"></i></button>
                 </div>
             </div>
-        </div>
+        </div>-->
     </section>
 </body>
 </html>

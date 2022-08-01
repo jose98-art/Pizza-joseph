@@ -10,8 +10,7 @@
     width: 100vw;
     height: 85vh;
     overflow: hidden;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%, white), to(rgba(165, 157, 157, 0.5))), url(../image/fondo.jpeg);
-    background-image: linear-gradient(top, white 30%, rgba(165, 157, 157, 0.5)), url(../image/fondo.jpeg);
+    background-image: url(../image/fondoGris5.jpg);
   }
   .container .portada {
     width: 100%;
@@ -41,13 +40,18 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    color: white;
   }
   .container .portada h1 span {
     font-size: .2em;
+    letter-spacing: 3px;
   }
   .container .portada i {
     font-size: 5em;
     margin: 10px;
+    color: #0e0d0d;
+    -webkit-filter: drop-shadow(0px 0px 20px white);
+            filter: drop-shadow(0px 0px 20px white);
   }
   .container .portada p {
     font-family: "Roboto Mono", monospace;
@@ -55,6 +59,7 @@
     font-style: italic;
     margin: 10px;
     letter-spacing: 3px;
+    color: white;
   }
   .container .portada button {
     font-size: 1.2em;
@@ -64,6 +69,8 @@
     border: none;
     outline: none;
     margin: 0;
+    -webkit-filter: drop-shadow(0 0 20px white);
+            filter: drop-shadow(0 0 20px white);
     cursor: pointer;
     font-family: "Roboto Mono", monospace;
     font-style: italic;
@@ -84,11 +91,8 @@
     width: 100vw;
     height: 15vh;
   }
-  footer * {
-    color: white;
-    background-color: black;
-  }
   footer div {
+    background-color: #000;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -104,9 +108,11 @@
             align-items: center;
     width: 100%;
     height: 100%;
+    color: white;
   }
   footer div h4 {
     margin: 5px;
+    color: white;
   }
   footer div ul {
     margin: 10px;
@@ -127,6 +133,10 @@
   }
   footer div ul li {
     list-style: none;
+  }
+  footer div ul li a i {
+    color: white;
+    margin: 5px;
   }
   .container_nav {
     width: 100vw;
@@ -164,6 +174,8 @@
     width: 100%;
     height: 100%;
     border: 1px solid black;
+    background-color: #000;
+    color: white;
   }
   .container_nav nav div {
     display: -webkit-box;
@@ -223,6 +235,8 @@
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0 0 50px 0;
+    background-image: url(../image/fondogris4.jpeg);
+    background-position: center;
   }
   .productos .cajaProduc {
     width: 100%;
@@ -239,7 +253,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    color: #060505;
+    color: #fbf3f3;
     margin: 40px 0;
   }
   .productos .cajaProduc h3 {
@@ -260,7 +274,6 @@
             flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    background-color: rgba(242, 242, 242, 0.7);
     margin-bottom: 20px;
   }
   .productos .cajaProduc .cajaDeOpcion .cajaIndividual {
@@ -282,6 +295,8 @@
     height: 30%;
     border-radius: 50%;
     margin: 10px;
+    -webkit-filter: drop-shadow(0 0 20px #000000);
+            filter: drop-shadow(0 0 20px #000000);
   }
   .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription {
     width: 65%;
@@ -347,6 +362,7 @@
     border: 1px solid rgba(16, 15, 15, 0.3);
     border-radius: 5px;
     outline: none;
+    color: #000;
   }
   .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio button {
     margin: 10px;
@@ -358,6 +374,7 @@
     background-color: rgba(246, 241, 241, 0.9);
     -webkit-backdrop-filter: 20px;
             backdrop-filter: 20px;
+    color: #000;
   }
   .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio button i {
     font-size: 1.3em;
@@ -371,6 +388,71 @@
     color: wheat;
     font-size: .7em;
     outline: none;
+  }
+  .cajaBebidas {
+    width: 100vw;
+    height: auto;
+    border: 1px solid black;
+  }
+  .cajaBebidas .cajas h3 {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .cajaBebidas .cajas .cajaDescrip {
+    border: 1px solid red;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cajaBebidas .cajas .cajaDescrip h5 {
+    text-align: center;
+  }
+  .cajaBebidas .cajas .cajaDescrip img {
+    width: 30%;
+    height: 110px;
+    -webkit-filter: drop-shadow(0 0 5px red);
+            filter: drop-shadow(0 0 5px red);
+    border-radius: 50%;
+  }
+  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas {
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+  }
+  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas p {
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+    font-style: italic;
+    font-weight: 300;
+  }
+  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 1px solid black;
+  }
+  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas form label {
+    width: auto;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
