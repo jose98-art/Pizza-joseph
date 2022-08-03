@@ -6,6 +6,13 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+  .fondoPiza {
+    position: absolute;
+    position: fixed;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+  }
   .container {
     width: 100vw;
     height: 85vh;
@@ -138,46 +145,10 @@
     color: white;
     margin: 5px;
   }
-  .container_nav {
+  .sliderProducImag {
     width: 100vw;
-    height: 10vh;
-    border: 1px solid black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: 10;
-  }
-  .container_nav nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    background-color: #000;
-    color: white;
-  }
-  .container_nav nav div {
+    height: 30vh;
+    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -185,274 +156,31 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    border: 1px solid black;
-    width: 100%;
-    height: 40%;
-    margin-bottom: 0px;
-    background-color: #000;
-  }
-  .container_nav nav div ul {
-    width: 80%;
-    height: 100%;
-    border: 1px solid black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .container_nav nav div ul .marca {
-    border-bottom: 2px solid white;
-  }
-  .container_nav nav div ul li {
-    list-style: none;
-    margin: auto;
-  }
-  .container_nav nav div ul li a {
-    text-decoration: none;
-    color: white;
-  }
-  .container_nav nav div .carrito {
-    font-size: 1.2em;
-    color: white;
-    margin: auto;
-  }
-  .productos {
-    width: 100vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0 0 50px 0;
-    background-image: url(../image/fondogris4.jpeg);
-    background-position: center;
-  }
-  .productos .cajaProduc {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    color: #fbf3f3;
-    margin: 40px 0;
-  }
-  .productos .cajaProduc h3 {
-    letter-spacing: 5px;
-    font-family: "Roboto Mono", monospace;
-    font-weight: 700;
-    font-style: italic;
-    margin: 5px;
-  }
-  .productos .cajaProduc .cajaDeOpcion {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin-bottom: 20px;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual img {
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-    margin: 10px;
-    -webkit-filter: drop-shadow(0 0 20px #000000);
-            filter: drop-shadow(0 0 20px #000000);
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription {
-    width: 65%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription h5 {
-    margin: 5px 0;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 10px;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .listIngredien h4 {
-    text-align: center;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .listIngredien ul li {
-    list-style: none;
-    text-align: left;
-    font-size: .7em;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio {
-    margin: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio p {
-    margin: auto;
-    font-size: .9em;
-    letter-spacing: 1px;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio p select {
-    width: 50px;
-    font-size: .8em;
-    border: 1px solid rgba(16, 15, 15, 0.3);
-    border-radius: 5px;
-    outline: none;
-    color: #000;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio button {
-    margin: 10px;
-    padding: 4px;
-    outline: none;
-    font-size: .7em;
-    border: 1px solid rgba(231, 224, 224, 0.3);
-    border-radius: 5px;
-    background-color: rgba(246, 241, 241, 0.9);
-    -webkit-backdrop-filter: 20px;
-            backdrop-filter: 20px;
-    color: #000;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio button i {
-    font-size: 1.3em;
-    margin-left: 4px;
-  }
-  .pagar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #000;
-    color: wheat;
-    font-size: .7em;
-    outline: none;
-  }
-  .cajaBebidas {
-    width: 100vw;
-    height: auto;
-    border: 1px solid black;
-  }
-  .cajaBebidas .cajas h3 {
-    text-align: center;
-    margin: 10px 0;
-  }
-  .cajaBebidas .cajas .cajaDescrip {
+    overflow: auto;
+    margin-top: 10vh;
     border: 1px solid red;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
-  .cajaBebidas .cajas .cajaDescrip h5 {
-    text-align: center;
-  }
-  .cajaBebidas .cajas .cajaDescrip img {
-    width: 30%;
-    height: 110px;
-    -webkit-filter: drop-shadow(0 0 5px red);
-            filter: drop-shadow(0 0 5px red);
-    border-radius: 50%;
-  }
-  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas {
-    border: 1px solid black;
-    width: 100%;
-    height: auto;
-  }
-  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas p {
-    text-align: center;
-    font-family: "Roboto Mono", monospace;
-    font-style: italic;
-    font-weight: 300;
-  }
-  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border: 1px solid black;
-  }
-  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas form label {
+  .sliderProducImag .contentImag {
     width: auto;
-    text-align: center;
+  }
+  .sliderProducImag .contentImag .cajaImage {
+    width: 100px;
+    height: 80%;
+    border: 1px solid greenyellow;
+    margin: 10px;
+  }
+  .sliderProducImag .contentImag .cajaImage h4 {
+    color: white;
+  }
+  .sliderProducImag .contentImag .cajaImage img {
+    width: 90px;
+    height: 60%;
   }
 }
 /*# sourceMappingURL=style.css.map */
