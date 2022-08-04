@@ -121,37 +121,167 @@
 
         }
     }
-
-    .sliderProducImag{
-        width: 100vw;
-        height: 30vh;
-        position: absolute;
+    .pizzas{
+        background-image: url(../image/fondogris4.jpeg);
+    }
+    .sliderProducpizza{
+      width: 100vw;
+      height: 35vh;
+      margin-top: 13vh;
+      overflow: auto;
+      
+      .contentImg{
+        overflow: hidden;
+        width: 1000px;
+        height: 90%;
         display: flex;
-        flex-direction:row ;
-        justify-content: space-between;
-        align-items: center;
-        overflow: auto;
-        margin-top: 10vh;
-        border: 1px solid red;
-        .contentImag{
-            width: auto;
-            .cajaImage{
-                width: 100px;
-                height: 80%;
-                border:1px solid greenyellow;
-                margin: 10px;
-                h4{
-                    color: white;
-                }
-                img{
-                    width: 90px;
-                    height: 60%;
-                }
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 9px 0;
+        
+        .cajaImage{
+            width: 150px;
+            border-radius: 10px;
+            background-color: rgba(242, 242, 242, 0.7);
+            border-radius: 10px;
+            backdrop-filter: 20px;
+            box-shadow: 0px 0px 20px rgb(110, 111, 109);
+
+            
+            h4{
+                display: table;
+                padding: 2px;
+                margin: 5px 10px;
+                font-size: .8em;
+                border: 1px solid #000;
+                background-color: #000;
+                color: #fff;
+                border-radius: 0 4px 4px 4px;
+                
+            }
+            img{
+                display: block;
+                width: 90%;
+                height: 60%;
+                margin: auto;
+                border-radius: 10%;
+                box-shadow: 0px 0px 10px rgb(146, 148, 142);
+            }
+            button{
+                display: block;
+                outline: none;
+                border: none;
+                margin: 15px auto;
+                font-size: .7em;
+                padding: 2px 15px;
+                border-radius: 7px;
+                background-color: #000;
+                color: #fff;
+
             }
         }
+      }
+    }
+    h1{
+        text-align: center;
+        color: #fff;
     }
 
-    
+    .sliderComplement{
+        width: 100vw;
+        height: 45vh;
+        margin-top: 2vh;
+        overflow: auto;   
+        .contentComplement{
+            width: 100%;
+            display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(6,1ft);
+                grid-template-areas: 
+                            "uno dos"
+                            "uno tres"
+                            "cuatro tres"
+                            "cuatro seis"
+                            "cinco seis"
+                            "siete siete";
+                column-gap: 10px;
+                row-gap: 10px;
+            .cajacomplementos{
+                width: 100%;
+                border-radius: 10px;
+                h4{
+                    display: table;
+                    padding: 2px;
+                    margin: 5px 10px;
+                    font-size: .8em;
+                    background-color: #000;
+                    color: #fff;
+                    border-radius: 0 4px 4px 4px;
+                }
+                img{
+                    display: block;
+                    width: 90%;
+                    height: 60%;
+                    margin: auto;
+                    border-radius: 10%;
+                    box-shadow: 0px 0px 10px rgb(146, 148, 142);
+                }
+                button{
+                    display: block;
+                outline: none;
+                border: none;
+                margin: 15px auto;
+                font-size: .7em;
+                padding: 2px 15px;
+                border-radius: 7px;
+                background-color: #000;
+                color: #fff;
+
+                }
+            }
+            .rectangulo{
+                margin: auto;
+                height: 40vh;
+            }
+            .cuadrado{
+                height: 25vh;
+            }
+            #uno{
+                grid-area:uno;
+                background-color: rgba(93, 91, 91, 0.8);
+
+            }
+            #dos{
+                grid-area:dos;
+                background-color: rgba(182, 168, 92, 0.8);
+            }
+            #tres{
+                grid-area:tres;
+                background-color: rgba(242, 242, 242, 0.8);
+            }
+            #cuatro{
+                grid-area:cuatro;
+                background-color: rgba(173, 134, 51, 0.8);
+            }
+            #cinco{
+                grid-area:cinco;
+                background-color: rgba(221, 174, 63, 0.8);
+            }
+            #seis{
+                grid-area:seis;
+                background-color: rgba(165, 127, 201, 0.8);
+            }
+            #siete{
+                grid-area: siete;
+                background-color: rgba(242, 242, 242, 0.8);
+                img{
+                    width: 70%;
+                }
+            }
+
+        }
+      
+    }
 
 
 }

@@ -145,10 +145,19 @@
     color: white;
     margin: 5px;
   }
-  .sliderProducImag {
+  .pizzas {
+    background-image: url(../image/fondogris4.jpeg);
+  }
+  .sliderProducpizza {
     width: 100vw;
-    height: 30vh;
-    position: absolute;
+    height: 35vh;
+    margin-top: 13vh;
+    overflow: auto;
+  }
+  .sliderProducpizza .contentImg {
+    overflow: hidden;
+    width: 1000px;
+    height: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -156,31 +165,162 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    overflow: auto;
-    margin-top: 10vh;
-    border: 1px solid red;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: 9px 0;
   }
-  .sliderProducImag .contentImag {
-    width: auto;
+  .sliderProducpizza .contentImg .cajaImage {
+    width: 150px;
+    border-radius: 10px;
+    background-color: rgba(242, 242, 242, 0.7);
+    border-radius: 10px;
+    -webkit-backdrop-filter: 20px;
+            backdrop-filter: 20px;
+    -webkit-box-shadow: 0px 0px 20px #6e6f6d;
+            box-shadow: 0px 0px 20px #6e6f6d;
   }
-  .sliderProducImag .contentImag .cajaImage {
-    width: 100px;
-    height: 80%;
-    border: 1px solid greenyellow;
-    margin: 10px;
+  .sliderProducpizza .contentImg .cajaImage h4 {
+    display: table;
+    padding: 2px;
+    margin: 5px 10px;
+    font-size: .8em;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 4px 4px 4px;
   }
-  .sliderProducImag .contentImag .cajaImage h4 {
-    color: white;
-  }
-  .sliderProducImag .contentImag .cajaImage img {
-    width: 90px;
+  .sliderProducpizza .contentImg .cajaImage img {
+    display: block;
+    width: 90%;
     height: 60%;
+    margin: auto;
+    border-radius: 10%;
+    -webkit-box-shadow: 0px 0px 10px #92948e;
+            box-shadow: 0px 0px 10px #92948e;
+  }
+  .sliderProducpizza .contentImg .cajaImage button {
+    display: block;
+    outline: none;
+    border: none;
+    margin: 15px auto;
+    font-size: .7em;
+    padding: 2px 15px;
+    border-radius: 7px;
+    background-color: #000;
+    color: #fff;
+  }
+  h1 {
+    text-align: center;
+    color: #fff;
+  }
+  .sliderComplement {
+    width: 100vw;
+    height: 45vh;
+    margin-top: 2vh;
+    overflow: auto;
+  }
+  .sliderComplement .contentComplement {
+    width: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1ft)[6];
+        grid-template-rows: repeat(6, 1ft);
+        grid-template-areas: "uno dos" "uno tres" "cuatro tres" "cuatro seis" "cinco seis" "siete siete";
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 10px;
+  }
+  .sliderComplement .contentComplement .cajacomplementos {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .sliderComplement .contentComplement .cajacomplementos h4 {
+    display: table;
+    padding: 2px;
+    margin: 5px 10px;
+    font-size: .8em;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 4px 4px 4px;
+  }
+  .sliderComplement .contentComplement .cajacomplementos img {
+    display: block;
+    width: 90%;
+    height: 60%;
+    margin: auto;
+    border-radius: 10%;
+    -webkit-box-shadow: 0px 0px 10px #92948e;
+            box-shadow: 0px 0px 10px #92948e;
+  }
+  .sliderComplement .contentComplement .cajacomplementos button {
+    display: block;
+    outline: none;
+    border: none;
+    margin: 15px auto;
+    font-size: .7em;
+    padding: 2px 15px;
+    border-radius: 7px;
+    background-color: #000;
+    color: #fff;
+  }
+  .sliderComplement .contentComplement .rectangulo {
+    margin: auto;
+    height: 40vh;
+  }
+  .sliderComplement .contentComplement .cuadrado {
+    height: 25vh;
+  }
+  .sliderComplement .contentComplement #uno {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: uno;
+    background-color: rgba(93, 91, 91, 0.8);
+  }
+  .sliderComplement .contentComplement #dos {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: dos;
+    background-color: rgba(182, 168, 92, 0.8);
+  }
+  .sliderComplement .contentComplement #tres {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: tres;
+    background-color: rgba(242, 242, 242, 0.8);
+  }
+  .sliderComplement .contentComplement #cuatro {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: cuatro;
+    background-color: rgba(173, 134, 51, 0.8);
+  }
+  .sliderComplement .contentComplement #cinco {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: cinco;
+    background-color: rgba(221, 174, 63, 0.8);
+  }
+  .sliderComplement .contentComplement #seis {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: seis;
+    background-color: rgba(165, 127, 201, 0.8);
+  }
+  .sliderComplement .contentComplement #siete {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: siete;
+    background-color: rgba(242, 242, 242, 0.8);
+  }
+  .sliderComplement .contentComplement #siete img {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=style.css.map */
