@@ -209,18 +209,22 @@
     background-color: #000;
     color: #fff;
   }
-  h1 {
+  #title {
     text-align: center;
     color: #fff;
+    font-size: .8em;
+    font-style: italic;
+    letter-spacing: 3px;
   }
   .sliderComplement {
-    width: 100vw;
+    width: 90vw;
     height: 45vh;
-    margin-top: 2vh;
+    margin: 2vh auto;
     overflow: auto;
   }
   .sliderComplement .contentComplement {
     width: 100%;
+    margin-bottom: 70px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
