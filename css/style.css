@@ -6,6 +6,13 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+  .fondoPiza {
+    position: absolute;
+    position: fixed;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+  }
   .container {
     width: 100vw;
     height: 85vh;
@@ -138,145 +145,19 @@
     color: white;
     margin: 5px;
   }
-  .container_nav {
-    width: 100vw;
-    height: 10vh;
-    border: 1px solid black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: 10;
-  }
-  .container_nav nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    width: 100%;
-    height: 100%;
-    border: 1px solid black;
-    background-color: #000;
-    color: white;
-  }
-  .container_nav nav div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    border: 1px solid black;
-    width: 100%;
-    height: 40%;
-    margin-bottom: 0px;
-    background-color: #000;
-  }
-  .container_nav nav div ul {
-    width: 80%;
-    height: 100%;
-    border: 1px solid black;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .container_nav nav div ul .marca {
-    border-bottom: 2px solid white;
-  }
-  .container_nav nav div ul li {
-    list-style: none;
-    margin: auto;
-  }
-  .container_nav nav div ul li a {
-    text-decoration: none;
-    color: white;
-  }
-  .container_nav nav div .carrito {
-    font-size: 1.2em;
-    color: white;
-    margin: auto;
-  }
-  .productos {
-    width: 100vw;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0 0 50px 0;
+  .pizzas {
     background-image: url(../image/fondogris4.jpeg);
-    background-position: center;
   }
-  .productos .cajaProduc {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    color: #fbf3f3;
-    margin: 40px 0;
+  .sliderProducpizza {
+    width: 100vw;
+    height: 35vh;
+    margin-top: 13vh;
+    overflow: auto;
   }
-  .productos .cajaProduc h3 {
-    letter-spacing: 5px;
-    font-family: "Roboto Mono", monospace;
-    font-weight: 700;
-    font-style: italic;
-    margin: 5px;
-  }
-  .productos .cajaProduc .cajaDeOpcion {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin-bottom: 20px;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual {
+  .sliderProducpizza .contentImg {
+    overflow: hidden;
+    width: 1000px;
+    height: 90%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -284,175 +165,162 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin: 9px 0;
   }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual img {
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-    margin: 10px;
-    -webkit-filter: drop-shadow(0 0 20px #000000);
-            filter: drop-shadow(0 0 20px #000000);
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription {
-    width: 65%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription h5 {
-    margin: 5px 0;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin: 10px;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .listIngredien h4 {
-    text-align: center;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .listIngredien ul li {
-    list-style: none;
-    text-align: left;
-    font-size: .7em;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio {
-    margin: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio p {
-    margin: auto;
-    font-size: .9em;
-    letter-spacing: 1px;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio p select {
-    width: 50px;
-    font-size: .8em;
-    border: 1px solid rgba(16, 15, 15, 0.3);
-    border-radius: 5px;
-    outline: none;
-    color: #000;
-  }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio button {
-    margin: 10px;
-    padding: 4px;
-    outline: none;
-    font-size: .7em;
-    border: 1px solid rgba(231, 224, 224, 0.3);
-    border-radius: 5px;
-    background-color: rgba(246, 241, 241, 0.9);
+  .sliderProducpizza .contentImg .cajaImage {
+    width: 150px;
+    border-radius: 10px;
+    background-color: rgba(242, 242, 242, 0.7);
+    border-radius: 10px;
     -webkit-backdrop-filter: 20px;
             backdrop-filter: 20px;
-    color: #000;
+    -webkit-box-shadow: 0px 0px 20px #6e6f6d;
+            box-shadow: 0px 0px 20px #6e6f6d;
   }
-  .productos .cajaProduc .cajaDeOpcion .cajaIndividual .cajaDescription .contentIngredientes .precio button i {
-    font-size: 1.3em;
-    margin-left: 4px;
-  }
-  .pagar {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+  .sliderProducpizza .contentImg .cajaImage h4 {
+    display: table;
+    padding: 2px;
+    margin: 5px 10px;
+    font-size: .8em;
+    border: 1px solid #000;
     background-color: #000;
-    color: wheat;
-    font-size: .7em;
+    color: #fff;
+    border-radius: 0 4px 4px 4px;
+  }
+  .sliderProducpizza .contentImg .cajaImage img {
+    display: block;
+    width: 90%;
+    height: 60%;
+    margin: auto;
+    border-radius: 10%;
+    -webkit-box-shadow: 0px 0px 10px #92948e;
+            box-shadow: 0px 0px 10px #92948e;
+  }
+  .sliderProducpizza .contentImg .cajaImage button {
+    display: block;
     outline: none;
+    border: none;
+    margin: 15px auto;
+    font-size: .7em;
+    padding: 2px 15px;
+    border-radius: 7px;
+    background-color: #000;
+    color: #fff;
   }
-  .cajaBebidas {
+  h1 {
+    text-align: center;
+    color: #fff;
+  }
+  .sliderComplement {
     width: 100vw;
-    height: auto;
-    border: 1px solid black;
+    height: 45vh;
+    margin-top: 2vh;
+    overflow: auto;
   }
-  .cajaBebidas .cajas h3 {
-    text-align: center;
-    margin: 10px 0;
-  }
-  .cajaBebidas .cajas .cajaDescrip {
-    border: 1px solid red;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .cajaBebidas .cajas .cajaDescrip h5 {
-    text-align: center;
-  }
-  .cajaBebidas .cajas .cajaDescrip img {
-    width: 30%;
-    height: 110px;
-    -webkit-filter: drop-shadow(0 0 5px red);
-            filter: drop-shadow(0 0 5px red);
-    border-radius: 50%;
-  }
-  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas {
-    border: 1px solid black;
+  .sliderComplement .contentComplement {
     width: 100%;
-    height: auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1ft)[6];
+        grid-template-rows: repeat(6, 1ft);
+        grid-template-areas: "uno dos" "uno tres" "cuatro tres" "cuatro seis" "cinco seis" "siete siete";
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+    row-gap: 10px;
   }
-  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas p {
-    text-align: center;
-    font-family: "Roboto Mono", monospace;
-    font-style: italic;
-    font-weight: 300;
+  .sliderComplement .contentComplement .cajacomplementos {
+    width: 100%;
+    border-radius: 10px;
   }
-  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border: 1px solid black;
+  .sliderComplement .contentComplement .cajacomplementos h4 {
+    display: table;
+    padding: 2px;
+    margin: 5px 10px;
+    font-size: .8em;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 4px 4px 4px;
   }
-  .cajaBebidas .cajas .cajaDescrip .cajaDeBebidas form label {
-    width: auto;
-    text-align: center;
+  .sliderComplement .contentComplement .cajacomplementos img {
+    display: block;
+    width: 90%;
+    height: 60%;
+    margin: auto;
+    border-radius: 10%;
+    -webkit-box-shadow: 0px 0px 10px #92948e;
+            box-shadow: 0px 0px 10px #92948e;
+  }
+  .sliderComplement .contentComplement .cajacomplementos button {
+    display: block;
+    outline: none;
+    border: none;
+    margin: 15px auto;
+    font-size: .7em;
+    padding: 2px 15px;
+    border-radius: 7px;
+    background-color: #000;
+    color: #fff;
+  }
+  .sliderComplement .contentComplement .rectangulo {
+    margin: auto;
+    height: 40vh;
+  }
+  .sliderComplement .contentComplement .cuadrado {
+    height: 25vh;
+  }
+  .sliderComplement .contentComplement #uno {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: uno;
+    background-color: rgba(93, 91, 91, 0.8);
+  }
+  .sliderComplement .contentComplement #dos {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: dos;
+    background-color: rgba(182, 168, 92, 0.8);
+  }
+  .sliderComplement .contentComplement #tres {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: tres;
+    background-color: rgba(242, 242, 242, 0.8);
+  }
+  .sliderComplement .contentComplement #cuatro {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: cuatro;
+    background-color: rgba(173, 134, 51, 0.8);
+  }
+  .sliderComplement .contentComplement #cinco {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: cinco;
+    background-color: rgba(221, 174, 63, 0.8);
+  }
+  .sliderComplement .contentComplement #seis {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: seis;
+    background-color: rgba(165, 127, 201, 0.8);
+  }
+  .sliderComplement .contentComplement #siete {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: siete;
+    background-color: rgba(242, 242, 242, 0.8);
+  }
+  .sliderComplement .contentComplement #siete img {
+    width: 70%;
   }
 }
 /*# sourceMappingURL=style.css.map */

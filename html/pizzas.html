@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/979475b1c3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css
+    ">
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
@@ -15,457 +18,142 @@
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;1,300;1,700&display=swap" rel="stylesheet">
     <title>MENÚ | PIZZAS</title>
 </head>
-<body>
+<body class="pizzas">
     <header class="container_nav">
-        <nav>
-            <h1><span>Joseph´s </span> PIZZA  </h1>
-            <div>
-                <ul>
-                    <li class="marca" ><a href="#">Pizzas</a></li>
-                    <li><a href="#">Bebidas</a></li>
-                    <li><a href="#">Acerca de Nosotros</a></li>
-                </ul>
-                <a class="carrito " href="#"> <i class="fa-solid fa-cart-shopping"></i></a>
-
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-0 rounded-pill" alt="... " type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-success border border-0  text-bg-dark"   type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button class=" border-0" ><i class="fa-solid fa-cart-shopping  text-bg-dark p-3"></i></button>
+                  </form>
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark´s Pizzas</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">contactanos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Acerca de nosotros</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-        </nav>
+          </nav>
     </header>
 <!----------------------------------------------------->
-    <section class="productos">
-
-        <div class="cajaProduc">
-            <h3>HAWAIANA</h3>
-            <div class="cajaDeOpcion">
-
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>FAMILIAR</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>  
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
-            <div class="cajaDeOpcion">
-
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>MEDIANA</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>   
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
-            <div class="cajaDeOpcion">
-
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>CHICA</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>   
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
+    <section class="sliderProducpizza">
+      
+      <div class="contentImg">
+        
+        <div class="cajaImage">
+          <h4>pizza</h4>
+          <img src="../image/pizza.jpeg" alt="pizzaPeperoni">
+          <button>VER</button>
+        </div>
+  
+        <div class="cajaImage">
+          <h4>pizza</h4>
+          <img src="../image/pizza1.png" alt="pizzaPeperoni">
+          <button>VER</button>
 
         </div>
-<!------------------------------------------------------------------------>
-        <div class="cajaProduc">
-            <h3>MEXICANA</h3>
-            <div class="cajaDeOpcion">
-
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>FAMILIAR</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>   
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
-            <div class="cajaDeOpcion">
-
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>MEDIANA</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>    
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
-            <div class="cajaDeOpcion">
-
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>CHICA</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>    
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
+  
+        <div class="cajaImage">
+          <h4>pizza</h4>
+          <img src="../image/pizza0.jpg" alt="pizzaPeperoni">
+          <button>VER</button>
+        </div>
+  
+        <div class="cajaImage">
+          <h4>pizza</h4>
+          <img src="../image/pizza2.png" alt="pizzaPeperoni">
+          <button>VER</button>
+        </div>
+  
+        <div class="cajaImage">
+          <h4>pizza</h4>
+          <img src="../image/pizza4.png" alt="pizzaPeperoni">
+          <button>VER</button>
 
         </div>
-<!------------------------------------------------------------------------>
-        <div class="cajaProduc">
-            <h3>PEPPERONI</h3>
-            <div class="cajaDeOpcion">
 
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>FAMILIAR</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>   
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
-            <div class="cajaDeOpcion">
-
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>MEDIANA</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>   
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
-            <div class="cajaDeOpcion">
-
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>CHICA</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>   
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
-
-        </div>
-<!------------------------------------------------------------------------>
-        <div class="cajaProduc">
-            <h3>AMERICANA</h3>
-            <div class="cajaDeOpcion">
-
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>FAMILIAR</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>   
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
-            <div class="cajaDeOpcion">
-
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>MEDIANA</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>   
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
-            <div class="cajaDeOpcion">
-
-               <div class="cajaIndividual">
-
-                    <img src="../image/pizza.jpeg" alt="">
-                    <div class="cajaDescription">                    <h5>CHICA</h5>
-                        <div class="contentIngredientes">
-                            <div class="listIngredien">
-                                <h4 class="listIngre">Ingredientes</h4>
-                                <ul>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                    <li> <input type="radio">  ingre</li>
-                                </ul>   
-                            </div>
-
-                            <div class="precio"> 
-                                <p >$00.00
-                                    <select name="" id="">
-                                        <option value="uno" selected>0</option>
-                                        <option value="uno">1</option>
-                                        <option value="uno">2</option>
-                                        <option value="uno">3</option>
-                                        <option value="uno">4</option>
-                                    </select>
-                                </p> 
-                                <button>Agregar al carrito<i class="fa-solid fa-cart-plus"></i> </button>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-               </div>
-            </div>
-
-        </div>
+      </div>
 
         
-    <button class="pagar">PAGAR</button>
+
+    </section>
+    
+
+    <section class="sliderComplement">
+      <h1>
+        COMPLEMENTOS
+      </h1>
+      
+      <div class="contentComplement">
+        
+        <div id="uno" class="cajacomplementos rectangulo">
+          <h4>complemento</h4>
+          <img src="../image/com1.jpg" alt="complementos">
+          <button> ver </button>
+        </div>
+  
+        <div id="dos" class="cajacomplementos cuadrado">
+          <h4>complemento</h4>
+          <img src="../image/com2.jpg" alt="complementos">
+          <button> ver</button>
+
+        </div>
+  
+        <div id="tres" class="cajacomplementos rectangulo">
+          <h4>complemento</h4>
+          <img src="../image/com3.jpg" alt="complementos">
+          <button> ver</button>
+        </div>
+  
+        <div id="cuatro" class="cajacomplementos rectangulo">
+          <h4>complemento</h4>
+          <img src="../image/com4.jpg" alt="complementos">
+          <button>ver</button>
+        </div>
+  
+        <div id="cinco" class="cajacomplementos cuadrado">
+          <h4>complemento</h4>
+          <img src="../image/com5.jpg" alt="complementos">
+          <button> ver</button>
+
+        </div>
+
+        <div id="seis" class="cajacomplementos rectangulo">
+          <h4>complemento</h4>
+          <img src="../image/com6.jpg" alt="complementos">
+          <button> ver</button>
+
+        </div>
+
+        <div id="siete" class="cajacomplementos cuadrado">
+          <h4>complemento</h4>
+          <img src="../image/com7.jpg" alt="complementos">
+          <button>VER</button>
+
+        </div>
+
+      </div>
+
+        
 
     </section>
 
-<script src="../js/main.js"></script>
+<!--<script src="../js/main.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
+"></script>
 </body>
 </html>
