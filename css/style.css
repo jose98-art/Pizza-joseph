@@ -6,18 +6,22 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
-  .fondoPiza {
-    position: absolute;
-    position: fixed;
+  .pizzas {
     z-index: -10;
     width: 100vw;
-    height: 100vh;
+    height: auto;
+  }
+  .titulo {
+    background-color: #dba54f;
+    color: white;
+    text-align: center;
+    margin-top: 13vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
   }
   .container {
     width: 100vw;
     height: 85vh;
-    overflow: hidden;
-    background-image: url(../image/fondoGris5.jpg);
   }
   .container .portada {
     width: 100%;
@@ -145,19 +149,18 @@
     color: white;
     margin: 5px;
   }
-  .pizzas {
-    background-image: url(../image/fondogris4.jpeg);
+  .titulo_margin {
+    margin-top: 2vh;
   }
   .sliderProducpizza {
     width: 100vw;
-    height: 35vh;
-    margin-top: 13vh;
+    height: 40vh;
     overflow: auto;
   }
   .sliderProducpizza .contentImg {
     overflow: hidden;
     width: 1000px;
-    height: 90%;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -167,17 +170,21 @@
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    margin: 9px 0;
   }
   .sliderProducpizza .contentImg .cajaImage {
-    width: 150px;
+    margin: auto;
+    width: 145px;
+    height: 80%;
     border-radius: 10px;
-    background-color: rgba(242, 242, 242, 0.7);
-    border-radius: 10px;
-    -webkit-backdrop-filter: 20px;
-            backdrop-filter: 20px;
-    -webkit-box-shadow: 0px 0px 20px #6e6f6d;
-            box-shadow: 0px 0px 20px #6e6f6d;
+    background: #ebebeb;
+    -webkit-box-shadow: 5px 5px 10px #5e5e5e, -5px -5px 10px #ffffff;
+            box-shadow: 5px 5px 10px #5e5e5e, -5px -5px 10px #ffffff;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .sliderProducpizza .contentImg .cajaImage:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
   }
   .sliderProducpizza .contentImg .cajaImage h4 {
     display: table;
@@ -194,7 +201,7 @@
     width: 90%;
     height: 60%;
     margin: auto;
-    border-radius: 10%;
+    border-radius: 50%;
     -webkit-box-shadow: 0px 0px 10px #92948e;
             box-shadow: 0px 0px 10px #92948e;
   }
@@ -211,16 +218,17 @@
   }
   #title {
     text-align: center;
-    color: #fff;
-    font-size: .8em;
+    color: #ebe1e1;
     font-style: italic;
-    letter-spacing: 3px;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #949494;
   }
   .sliderComplement {
-    width: 90vw;
-    height: 45vh;
+    width: 100vw;
+    height: auto;
     margin: 2vh auto;
-    overflow: auto;
+    border-radius: 5px;
   }
   .sliderComplement .contentComplement {
     width: 100%;
@@ -232,13 +240,47 @@
     -ms-grid-rows: (1ft)[6];
         grid-template-rows: repeat(6, 1ft);
         grid-template-areas: "uno dos" "uno tres" "cuatro tres" "cuatro seis" "cinco seis" "siete siete";
-    -webkit-column-gap: 10px;
-            column-gap: 10px;
-    row-gap: 10px;
+    -webkit-column-gap: 5px;
+            column-gap: 5px;
+    row-gap: 15px;
+    margin-bottom: 10vh;
+    -webkit-animation-delay: .2s;
+            animation-delay: .2s;
   }
   .sliderComplement .contentComplement .cajacomplementos {
-    width: 100%;
+    width: 85%;
     border-radius: 10px;
+    margin: auto;
+    -webkit-animation: floatar 4s infinite linear;
+            animation: floatar 4s infinite linear;
+  }
+  @-webkit-keyframes floatar {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+  }
+  @keyframes floatar {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
   }
   .sliderComplement .contentComplement .cajacomplementos h4 {
     display: table;
@@ -254,7 +296,7 @@
     width: 90%;
     height: 60%;
     margin: auto;
-    border-radius: 10%;
+    border-radius: 50%;
     -webkit-box-shadow: 0px 0px 10px #92948e;
             box-shadow: 0px 0px 10px #92948e;
   }
@@ -271,7 +313,7 @@
   }
   .sliderComplement .contentComplement .rectangulo {
     margin: auto;
-    height: 40vh;
+    height: 35vh;
   }
   .sliderComplement .contentComplement .cuadrado {
     height: 25vh;
@@ -281,47 +323,84 @@
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
     grid-area: uno;
-    background-color: rgba(93, 91, 91, 0.8);
+    border-radius: 10px;
+    border-radius: 10px;
+    background: #919191;
+    -webkit-box-shadow: 11px 11px 22px #3a3a3a, -11px -11px 22px #e8e8e8;
+            box-shadow: 11px 11px 22px #3a3a3a, -11px -11px 22px #e8e8e8;
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
   }
   .sliderComplement .contentComplement #dos {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: dos;
-    background-color: rgba(182, 168, 92, 0.8);
+    border-radius: 10px;
+    border-radius: 10px;
+    background: #ffc677;
+    -webkit-box-shadow: 11px 11px 22px #664f30, -11px -11px 22px #ffffbe;
+            box-shadow: 11px 11px 22px #664f30, -11px -11px 22px #ffffbe;
+    -webkit-animation-delay: .0s;
+            animation-delay: .0s;
   }
   .sliderComplement .contentComplement #tres {
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     -ms-grid-column: 2;
     grid-area: tres;
-    background-color: rgba(242, 242, 242, 0.8);
+    border-radius: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+    -webkit-box-shadow: 11px 11px 22px #666666, -11px -11px 22px #ffffff;
+            box-shadow: 11px 11px 22px #666666, -11px -11px 22px #ffffff;
+    -webkit-animation-delay: .10s;
+            animation-delay: .10s;
   }
   .sliderComplement .contentComplement #cuatro {
     -ms-grid-row: 3;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
     grid-area: cuatro;
-    background-color: rgba(173, 134, 51, 0.8);
+    border-radius: 10px;
+    border-radius: 10px;
+    background: #fecb3e;
+    -webkit-box-shadow: 5px 5px 10px #d0a633, -5px -5px 10px #fff049;
+            box-shadow: 5px 5px 10px #d0a633, -5px -5px 10px #fff049;
+    -webkit-animation-delay: .8s;
+            animation-delay: .8s;
   }
   .sliderComplement .contentComplement #cinco {
     -ms-grid-row: 5;
     -ms-grid-column: 1;
     grid-area: cinco;
-    background-color: rgba(221, 174, 63, 0.8);
+    border-radius: 10px;
+    background: #ffd9a8;
+    -webkit-box-shadow: 5px 5px 10px #d1b28a, -5px -5px 10px #ffffc6;
+            box-shadow: 5px 5px 10px #d1b28a, -5px -5px 10px #ffffc6;
   }
   .sliderComplement .contentComplement #seis {
     -ms-grid-row: 4;
     -ms-grid-row-span: 2;
     -ms-grid-column: 2;
     grid-area: seis;
-    background-color: rgba(165, 127, 201, 0.8);
+    border-radius: 10px;
+    background: #e392fe;
+    -webkit-box-shadow: 5px 5px 10px #ba78d0, -5px -5px 10px #ffacff;
+            box-shadow: 5px 5px 10px #ba78d0, -5px -5px 10px #ffacff;
+    -webkit-animation-delay: .3s;
+            animation-delay: .3s;
   }
   .sliderComplement .contentComplement #siete {
     -ms-grid-row: 6;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-area: siete;
-    background-color: rgba(242, 242, 242, 0.8);
+    border-radius: 10px;
+    background: #ebebeb;
+    -webkit-box-shadow: 5px 5px 10px #c1c1c1, -5px -5px 10px #ffffff;
+            box-shadow: 5px 5px 10px #c1c1c1, -5px -5px 10px #ffffff;
+    -webkit-animation-delay: .7s;
+            animation-delay: .7s;
   }
   .sliderComplement .contentComplement #siete img {
     width: 70%;

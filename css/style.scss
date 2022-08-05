@@ -6,18 +6,23 @@
         padding: 0;
         box-sizing: border-box;
     }
-    .fondoPiza{
-        position: absolute;
-        position: fixed;
+    .pizzas{
         z-index: -10;
         width: 100vw;
-        height: 100vh;
+        height: auto;
+      
+    }
+    .titulo{
+        background-color: rgb(219, 165, 79);
+        color: white;
+        text-align: center;
+        margin-top: 13vh;
+        font-family: 'Courier New', Courier, monospace;
+        font-style: italic;
     }
     .container{
         width: 100vw;
-        height: 85vh;
-        overflow: hidden;
-        background-image: url(../image/fondoGris5.jpg);
+        height: 85vh;        
         .portada{
             width: 100%;
             height: 100%;
@@ -121,31 +126,36 @@
 
         }
     }
-    .pizzas{
-        background-image: url(../image/fondogris4.jpeg);
+
+    .titulo_margin{
+        margin-top: 2vh;
     }
     .sliderProducpizza{
       width: 100vw;
-      height: 35vh;
-      margin-top: 13vh;
+      height: 40vh;
+      
       overflow: auto;
       
       .contentImg{
         overflow: hidden;
         width: 1000px;
-        height: 90%;
+        height: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        margin: 9px 0;
         
         .cajaImage{
-            width: 150px;
+            margin: auto;
+            width: 145px;
+            height: 80%;
             border-radius: 10px;
-            background-color: rgba(242, 242, 242, 0.7);
-            border-radius: 10px;
-            backdrop-filter: 20px;
-            box-shadow: 0px 0px 20px rgb(110, 111, 109);
+            background: #ebebeb;
+            box-shadow:  5px 5px 10px #5e5e5e,
+                         -5px -5px 10px #ffffff;
+            transition: .5s;
+            &:hover{
+                transform: scale(1.05);
+            }
 
             
             h4{
@@ -164,7 +174,7 @@
                 width: 90%;
                 height: 60%;
                 margin: auto;
-                border-radius: 10%;
+                border-radius: 50%;
                 box-shadow: 0px 0px 10px rgb(146, 148, 142);
             }
             button{
@@ -184,17 +194,19 @@
     }
     #title{
         text-align: center;
-        color: #fff;
-        font-size: .8em;
+        color: rgb(235, 225, 225);
         font-style: italic;
-        letter-spacing: 3px;
+        font-weight: 300;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: rgb(148, 148, 148);
+
     }
 
     .sliderComplement{
-        width: 90vw;
-        height: 45vh;
+        width: 100vw;
+        height: auto;
         margin: 2vh auto;
-        overflow: auto;   
+        border-radius: 5px;
 
         .contentComplement{
             width: 100%;
@@ -209,11 +221,28 @@
                             "cuatro seis"
                             "cinco seis"
                             "siete siete";
-                column-gap: 10px;
-                row-gap: 10px;
+                column-gap: 5px;
+                row-gap: 15px;
+            margin-bottom: 10vh;
             .cajacomplementos{
-                width: 100%;
+                width: 85%;
                 border-radius: 10px;
+                margin: auto;
+                
+                animation: floatar 4s infinite linear;
+                @keyframes floatar {
+                    0%{
+                        transform: translateY(0);
+                    }
+                    50%{
+                        transform: translateY(10px);    
+                    }
+                    100%{
+                        transform: translateY(0);    
+
+                    }
+
+                }
                 h4{
                     display: table;
                     padding: 2px;
@@ -228,7 +257,7 @@
                     width: 90%;
                     height: 60%;
                     margin: auto;
-                    border-radius: 10%;
+                    border-radius: 50%;
                     box-shadow: 0px 0px 10px rgb(146, 148, 142);
                 }
                 button{
@@ -246,39 +275,70 @@
             }
             .rectangulo{
                 margin: auto;
-                height: 40vh;
+                height: 35vh;
             }
             .cuadrado{
                 height: 25vh;
             }
             #uno{
                 grid-area:uno;
-                background-color: rgba(93, 91, 91, 0.8);
+                border-radius: 10px;
+                border-radius: 10px;
+                background: #919191;
+                box-shadow:  11px 11px 22px #3a3a3a,
+                             -11px -11px 22px #e8e8e8;
+                animation-delay: .5s;
 
             }
             #dos{
                 grid-area:dos;
-                background-color: rgba(182, 168, 92, 0.8);
+                border-radius: 10px;
+                border-radius: 10px;
+                background: #ffc677;
+                box-shadow:  11px 11px 22px #664f30,
+                             -11px -11px 22px #ffffbe;
+                animation-delay: .0s;
             }
             #tres{
                 grid-area:tres;
-                background-color: rgba(242, 242, 242, 0.8);
+                border-radius: 10px;
+                border-radius: 10px;
+                background: #ffffff;
+                box-shadow:  11px 11px 22px #666666,
+                             -11px -11px 22px #ffffff;
+                animation-delay: .10s;
             }
             #cuatro{
                 grid-area:cuatro;
-                background-color: rgba(173, 134, 51, 0.8);
+                border-radius: 10px;
+                border-radius: 10px;
+                background: #fecb3e;
+                box-shadow:  5px 5px 10px #d0a633,
+                             -5px -5px 10px #fff049;
+            animation-delay: .8s;
             }
             #cinco{
                 grid-area:cinco;
-                background-color: rgba(221, 174, 63, 0.8);
-            }
+                border-radius: 10px;
+background: #ffd9a8;
+box-shadow:  5px 5px 10px #d1b28a,
+             -5px -5px 10px #ffffc6; }
+             animation-delay: .2s;
             #seis{
                 grid-area:seis;
-                background-color: rgba(165, 127, 201, 0.8);
+                border-radius: 10px;
+background: #e392fe;
+box-shadow:  5px 5px 10px #ba78d0,
+             -5px -5px 10px #ffacff;           
+             animation-delay: .3s;
             }
             #siete{
                 grid-area: siete;
-                background-color: rgba(242, 242, 242, 0.8);
+                border-radius: 10px;
+background: #ebebeb;
+box-shadow:  5px 5px 10px #c1c1c1,
+             -5px -5px 10px #ffffff;  
+             animation-delay: .7s;            
                 img{
                     width: 70%;
                 }
