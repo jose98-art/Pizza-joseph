@@ -46,11 +46,6 @@ while (promocion){
     }
 }
 
-let tipoDePizza = parseInt(prompt("Ingresa el numero de la pizza que deseas:  \n 1) Hawaiana \n 2) Pepperoni \n 3) Mexicana \n 4) Americana \n 5) 4 Quesos"  ))
-
-
-
-
 class Producto {
     constructor(pizza, precio, tamaño) {
         this.pizza = pizza
@@ -69,9 +64,10 @@ class Producto {
         
     }
 }
+
 function compras(){
     let escoje = prompt("Escoje tu pizza:  \n 1) Hawaiana \n 2) Pepperoni \n 3) Mexicana \n 4) Americana \n 5) 4 Quesos ")
-    let tam = parseInt(prompt("Ingresa el numero de tamaño de tu pizza: \n1)Grande \n2)Chica "))
+    let tam = parseInt(prompt("Ingresa el numero de tamaño del tu pizza: \n1) Grande \n2) Chica "))
     let unidad = prompt("¿Cuantas unidades desaa?")
     
     if(tam === 1){
@@ -97,48 +93,92 @@ function compras(){
 }
 
 
-const pizza1 = new Producto("Hawaiana", 99, "Chica o Grande ")
-const pizza2 = new Producto("Pepperoni",110, "Chica o Grande ")
-const pizza3 = new Producto("Mexicana", 170, "Chica o Grande  ")
-const pizza4 = new Producto("Americana", 160, "Chica o Grande ")
-const pizza5 = new Producto("4quesos",350, "Chica o Grande ")
+const pizza1 = new Producto("Hawaiana" , 99  , " Chica o Grande ")
+const pizza2 = new Producto("Pepperoni", 110 , " Chica o Grande ")
+const pizza3 = new Producto("Mexicana" , 170 , " Chica o Grande ")
+const pizza4 = new Producto("Americana", 160 , " Chica o Grande ")
+const pizza5 = new Producto("4 Quesos" , 350 , " Chica o Grande ")
 const IVA = 1.16
 
-
-while (tipoDePizza !== 0){
-    switch(tipoDePizza){
-        case 1:
-            alert("Pizza: \n" + pizza1.pizza +"\nPrecio unitario:  \n" +"$ "+ pizza1.precio + "\nTamaño a escojer:\n" + pizza1.tamaño)
-            break ;
-        case 2:
-            alert("Pizza: \n" + pizza2.pizza +"\nPrecio unitario:  \n" +"$ "+ pizza2.precio + "\nTamaño a escojer:\n" + pizza2.tamaño)
-            break;
-        case 3:
-            alert("Pizza: \n" + pizza3.pizza +"\nPrecio unitario:  \n" +"$ "+ pizza3.precio + "\nTamaño a escojer:\n" + pizza3.tamaño)
-            break;
-        case 4:
-            alert("Pizza: \n" + pizza4.pizza +"\nPrecio unitario:  \n" +"$ "+ pizza4.precio+ "\nTamaño a escojer:\n" + pizza4.tamaño)
-            break;
-        case 5:
-            alert("Pizza: \n" + pizza5.pizza +"\nPrecio unitario:  \n" +"$ "+ pizza5.precio+ pizza5.tamaño)
-            break;
-        default:
-
-    }tipoDePizza=parseInt(prompt("Ingresa el numero de la pizza que deseas:  \n 1) Hawaiana \n 2) Pepperoni \n 3) Mexicana \n 4) Americana \n 5) 4 Quesos \n o inserte un 0 para salir"  ))
-
+let menu = prompt("¿Quieres ver el menu?\nIngresa un si o no ").toLowerCase()
+if(menu === "si"){
+    menuPizza()
 }
+function menuPizza(){ 
+    let tipoDePizza = parseInt(prompt("Ingresa el numero de la pizza que deseas:  \n 1) Hawaiana \n 2) Pepperoni \n 3) Mexicana \n 4) Americana \n 5) 4 Quesos"  ))
+    while (tipoDePizza !== 0){
+        switch(tipoDePizza){
+            case 1:
+                alert("Pizza: \n" + pizza1.pizza +"\nPrecio unitario:  \n" +"$ "+ (pizza1.precio * IVA).toFixed() + "\nTamaño a escojer:\n" + pizza1.tamaño + "\n \nTodos nuestros precios incluyen IVA")
+                break ;
+            case 2:
+                alert("Pizza: \n" + pizza2.pizza +"\nPrecio unitario:  \n" +"$ "+ (pizza2.precio * IVA).toFixed() + "\nTamaño a escojer:\n" + pizza2.tamaño + "\n \nTodos nuestros precios incluyen IVA")
+                break;
+            case 3:
+                alert("Pizza: \n" + pizza3.pizza +"\nPrecio unitario:  \n" +"$ "+ (pizza3.precio * IVA).toFixed() + "\nTamaño a escojer:\n" + pizza3.tamaño + "\n \nTodos nuestros precios incluyen IVA")
+                break;
+            case 4:
+                alert("Pizza: \n" + pizza4.pizza +"\nPrecio unitario:  \n" +"$ "+ (pizza4.precio * IVA).toFixed() + "\nTamaño a escojer:\n" + pizza4.tamaño + "\n \nTodos nuestros precios incluyen IVA")
+                break;
+            case 5:
+                alert("Pizza: \n" + pizza5.pizza +"\nPrecio unitario:  \n" +"$ "+ (pizza5.precio * IVA).toFixed() + "\nTamaño a escojer:\n" + pizza5.tamaño + "\n \nTodos nuestros precios incluyen IVA")
+                break;
+            default:
+
+        }tipoDePizza=parseInt(prompt("Ingresa el numero de la pizza que deseas:  \n 1) Hawaiana \n 2) Pepperoni \n 3) Mexicana \n 4) Americana \n 5) 4 Quesos \n o inserte un 0 para salir"  ))
 
 
+    }
+}
 let comprar = prompt("¿Desea comprar?").toLowerCase()
 if(comprar === "si"){
     compras()
+}
+
+class Direccion{
+    constructor(iden, calle, colonia, cuidad, cel){
+        this.iden = iden
+        this.calle = calle
+        this.colonia = colonia
+        this.cuidad = cuidad
+        this.cel = cel
+    }
+}
+
+function crearId(iden){
+    for(let i = 1; i <= iden ; i++ ){
+        console.log(i)
+    }
+    return parseInt(Math.random() * 100000)
+}
+
+const direcciones = []
+
+function agregarDireccion(){
+    let iden = crearId()
+    let calle = prompt("ingresa su calle")
+    let colonia =prompt("Ingrese su colonia:")
+    let lugar = prompt("ingrese su cuidad")
+    let numer = parseInt(prompt("ingrese su numeo telefonico"))
+        direcciones.push(new Direccion(iden, calle, colonia, lugar, numer))
+        console.table(direcciones)
+}
+
+function sustituir(){
+    let reemplas = prompt("¿Quieres sustituir sus dato?, \nIngresa un si o no").toLowerCase()
+    if(reemplas === "si"){
+        alert("¡ingrese sus nuevos datos!")
+            agregarDireccion()
+        
+    }else{
+        alert("!Su pedido esta en camino¡")
+    }
+}
+
+let derec = prompt("¿Quiere agregar una direccion para futuras entregas?\nIngresa un si o no").toLowerCase()
+if (derec === "si"){
+    agregarDireccion()
+    sustituir()
 }else{
     alert("Bienvenido a JOSEPH´S PIZZA, " + nombre)
 }
-
-
-
-
-
-
-
