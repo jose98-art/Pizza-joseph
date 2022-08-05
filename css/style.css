@@ -22,6 +22,7 @@
   .container {
     width: 100vw;
     height: 85vh;
+    background-color: #ffffff;
   }
   .container .portada {
     width: 100%;
@@ -51,7 +52,7 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    color: white;
+    color: #070606;
   }
   .container .portada h1 span {
     font-size: .2em;
@@ -70,7 +71,7 @@
     font-style: italic;
     margin: 10px;
     letter-spacing: 3px;
-    color: white;
+    color: #040303;
   }
   .container .portada button {
     font-size: 1.2em;
