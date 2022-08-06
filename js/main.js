@@ -130,7 +130,7 @@ function menuPizza(){
 
     }
 }
-let comprar = prompt("¿Desea comprar?").toLowerCase()
+let comprar = prompt("¿Desea comprar?\nIngresa un si o no ").toLowerCase()
 if(comprar === "si"){
     compras()
 }
@@ -179,6 +179,9 @@ let derec = prompt("¿Quiere agregar una direccion para futuras entregas?\nIngre
 if (derec === "si"){
     agregarDireccion()
     sustituir()
+    alert("!Su pedido esta en camino¡")
+    alert("Bienvenido a JOSEPH´S PIZZA, " + nombre)
+
 }else{
     alert("Bienvenido a JOSEPH´S PIZZA, " + nombre)
 }
