@@ -406,5 +406,292 @@
   .sliderComplement .contentComplement #siete img {
     width: 70%;
   }
+  .boton_back {
+    margin-top: -30PX;
+    position: fixed;
+    text-decoration: none;
+    width: 50px;
+    height: 30px;
+  }
+  .boton_back button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 0  30px 30px 0;
+    background-color: transparent;
+  }
+  .boton_back button:hover {
+    color: #dba54f;
+  }
+  .boton_back button i {
+    font-size: 1.5em;
+    font-weight: bold;
+    background: transparent;
+  }
+  /*      contenidoPresentacion        */
+  .contenidoPresentacion {
+    width: 100vw;
+    height: 45vh;
+    margin-top: 15vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .contenidoPresentacion .cajaPresentacion {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 10px;
+    background-color: rgba(242, 242, 242, 0.9);
+  }
+  .contenidoPresentacion .cajaPresentacion .imgagenDescrip {
+    width: 50%;
+  }
+  .contenidoPresentacion .cajaPresentacion .imgagenDescrip img {
+    display: block;
+    width: 80%;
+    height: 30vh;
+    margin: 20px auto;
+    border-radius: 10px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    -webkit-box-shadow: 25px 25px 20px #d4d4d4;
+            box-shadow: 25px 25px 20px #d4d4d4;
+  }
+  .contenidoPresentacion .cajaPresentacion .imgagenDescrip p {
+    font-size: .7em;
+    text-align: center;
+  }
+  .contenidoPresentacion .ingreName {
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contenidoPresentacion .ingreName h1 {
+    font-size: 1.3em;
+    background-color: #dba54f;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+  }
+  .contenidoPresentacion .ingreName .contentIngre {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenidoPresentacion .ingreName .contentIngre .ingrediente {
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+    margin-right: 30px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    -webkit-box-shadow: 6px 1px 20px #808080;
+            box-shadow: 6px 1px 20px #808080;
+  }
+  .contenidoPresentacion .ingreName .contentIngre .ingrediente img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  /*       precio y comprar  */
+  .precioCompra {
+    width: 100vw;
+    height: 20vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 5vh;
+    background-color: rgba(242, 242, 242, 0.9);
+  }
+  .precioCompra .precioTamano {
+    width: 50%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .precioCompra .precioTamano .precio {
+    width: 100%;
+    height: 50%;
+  }
+  .precioCompra .precioTamano .precio p {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    font-style: italic;
+  }
+  .precioCompra .precioTamano .tamano {
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .precioCompra .precioTamano .tamano label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1.3em;
+  }
+  .precioCompra .carritoContador {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+    height: 100%;
+  }
+  .precioCompra .carritoContador .contador {
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .precioCompra .carritoContador .contador .cont {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    color: white;
+    background-color: #dba54f;
+  }
+  .precioCompra .carritoContador .contador p {
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 1.8em;
+    color: #dba54f;
+  }
+  /* bottun de agregar */
+  .agregarCarrito {
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .agrega {
+    position: relative;
+    width: 70px;
+    height: 30px;
+    font-size: 10px;
+    background-color: #202231;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-transition: width .5s;
+    transition: width .5s;
+    border-radius: .5s;
+    outline: none;
+  }
+  .agregarCarrito .agrega * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    -webkit-transition: opacity .25s;
+    transition: opacity .25s;
+  }
+  .agregarCarrito .palomita {
+    opacity: 0;
+  }
+  .agregarCarrito .agrega:focus {
+    width: 30px;
+    background-color: #44c08a;
+    border-radius: 50%;
+  }
+  .agregarCarrito .agrega:focus .text {
+    opacity: 0;
+  }
+  .agregarCarrito .agrega:focus .palomita {
+    opacity: 1;
+    -webkit-transition-delay: .5s;
+            transition-delay: .5s;
+  }
 }
 /*# sourceMappingURL=style.css.map */
