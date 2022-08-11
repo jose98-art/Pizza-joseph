@@ -110,19 +110,19 @@ function menuPizza(){
         switch(tipoDePizza){
             case 1:
                 alert("Pizza: \n" + pizza1.pizza +"\nPrecio unitario:  \n" +"$ "+ (pizza1.precio * IVA).toFixed() + "\nTamaño a escojer:\n" + pizza1.tamaño + "\n \nTodos nuestros precios incluyen IVA")
-                break ;
+                break
             case 2:
                 alert("Pizza: \n" + pizza2.pizza +"\nPrecio unitario:  \n" +"$ "+ (pizza2.precio * IVA).toFixed() + "\nTamaño a escojer:\n" + pizza2.tamaño + "\n \nTodos nuestros precios incluyen IVA")
-                break;
+                break
             case 3:
                 alert("Pizza: \n" + pizza3.pizza +"\nPrecio unitario:  \n" +"$ "+ (pizza3.precio * IVA).toFixed() + "\nTamaño a escojer:\n" + pizza3.tamaño + "\n \nTodos nuestros precios incluyen IVA")
-                break;
+                break
             case 4:
                 alert("Pizza: \n" + pizza4.pizza +"\nPrecio unitario:  \n" +"$ "+ (pizza4.precio * IVA).toFixed() + "\nTamaño a escojer:\n" + pizza4.tamaño + "\n \nTodos nuestros precios incluyen IVA")
-                break;
+                break
             case 5:
                 alert("Pizza: \n" + pizza5.pizza +"\nPrecio unitario:  \n" +"$ "+ (pizza5.precio * IVA).toFixed() + "\nTamaño a escojer:\n" + pizza5.tamaño + "\n \nTodos nuestros precios incluyen IVA")
-                break;
+                break
             default:
 
         }tipoDePizza=parseInt(prompt("Ingresa el numero de la pizza que deseas:  \n 1) Hawaiana \n 2) Pepperoni \n 3) Mexicana \n 4) Americana \n 5) 4 Quesos \n o inserte un 0 para salir"  ))
@@ -160,8 +160,8 @@ function agregarDireccion(){
     let colonia =prompt("Ingrese su colonia:")
     let lugar = prompt("ingrese su cuidad")
     let numer = parseInt(prompt("ingrese su numeo telefonico"))
-        direcciones.push(new Direccion(iden, calle, colonia, lugar, numer))
-        console.table(direcciones)
+    direcciones.push(new Direccion(iden, calle, colonia, lugar, numer))
+    console.table(direcciones)
 }
 
 function sustituir(){
@@ -180,8 +180,54 @@ if (derec === "si"){
     agregarDireccion()
     sustituir()
     alert("!Su pedido esta en camino¡")
-    alert("Bienvenido a JOSEPH´S PIZZA, " + nombre)
-
 }else{
     alert("Bienvenido a JOSEPH´S PIZZA, " + nombre)
+}
+
+
+
+
+const carrito = []
+const stock = ["HAWAIANA", "MOZZARELLA", "MEXICANA", "PEPPERONI","4 QUESOS","AMERICANA"]
+class ProductosCarro{
+    constructor(id, pizza, precio, tamano){
+        this.id = id
+        this.pizza = pizza
+        this.precio = precio
+        this.tamano = tamano
+    }
+    precioIva(){
+        return parseFloat((this.precio * IVA).toFixed(2))
+    }
+    
+}
+carrito.push(new ProductosCarro(1, "HAWAIANA", 250, "CHICA"))
+carrito.push(new ProductosCarro(2, "MOZZARELLA", 375, "GRANDE"))
+carrito.push(new ProductosCarro(3, "MEXICANA", 280,"GRANDE"))
+carrito.push(new ProductosCarro(4, "PEPPERONI",180, "CHICA"))
+
+
+function calcularCarrito(){
+    let suma = carrito.reduce((acc, producto)=> acc + producto.precioIva(), 0)
+    console.log("Total a pagar: $ ", suma, "\n los prcio a pagar incluye el IVA")
+}
+function buscarProducto(){
+    let busca = prompt("Busca tu pizza: ").toUpperCase()
+    const resultado = stock.filter(producto => producto.includes(busca))
+    console.log(resultado)
+}
+function mostrarProducto(){
+    carrito.forEach(carrito => {
+        console.log(carrito)
+    })
+}
+
+let verCarro = prompt("Quieres checar tu carrito de compras?\nIngresa un si o no").toLowerCase()
+if(verCarro === "si"){
+    mostrarProducto()
+    calcularCarrito()
+}
+let buscar = prompt("Quieres buscar un producto en especial?\nIngresa un si o no")
+if(buscar === "si") {
+    buscarProducto()
 }
