@@ -745,5 +745,160 @@
     font-size: .9em;
     color: #100f0e;
   }
+  /*-------------------formulario-------------------*/
+  .containerFormulario {
+    width: 100vw;
+    height: 80vh;
+    margin-top: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #dba54f;
+  }
+  .containerFormulario .formulario {
+    border-radius: 10px;
+    background-color: white;
+    width: 80vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .containerFormulario .formulario .conntenidoDtos h1 {
+    text-align: center;
+    font-size: 1.3em;
+  }
+  .containerFormulario .formulario .conntenidoDtos .formulariodatos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 5px;
+  }
+  .containerFormulario .formulario .conntenidoDtos .formulariodatos legend {
+    text-align: center;
+    font-size: 1em;
+  }
+  .containerFormulario .formulario .conntenidoDtos .formulariodatos label {
+    margin: 5px;
+  }
+  .containerFormulario .formulario .conntenidoDtos .formulariodatos label input {
+    font-size: 1em;
+    outline: none;
+    border: 1px solid #d18946;
+    border-radius: 4px;
+  }
+  .containerFormulario .formulario .conntenidoDtos .botonForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+  }
+  .containerFormulario .formulario .conntenidoDtos .botonForm input {
+    padding: 3px 20px;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+  }
+  .containerFormulario .formulario .conntenidoDtos .botonForm input:hover {
+    opacity: .6;
+  }
+  /*---------------cards de ususario*/
+  .cards {
+    width: 90vw;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: rgba(242, 242, 242, 0.8);
+  }
+  .cards .icono {
+    width: 100px;
+    height: 100px;
+    background-color: #e8a63b;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 20px auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+  }
+  .cards .icono i {
+    font-size: 4em;
+  }
+  .cards .date {
+    width: 80%;
+    margin: 5px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-radius: 5px;
+  }
+  .cards .date h1 {
+    font-size: 1.3em;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  .cards .date p {
+    display: block;
+    border-radius: 10px;
+    font-size: .9em;
+    text-align: center;
+    background-color: rgba(238, 238, 238, 0.9);
+    padding: 8px 0px;
+    border-bottom: 1px solid #eba63b;
+  }
 }
 /*# sourceMappingURL=style.css.map */

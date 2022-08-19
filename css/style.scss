@@ -634,4 +634,123 @@ box-shadow:  6px 1px 20px #808080;
             }
         }
     }
+/*-------------------formulario-------------------*/
+
+    .containerFormulario{
+        width: 100vw;
+        height: 80vh;
+        margin-top: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(219, 165, 79);
+
+        .formulario{
+            border-radius: 10px;
+            background-color: white;
+            width: 80vw;
+            display: flex;
+            flex-direction: column;
+            .conntenidoDtos{
+
+                h1{
+                    text-align: center;
+                    font-size: 1.3em;
+    
+                }
+                .formulariodatos{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 5px;
+                    legend{
+                        text-align: center;
+                        font-size: 1em;
+                    }
+                    label{
+                        margin: 5px;
+                        input{
+                            font-size: 1em;
+                            outline: none;
+                            border: 1px solid rgb(209, 137, 70);
+                            border-radius: 4px;
+                        }
+                    }
+    
+                }
+                .botonForm{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    margin-top: 20px;
+                    input{
+                        padding: 3px 20px;
+                        margin: auto;
+                        border: none;
+                        border-radius: 5px;
+                        margin-bottom: 15px;
+                        outline: none;
+                        &:hover{
+                            opacity: .6;
+                        }
+                    }
+                }
+
+            }
+           
+        }
+    }
+    /*---------------cards de ususario*/
+    .cards{
+        width: 90vw;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(242, 242, 242, 0.8);
+
+        .icono{
+            width: 100px;
+            height: 100px;
+            background-color: #e8a63b;
+            display: flex;
+            margin:20px auto ;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            i{
+                font-size: 4em;
+            }
+        }
+        .date{
+            width: 80%;
+            margin: 5px auto;
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            h1{
+                font-size: 1.3em;
+                text-align: center;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+            p{
+                display: block;
+                border-radius: 10px;
+                font-size: .9em;
+                text-align: center;
+                background-color: rgba(238, 238, 238, 0.9);
+                padding: 8px 0px;
+                border-bottom: 1px solid #eba63b;
+            }
+        }
+
+    }
+
 }
+
