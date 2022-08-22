@@ -774,6 +774,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    visibility: hidden;
   }
   .active {
     visibility: visible;
@@ -894,7 +895,7 @@
   .popup .formulario .conntenidoDtos .botonForm input {
     padding: 3px 20px;
     margin: auto;
-    border: none;
+    border: 1px solid black;
     border-radius: 5px;
     margin-bottom: 15px;
     outline: none;

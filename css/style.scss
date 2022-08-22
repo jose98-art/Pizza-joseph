@@ -656,7 +656,7 @@ box-shadow:  6px 1px 20px #808080;
         display: flex;
         align-items: center;
         justify-content: center;
-        // visibility: hidden;
+        visibility: hidden;
     }
     .active{
         visibility: visible;
@@ -744,7 +744,7 @@ box-shadow:  6px 1px 20px #808080;
                     input{
                         padding: 3px 20px;
                         margin: auto;
-                        border: none;
+                        border: 1px solid black;
                         border-radius: 5px;
                         margin-bottom: 15px;
                         outline: none;
