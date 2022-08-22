@@ -83,6 +83,7 @@
     margin: 0;
     -webkit-filter: drop-shadow(0 0 20px white);
             filter: drop-shadow(0 0 20px white);
+    margin: 8px auto;
     cursor: pointer;
     font-family: "Roboto Mono", monospace;
     font-style: italic;
@@ -746,10 +747,24 @@
     color: #100f0e;
   }
   /*-------------------formulario-------------------*/
-  .containerFormulario {
-    width: 100vw;
-    height: 80vh;
-    margin-top: 10vh;
+  .btn-abrir-popup {
+    margin: 10vh auto;
+    display: block;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #d0a633;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -759,9 +774,59 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-color: #dba54f;
+    visibility: hidden;
   }
-  .containerFormulario .formulario {
+  .active {
+    visibility: visible;
+  }
+  .popup {
+    width: 90vw;
+    height: 70vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: #dba54f;
+    border-radius: 15px;
+  }
+  .popup .cajabtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    width: 100%;
+    height: 20px;
+    margin-top: -70px;
+    margin-bottom: 20px;
+  }
+  .popup .cajabtn .btn-cerrar-popup {
+    font-size: 25px;
+    line-height: 25px;
+    display: block;
+    text-align: right;
+    margin-right: 20px;
+    color: #000;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+  }
+  .popup .cajabtn .btn-cerrar-popup:hover {
+    color: #fff;
+  }
+  .popup .formulario {
     border-radius: 10px;
     background-color: white;
     width: 80vw;
@@ -773,11 +838,11 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .containerFormulario .formulario .conntenidoDtos h1 {
+  .popup .formulario .conntenidoDtos h1 {
     text-align: center;
     font-size: 1.3em;
   }
-  .containerFormulario .formulario .conntenidoDtos .formulariodatos {
+  .popup .formulario .conntenidoDtos .formulariodatos {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -793,20 +858,20 @@
             align-items: center;
     margin: 5px;
   }
-  .containerFormulario .formulario .conntenidoDtos .formulariodatos legend {
+  .popup .formulario .conntenidoDtos .formulariodatos legend {
     text-align: center;
     font-size: 1em;
   }
-  .containerFormulario .formulario .conntenidoDtos .formulariodatos label {
+  .popup .formulario .conntenidoDtos .formulariodatos label {
     margin: 5px;
   }
-  .containerFormulario .formulario .conntenidoDtos .formulariodatos label input {
+  .popup .formulario .conntenidoDtos .formulariodatos label input {
     font-size: 1em;
     outline: none;
     border: 1px solid #d18946;
     border-radius: 4px;
   }
-  .containerFormulario .formulario .conntenidoDtos .botonForm {
+  .popup .formulario .conntenidoDtos .botonForm {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -823,22 +888,24 @@
             justify-content: center;
     margin-top: 20px;
   }
-  .containerFormulario .formulario .conntenidoDtos .botonForm input {
+  .popup .formulario .conntenidoDtos .botonForm input {
     padding: 3px 20px;
     margin: auto;
     border: none;
     border-radius: 5px;
     margin-bottom: 15px;
     outline: none;
+    color: #000;
+    cursor: pointer;
   }
-  .containerFormulario .formulario .conntenidoDtos .botonForm input:hover {
+  .popup .formulario .conntenidoDtos .botonForm input:hover {
     opacity: .6;
   }
   /*---------------cards de ususario*/
   .cards {
     width: 90vw;
     height: auto;
-    margin: 20px auto;
+    margin: 10vh auto;
     border-radius: 5px;
     display: -webkit-box;
     display: -ms-flexbox;

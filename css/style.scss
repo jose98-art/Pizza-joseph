@@ -68,7 +68,7 @@
                 outline: none;
                 margin: 0;
                 filter: drop-shadow(0 0 20px white);
-
+                margin: 8px auto;
                 cursor: pointer;
                 font-family: $fuenteuno;
                 font-style: italic;
@@ -635,15 +635,66 @@ box-shadow:  6px 1px 20px #808080;
         }
     }
 /*-------------------formulario-------------------*/
-
-    .containerFormulario{
-        width: 100vw;
-        height: 80vh;
-        margin-top: 10vh;
+    .btn-abrir-popup{
+        margin: 10vh auto;
+        display: block;
+        border-radius: 10px;
+        padding: 5px;
+        background-color: #d0a633;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    .overlay{
+        background-color: rgba(0, 0, 0,.1);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        visibility: hidden;
+    }
+    .active{
+        visibility: visible;
+    }
+
+
+    .popup{
+        width: 90vw;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
         background-color: rgb(219, 165, 79);
+        border-radius: 15px;
+        .cajabtn{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 100%;
+            height: 20px;
+            margin-top: -70px;
+            margin-bottom: 20px;
+
+           
+            .btn-cerrar-popup{
+                font-size: 25px;
+                line-height: 25px;
+                display: block;
+                text-align: right;
+                margin-right: 20px;
+                color: #000;
+                transition: .3s ease all;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
 
         .formulario{
             border-radius: 10px;
@@ -693,6 +744,8 @@ box-shadow:  6px 1px 20px #808080;
                         border-radius: 5px;
                         margin-bottom: 15px;
                         outline: none;
+                        color: #000;
+                        cursor: pointer;
                         &:hover{
                             opacity: .6;
                         }
@@ -707,7 +760,7 @@ box-shadow:  6px 1px 20px #808080;
     .cards{
         width: 90vw;
         height: auto;
-        margin: 20px auto;
+        margin: 10vh auto;
         border-radius: 5px;
         display: flex;
         align-items: center;
