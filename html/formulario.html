@@ -57,41 +57,19 @@
                       <legend>Datos:</legend>
   
                       <label for="nombre">
-                          <input class="datos" type="text"   placeholder="Nombre" required>
+                          <input id="nombre" class="datos" type="text"   placeholder="Nombre" required>
                       </label>
   
                       <label for="email">
-                          <input  class="datos" type="email"  placeholder="Correo electrónico" required>
+                          <input id="correo"  class="datos" type="email"  placeholder="Correo electrónico" required>
                       </label>
   
                       <label for="cel">
-                          <input  class="datos" type="tel" placeholder="Cel:" maxlength="10" required>
+                          <input id="telef"  class="datos" type="tel" placeholder="Cel:" maxlength="10" required>
                       </label>
-  
-                  </div>
-  
-                  <div class="formulariodatos">
-                      <legend>Dirección:</legend>
-  
-                      <label for="ciudad">
-                          <input  class="datos" type="text"  placeholder="Ciudad">
-                      </label>
-  
-                      <label for="calle">
-                          <input  class="datos" type="text"  placeholder="Calle">
-                      </label>
-  
-                      <label for="col">
-                          <input  class="datos" type="text" 
-                          placeholder="Colonia">
-                      </label>
-  
-                      <label for="cp">
-                          <input  class="datos" type="text" placeholder="Código Postal">
-                      </label>
-  
-                      <label  for="num">
-                          <input  class="datos" type="text"  placeholder="Número Esterior">
+                      <label for="">
+                          <input id="direccion" type="text" placeholder="Direccion completa"
+                          class="datos" required>
                       </label>
   
                   </div>
@@ -100,7 +78,7 @@
   
                       <input id="capturar"  type="button" value="Registrar">
   
-                      <input  type="reset" value="Borrar" id="borrar">
+                      <input  type="reset" value="guardar" id="borrar">
   
                   </div>
   
@@ -118,7 +96,7 @@
 
 
 
-    <script src="../js/index.js"></script>
+    <script src="../js/JSON.JS"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js
 "></script>
 </body>
