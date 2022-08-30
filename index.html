@@ -4,41 +4,206 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="./css/style.css">
+    <!--BOOTSTRAP-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <!--STYLE-->
+    <link rel="stylesheet" href="./scss/style.css">
     <script src="https://kit.fontawesome.com/979475b1c3.js" crossorigin="anonymous"></script>
-     <link
-     rel="stylesheet"
-     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-   />
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
-    <title>PIZZA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;1,700&display=swap" rel="stylesheet">
+
+    <title>Dark´s Pizza</title>
 </head>
 <body>
-    <header class="container">
+    <header>
+        <ul class="nav justify-content-center text-bg-dark">
+            <li class="nav-item">
+              <a class="nav-link text-bg-dark m-2" href="#">Dark´s Pizza</a>
+            </li>
+            <li class="nav-item">
+                <i class="fa-solid fa-cart-shopping  text-bg-dark p-3" id="verCarrito"> <sub>0</sub> </i>
+            </li>
+            <li>
+              <i class="fa-solid fa-clipboard-list text-bg-dark p-3" id="registro"></i>
+            </li>
+            <li class="nav-item" >
+              <i class="fa-solid fa-user-large text-bg-dark p-3" id="verCard"></i>
+            </li>
+
+            
+            
+          </ul>
+  </header>
+  <section>
+    <h1 class="titulo">
+        Dark´s PIZZA
+    </h1>
+    <!--MENU PRINCIPAL DE PRODUCTOS-->
+    <div class="sliderProducpizza">
+          <div class="cajaImage">
+            <h4>PIZZA</h4>
+            <img src="./image/pizza1.png" alt="pizzaPeperoni">
+            <button class="btnVer" id="verPizza">VER</button>
+          </div>
+
+          <div class="cajaImage">
+            <h4>ENSALADAS</h4>
+            <img src="./image/ensalada.jpeg" alt="pizzaPeperoni">
+             <button class="btnVer D" id="verEnsalada">VER</button>
+
+          </div>
+
+          <div class="cajaImage">
+            <h4>SODAS</h4>
+            <img src="./image/Coca-Cola - Wikipedia, la enciclopedia libre.png" alt="pizzaPeperoni">
+            <button class="btnVer D" id="verSodas">VER</button>
+            </div>
+
+          <div class="cajaImage">
+            <h4>ALITAS</h4>
+            <img src="./image/Whiskey Wings Recipe | Yummly.jpg" alt="pizzaPeperoni">
+            <button class="btnVer D" id="verAlitas">VER</button>
+            </div>
+
+          <div class="cajaImage">
+            <h4>POSTRES</h4>
+            <img src="./image/Helado de dulce de leche.jpg" alt="pizzaPeperoni">
+            <button class="btnVer D" id="verPostre">VER</button>
+          </div>
+    </div>
+  </section>
+
+  <!--PRODUCTOS QUE SE MUESTRAN AL DAR CLCK EN VER DEL MENU PRINCIPAL-->
+  
+      <div class="menuPizza" id="menuPizza">
+        <div class="contBC"> <span>PIZZA </span>
+            <button class="btnCerras" id="btnCerras" ><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div class="pizzas caja" id="pizzas">
+          
+        </div>
+
+      </div>
+
+      <div class="menu" id="menuEnsalda">
+        <div class="contBC"><span>ENSALADAS  </span>
+            <button class="btnCerras" id="btnCerrasEnsa" ><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div class="ensalada caja_estilos" id="ensalada">
+        
+        </div>
+      </div>
+
+      <div class="menu" id="menuSoda">
+        <div class="contBC"> <span>BEBIDAS </span>
+          <button class="btnCerras" id="btnCerrasSod" ><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div class="soda caja_estilos" id="soda">
+        
+        </div>
+      </div>
+
+      <div class="menu" id="menuAlitas">
+        <div class="contBC"> <span> ALITAS</span>
+          <button class="btnCerras" id="btnCerrasAli" ><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div class="alitas caja_estilos" id="alitas">
+        
+        </div>
+      </div>
+
+      <div class="menu" id="menuPostre">
+        <div class="contBC"> <span> POSTRE</span>
+          <button class="btnCerras" id="btnCerrasPos" ><i class="fa-solid fa-arrow-left"></i></button>
+        </div>
+        <div class="postre caja_estilos" id="postre">
+        
+        </div>
+      </div>
+
+<!-------CARRITO------------>
+  <div class="carrito">
+
+  </div>
+
+<!--PORTADA-->
+    <div class="contenedorPortada" id="portada">
         <div class="portada">
-            <h1><span class="animate_animated  animate__hinge">Joseph´s </span>PIZZA  </h1>
+            <h1><span class="animate_animated  animate__hinge">Dark´s </span>PIZZA  </h1>
             <i class="animate__animated animate__rotateIn fa-solid fa-pizza-slice"></i>
             <p>!NO DEJES QUE SE ENFRIEN!</p>
-            <button> <a href="./html/pizzas.html">¡Entrá!</a></button>
-            <button> <a href="./html/formulario.html">¡Registrate!</a></button>
+            <button id="ocultar" class="ocultar"> ¡Entrá!</button>
+            <button class="ocultar" id="btnAbrirFormulario"> ¡Registrate!</button>
         </div>
-    </header>
-<footer>
-    <div>
-        <h4>¡Pide tu Pizza a domicilio!</h4>
-        <p>¡contactanos!</p>
-        <ul>
-            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-            <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
-        </ul>
     </div>
-</footer>
 
-    
+    <footer class="footerPortada" id="footerPortada">
+        <div>
+            <h4>¡Pide tu Pizza a domicilio!</h4>
+            <p>¡contactanos!</p>
+            <ul>
+                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+<!--formulario-->
+  <div class="overlay " id="overlay">
+    <section class="popup" id="popup">
+      
+        <div class="contentBtn">
+            <button id="brn-cerrar-popup" class="btn-cerrar-popup">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+        </div>
+      
+        <div class="formulario" id="inputDatos">
+          <h1>¡Registrate!</h1>
+            <form action="" class="conntenidoDtos">
+               <legend>Datos:</legend>
+               <label for="nombre">
+                    <input id="nombre" class="datos" type="text"   placeholder="Nombre" required>
+                </label>
 
+                <label for="email">
+                    <input id="correo"  class="datos" type="email"  placeholder="Correo electrónico" required>
+                </label>
 
+                <label for="cel">
+                    <input id="telef"  class="datos" type="tel" placeholder="Cel:" maxlength="10" required>
+                </label>
+                <label for="">
+                    <input id="direccion" type="text" placeholder="Direccion completa"
+                    class="datos" required>
+                </label>
+
+                <div class="botonForm">
+
+                    <input id="capturar"  type="button" value="REGISTRAR">
+
+                    <input  type="reset" value="GUARDAR" id="guardar">
+
+                </div>
+            </form>
+        </div>
+    </section>
+  </div>
+  <!--card-->
+  <section class="cajaCards"  id="cards">
+     <div class="containBtnCerrar" id="btnCerrarCard">
+        <button><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    <div class="cards" id="cardUsuario">
+    </div>
+  </section>
+  
+<!--SCRIPTS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/varCons.js"></script>
+<script src="js/eventos.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

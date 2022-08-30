@@ -1,0 +1,878 @@
+@media screen and (min-width: 320px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /*el primer titulo despues de nav*/
+  .titulo {
+    background-color: rgb(219, 165, 79);
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-style: italic;
+  }
+  /*contenido*/
+  .sliderProducpizza {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: auto;
+  }
+  .sliderProducpizza .cajaImage {
+    margin: auto;
+    width: 145px;
+    height: 230px;
+    border-radius: 10px;
+    background: #ebebeb;
+    box-shadow: 5px 5px 10px #5e5e5e, -5px -5px 10px #ffffff;
+    transition: 0.5s;
+    margin-bottom: 20px;
+  }
+  .sliderProducpizza .cajaImage:hover {
+    transform: scale(1.05);
+  }
+  .sliderProducpizza .cajaImage h4 {
+    display: table;
+    padding: 2px;
+    margin: 5px 10px;
+    font-size: 0.8em;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    border-radius: 0 4px 4px 4px;
+  }
+  .sliderProducpizza .cajaImage img {
+    display: block;
+    width: 90%;
+    height: 60%;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(146, 148, 142);
+  }
+  .sliderProducpizza .cajaImage .btnVer {
+    display: block;
+    outline: none;
+    border: none;
+    margin: 15px auto;
+    font-size: 0.7em;
+    padding: 2px 15px;
+    border-radius: 7px;
+    background-color: #000;
+    color: #fff;
+  }
+  /*PRODUCTOS A MOSTRAR*/
+  .menuPizza, .menu {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: 0.5s;
+  }
+  .menuPizza .contBC, .menu .contBC {
+    width: 100%;
+    height: 60px;
+    background-color: orange;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .menuPizza .contBC span, .menu .contBC span {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  .menuPizza .contBC .btnCerras, .menu .contBC .btnCerras {
+    width: 50px;
+    height: 50px;
+    margin-right: -40px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+  }
+  .menuPizza .contBC .btnCerras i, .menu .contBC .btnCerras i {
+    font-size: 1.2em;
+  }
+  .menuPizza .pizzas,
+.menuPizza .caja_estilos, .menu .pizzas,
+.menu .caja_estilos {
+    width: 95%;
+    height: 90vh;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    overflow: auto;
+    border-radius: 10px;
+  }
+  .menuPizza .pizzas .producPizza,
+.menuPizza .pizzas .producEnsalada,
+.menuPizza .pizzas .producSoda,
+.menuPizza .pizzas .producAlita,
+.menuPizza .pizzas .producPostre,
+.menuPizza .caja_estilos .producPizza,
+.menuPizza .caja_estilos .producEnsalada,
+.menuPizza .caja_estilos .producSoda,
+.menuPizza .caja_estilos .producAlita,
+.menuPizza .caja_estilos .producPostre, .menu .pizzas .producPizza,
+.menu .pizzas .producEnsalada,
+.menu .pizzas .producSoda,
+.menu .pizzas .producAlita,
+.menu .pizzas .producPostre,
+.menu .caja_estilos .producPizza,
+.menu .caja_estilos .producEnsalada,
+.menu .caja_estilos .producSoda,
+.menu .caja_estilos .producAlita,
+.menu .caja_estilos .producPostre {
+    width: 45%;
+    height: 40vh;
+    margin: 20px auto;
+    border-radius: 10px;
+    background: rgba(235, 235, 235, 0.8);
+    box-shadow: 5px 5px 10px #5e5e5e, -5px -5px 10px #ffffff;
+    -webkit-backdrop-filter: 20px;
+            backdrop-filter: 20px;
+  }
+  .menuPizza .pizzas .producPizza .imagen,
+.menuPizza .pizzas .producEnsalada .imagen,
+.menuPizza .pizzas .producSoda .imagen,
+.menuPizza .pizzas .producAlita .imagen,
+.menuPizza .pizzas .producPostre .imagen,
+.menuPizza .caja_estilos .producPizza .imagen,
+.menuPizza .caja_estilos .producEnsalada .imagen,
+.menuPizza .caja_estilos .producSoda .imagen,
+.menuPizza .caja_estilos .producAlita .imagen,
+.menuPizza .caja_estilos .producPostre .imagen, .menu .pizzas .producPizza .imagen,
+.menu .pizzas .producEnsalada .imagen,
+.menu .pizzas .producSoda .imagen,
+.menu .pizzas .producAlita .imagen,
+.menu .pizzas .producPostre .imagen,
+.menu .caja_estilos .producPizza .imagen,
+.menu .caja_estilos .producEnsalada .imagen,
+.menu .caja_estilos .producSoda .imagen,
+.menu .caja_estilos .producAlita .imagen,
+.menu .caja_estilos .producPostre .imagen {
+    width: 95%;
+    height: 20vh;
+    margin: auto;
+    border-radius: 10px;
+  }
+  .menuPizza .pizzas .producPizza .imagen img,
+.menuPizza .pizzas .producEnsalada .imagen img,
+.menuPizza .pizzas .producSoda .imagen img,
+.menuPizza .pizzas .producAlita .imagen img,
+.menuPizza .pizzas .producPostre .imagen img,
+.menuPizza .caja_estilos .producPizza .imagen img,
+.menuPizza .caja_estilos .producEnsalada .imagen img,
+.menuPizza .caja_estilos .producSoda .imagen img,
+.menuPizza .caja_estilos .producAlita .imagen img,
+.menuPizza .caja_estilos .producPostre .imagen img, .menu .pizzas .producPizza .imagen img,
+.menu .pizzas .producEnsalada .imagen img,
+.menu .pizzas .producSoda .imagen img,
+.menu .pizzas .producAlita .imagen img,
+.menu .pizzas .producPostre .imagen img,
+.menu .caja_estilos .producPizza .imagen img,
+.menu .caja_estilos .producEnsalada .imagen img,
+.menu .caja_estilos .producSoda .imagen img,
+.menu .caja_estilos .producAlita .imagen img,
+.menu .caja_estilos .producPostre .imagen img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+  }
+  .menuPizza .pizzas .producPizza .nombrePizza, .menuPizza .pizzas .producPizza .nombreEnsalada, .menuPizza .pizzas .producPizza .nombreSoda, .menuPizza .pizzas .producPizza .nombreAlita, .menuPizza .pizzas .producPizza .nombrePostre,
+.menuPizza .pizzas .producEnsalada .nombrePizza,
+.menuPizza .pizzas .producEnsalada .nombreEnsalada,
+.menuPizza .pizzas .producEnsalada .nombreSoda,
+.menuPizza .pizzas .producEnsalada .nombreAlita,
+.menuPizza .pizzas .producEnsalada .nombrePostre,
+.menuPizza .pizzas .producSoda .nombrePizza,
+.menuPizza .pizzas .producSoda .nombreEnsalada,
+.menuPizza .pizzas .producSoda .nombreSoda,
+.menuPizza .pizzas .producSoda .nombreAlita,
+.menuPizza .pizzas .producSoda .nombrePostre,
+.menuPizza .pizzas .producAlita .nombrePizza,
+.menuPizza .pizzas .producAlita .nombreEnsalada,
+.menuPizza .pizzas .producAlita .nombreSoda,
+.menuPizza .pizzas .producAlita .nombreAlita,
+.menuPizza .pizzas .producAlita .nombrePostre,
+.menuPizza .pizzas .producPostre .nombrePizza,
+.menuPizza .pizzas .producPostre .nombreEnsalada,
+.menuPizza .pizzas .producPostre .nombreSoda,
+.menuPizza .pizzas .producPostre .nombreAlita,
+.menuPizza .pizzas .producPostre .nombrePostre,
+.menuPizza .caja_estilos .producPizza .nombrePizza,
+.menuPizza .caja_estilos .producPizza .nombreEnsalada,
+.menuPizza .caja_estilos .producPizza .nombreSoda,
+.menuPizza .caja_estilos .producPizza .nombreAlita,
+.menuPizza .caja_estilos .producPizza .nombrePostre,
+.menuPizza .caja_estilos .producEnsalada .nombrePizza,
+.menuPizza .caja_estilos .producEnsalada .nombreEnsalada,
+.menuPizza .caja_estilos .producEnsalada .nombreSoda,
+.menuPizza .caja_estilos .producEnsalada .nombreAlita,
+.menuPizza .caja_estilos .producEnsalada .nombrePostre,
+.menuPizza .caja_estilos .producSoda .nombrePizza,
+.menuPizza .caja_estilos .producSoda .nombreEnsalada,
+.menuPizza .caja_estilos .producSoda .nombreSoda,
+.menuPizza .caja_estilos .producSoda .nombreAlita,
+.menuPizza .caja_estilos .producSoda .nombrePostre,
+.menuPizza .caja_estilos .producAlita .nombrePizza,
+.menuPizza .caja_estilos .producAlita .nombreEnsalada,
+.menuPizza .caja_estilos .producAlita .nombreSoda,
+.menuPizza .caja_estilos .producAlita .nombreAlita,
+.menuPizza .caja_estilos .producAlita .nombrePostre,
+.menuPizza .caja_estilos .producPostre .nombrePizza,
+.menuPizza .caja_estilos .producPostre .nombreEnsalada,
+.menuPizza .caja_estilos .producPostre .nombreSoda,
+.menuPizza .caja_estilos .producPostre .nombreAlita,
+.menuPizza .caja_estilos .producPostre .nombrePostre, .menu .pizzas .producPizza .nombrePizza, .menu .pizzas .producPizza .nombreEnsalada, .menu .pizzas .producPizza .nombreSoda, .menu .pizzas .producPizza .nombreAlita, .menu .pizzas .producPizza .nombrePostre,
+.menu .pizzas .producEnsalada .nombrePizza,
+.menu .pizzas .producEnsalada .nombreEnsalada,
+.menu .pizzas .producEnsalada .nombreSoda,
+.menu .pizzas .producEnsalada .nombreAlita,
+.menu .pizzas .producEnsalada .nombrePostre,
+.menu .pizzas .producSoda .nombrePizza,
+.menu .pizzas .producSoda .nombreEnsalada,
+.menu .pizzas .producSoda .nombreSoda,
+.menu .pizzas .producSoda .nombreAlita,
+.menu .pizzas .producSoda .nombrePostre,
+.menu .pizzas .producAlita .nombrePizza,
+.menu .pizzas .producAlita .nombreEnsalada,
+.menu .pizzas .producAlita .nombreSoda,
+.menu .pizzas .producAlita .nombreAlita,
+.menu .pizzas .producAlita .nombrePostre,
+.menu .pizzas .producPostre .nombrePizza,
+.menu .pizzas .producPostre .nombreEnsalada,
+.menu .pizzas .producPostre .nombreSoda,
+.menu .pizzas .producPostre .nombreAlita,
+.menu .pizzas .producPostre .nombrePostre,
+.menu .caja_estilos .producPizza .nombrePizza,
+.menu .caja_estilos .producPizza .nombreEnsalada,
+.menu .caja_estilos .producPizza .nombreSoda,
+.menu .caja_estilos .producPizza .nombreAlita,
+.menu .caja_estilos .producPizza .nombrePostre,
+.menu .caja_estilos .producEnsalada .nombrePizza,
+.menu .caja_estilos .producEnsalada .nombreEnsalada,
+.menu .caja_estilos .producEnsalada .nombreSoda,
+.menu .caja_estilos .producEnsalada .nombreAlita,
+.menu .caja_estilos .producEnsalada .nombrePostre,
+.menu .caja_estilos .producSoda .nombrePizza,
+.menu .caja_estilos .producSoda .nombreEnsalada,
+.menu .caja_estilos .producSoda .nombreSoda,
+.menu .caja_estilos .producSoda .nombreAlita,
+.menu .caja_estilos .producSoda .nombrePostre,
+.menu .caja_estilos .producAlita .nombrePizza,
+.menu .caja_estilos .producAlita .nombreEnsalada,
+.menu .caja_estilos .producAlita .nombreSoda,
+.menu .caja_estilos .producAlita .nombreAlita,
+.menu .caja_estilos .producAlita .nombrePostre,
+.menu .caja_estilos .producPostre .nombrePizza,
+.menu .caja_estilos .producPostre .nombreEnsalada,
+.menu .caja_estilos .producPostre .nombreSoda,
+.menu .caja_estilos .producPostre .nombreAlita,
+.menu .caja_estilos .producPostre .nombrePostre {
+    margin-top: 10px;
+    width: 100%;
+    height: 5vh;
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(143, 135, 135, 0.158);
+  }
+  .menuPizza .pizzas .producPizza .nombrePizza h5, .menuPizza .pizzas .producPizza .nombreEnsalada h5, .menuPizza .pizzas .producPizza .nombreSoda h5, .menuPizza .pizzas .producPizza .nombreAlita h5, .menuPizza .pizzas .producPizza .nombrePostre h5,
+.menuPizza .pizzas .producEnsalada .nombrePizza h5,
+.menuPizza .pizzas .producEnsalada .nombreEnsalada h5,
+.menuPizza .pizzas .producEnsalada .nombreSoda h5,
+.menuPizza .pizzas .producEnsalada .nombreAlita h5,
+.menuPizza .pizzas .producEnsalada .nombrePostre h5,
+.menuPizza .pizzas .producSoda .nombrePizza h5,
+.menuPizza .pizzas .producSoda .nombreEnsalada h5,
+.menuPizza .pizzas .producSoda .nombreSoda h5,
+.menuPizza .pizzas .producSoda .nombreAlita h5,
+.menuPizza .pizzas .producSoda .nombrePostre h5,
+.menuPizza .pizzas .producAlita .nombrePizza h5,
+.menuPizza .pizzas .producAlita .nombreEnsalada h5,
+.menuPizza .pizzas .producAlita .nombreSoda h5,
+.menuPizza .pizzas .producAlita .nombreAlita h5,
+.menuPizza .pizzas .producAlita .nombrePostre h5,
+.menuPizza .pizzas .producPostre .nombrePizza h5,
+.menuPizza .pizzas .producPostre .nombreEnsalada h5,
+.menuPizza .pizzas .producPostre .nombreSoda h5,
+.menuPizza .pizzas .producPostre .nombreAlita h5,
+.menuPizza .pizzas .producPostre .nombrePostre h5,
+.menuPizza .caja_estilos .producPizza .nombrePizza h5,
+.menuPizza .caja_estilos .producPizza .nombreEnsalada h5,
+.menuPizza .caja_estilos .producPizza .nombreSoda h5,
+.menuPizza .caja_estilos .producPizza .nombreAlita h5,
+.menuPizza .caja_estilos .producPizza .nombrePostre h5,
+.menuPizza .caja_estilos .producEnsalada .nombrePizza h5,
+.menuPizza .caja_estilos .producEnsalada .nombreEnsalada h5,
+.menuPizza .caja_estilos .producEnsalada .nombreSoda h5,
+.menuPizza .caja_estilos .producEnsalada .nombreAlita h5,
+.menuPizza .caja_estilos .producEnsalada .nombrePostre h5,
+.menuPizza .caja_estilos .producSoda .nombrePizza h5,
+.menuPizza .caja_estilos .producSoda .nombreEnsalada h5,
+.menuPizza .caja_estilos .producSoda .nombreSoda h5,
+.menuPizza .caja_estilos .producSoda .nombreAlita h5,
+.menuPizza .caja_estilos .producSoda .nombrePostre h5,
+.menuPizza .caja_estilos .producAlita .nombrePizza h5,
+.menuPizza .caja_estilos .producAlita .nombreEnsalada h5,
+.menuPizza .caja_estilos .producAlita .nombreSoda h5,
+.menuPizza .caja_estilos .producAlita .nombreAlita h5,
+.menuPizza .caja_estilos .producAlita .nombrePostre h5,
+.menuPizza .caja_estilos .producPostre .nombrePizza h5,
+.menuPizza .caja_estilos .producPostre .nombreEnsalada h5,
+.menuPizza .caja_estilos .producPostre .nombreSoda h5,
+.menuPizza .caja_estilos .producPostre .nombreAlita h5,
+.menuPizza .caja_estilos .producPostre .nombrePostre h5, .menu .pizzas .producPizza .nombrePizza h5, .menu .pizzas .producPizza .nombreEnsalada h5, .menu .pizzas .producPizza .nombreSoda h5, .menu .pizzas .producPizza .nombreAlita h5, .menu .pizzas .producPizza .nombrePostre h5,
+.menu .pizzas .producEnsalada .nombrePizza h5,
+.menu .pizzas .producEnsalada .nombreEnsalada h5,
+.menu .pizzas .producEnsalada .nombreSoda h5,
+.menu .pizzas .producEnsalada .nombreAlita h5,
+.menu .pizzas .producEnsalada .nombrePostre h5,
+.menu .pizzas .producSoda .nombrePizza h5,
+.menu .pizzas .producSoda .nombreEnsalada h5,
+.menu .pizzas .producSoda .nombreSoda h5,
+.menu .pizzas .producSoda .nombreAlita h5,
+.menu .pizzas .producSoda .nombrePostre h5,
+.menu .pizzas .producAlita .nombrePizza h5,
+.menu .pizzas .producAlita .nombreEnsalada h5,
+.menu .pizzas .producAlita .nombreSoda h5,
+.menu .pizzas .producAlita .nombreAlita h5,
+.menu .pizzas .producAlita .nombrePostre h5,
+.menu .pizzas .producPostre .nombrePizza h5,
+.menu .pizzas .producPostre .nombreEnsalada h5,
+.menu .pizzas .producPostre .nombreSoda h5,
+.menu .pizzas .producPostre .nombreAlita h5,
+.menu .pizzas .producPostre .nombrePostre h5,
+.menu .caja_estilos .producPizza .nombrePizza h5,
+.menu .caja_estilos .producPizza .nombreEnsalada h5,
+.menu .caja_estilos .producPizza .nombreSoda h5,
+.menu .caja_estilos .producPizza .nombreAlita h5,
+.menu .caja_estilos .producPizza .nombrePostre h5,
+.menu .caja_estilos .producEnsalada .nombrePizza h5,
+.menu .caja_estilos .producEnsalada .nombreEnsalada h5,
+.menu .caja_estilos .producEnsalada .nombreSoda h5,
+.menu .caja_estilos .producEnsalada .nombreAlita h5,
+.menu .caja_estilos .producEnsalada .nombrePostre h5,
+.menu .caja_estilos .producSoda .nombrePizza h5,
+.menu .caja_estilos .producSoda .nombreEnsalada h5,
+.menu .caja_estilos .producSoda .nombreSoda h5,
+.menu .caja_estilos .producSoda .nombreAlita h5,
+.menu .caja_estilos .producSoda .nombrePostre h5,
+.menu .caja_estilos .producAlita .nombrePizza h5,
+.menu .caja_estilos .producAlita .nombreEnsalada h5,
+.menu .caja_estilos .producAlita .nombreSoda h5,
+.menu .caja_estilos .producAlita .nombreAlita h5,
+.menu .caja_estilos .producAlita .nombrePostre h5,
+.menu .caja_estilos .producPostre .nombrePizza h5,
+.menu .caja_estilos .producPostre .nombreEnsalada h5,
+.menu .caja_estilos .producPostre .nombreSoda h5,
+.menu .caja_estilos .producPostre .nombreAlita h5,
+.menu .caja_estilos .producPostre .nombrePostre h5 {
+    text-align: center;
+  }
+  .menuPizza .pizzas .producPizza .iforma,
+.menuPizza .pizzas .producEnsalada .iforma,
+.menuPizza .pizzas .producSoda .iforma,
+.menuPizza .pizzas .producAlita .iforma,
+.menuPizza .pizzas .producPostre .iforma,
+.menuPizza .caja_estilos .producPizza .iforma,
+.menuPizza .caja_estilos .producEnsalada .iforma,
+.menuPizza .caja_estilos .producSoda .iforma,
+.menuPizza .caja_estilos .producAlita .iforma,
+.menuPizza .caja_estilos .producPostre .iforma, .menu .pizzas .producPizza .iforma,
+.menu .pizzas .producEnsalada .iforma,
+.menu .pizzas .producSoda .iforma,
+.menu .pizzas .producAlita .iforma,
+.menu .pizzas .producPostre .iforma,
+.menu .caja_estilos .producPizza .iforma,
+.menu .caja_estilos .producEnsalada .iforma,
+.menu .caja_estilos .producSoda .iforma,
+.menu .caja_estilos .producAlita .iforma,
+.menu .caja_estilos .producPostre .iforma {
+    background-color: rgba(143, 135, 135, 0.158);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 13vh;
+    border-radius: 0 0 10px 10px;
+  }
+  .menuPizza .pizzas .producPizza .iforma .contePrecio,
+.menuPizza .pizzas .producEnsalada .iforma .contePrecio,
+.menuPizza .pizzas .producSoda .iforma .contePrecio,
+.menuPizza .pizzas .producAlita .iforma .contePrecio,
+.menuPizza .pizzas .producPostre .iforma .contePrecio,
+.menuPizza .caja_estilos .producPizza .iforma .contePrecio,
+.menuPizza .caja_estilos .producEnsalada .iforma .contePrecio,
+.menuPizza .caja_estilos .producSoda .iforma .contePrecio,
+.menuPizza .caja_estilos .producAlita .iforma .contePrecio,
+.menuPizza .caja_estilos .producPostre .iforma .contePrecio, .menu .pizzas .producPizza .iforma .contePrecio,
+.menu .pizzas .producEnsalada .iforma .contePrecio,
+.menu .pizzas .producSoda .iforma .contePrecio,
+.menu .pizzas .producAlita .iforma .contePrecio,
+.menu .pizzas .producPostre .iforma .contePrecio,
+.menu .caja_estilos .producPizza .iforma .contePrecio,
+.menu .caja_estilos .producEnsalada .iforma .contePrecio,
+.menu .caja_estilos .producSoda .iforma .contePrecio,
+.menu .caja_estilos .producAlita .iforma .contePrecio,
+.menu .caja_estilos .producPostre .iforma .contePrecio {
+    width: 45%;
+    height: 95%;
+  }
+  .menuPizza .pizzas .producPizza .iforma .contePrecio .precio,
+.menuPizza .pizzas .producEnsalada .iforma .contePrecio .precio,
+.menuPizza .pizzas .producSoda .iforma .contePrecio .precio,
+.menuPizza .pizzas .producAlita .iforma .contePrecio .precio,
+.menuPizza .pizzas .producPostre .iforma .contePrecio .precio,
+.menuPizza .caja_estilos .producPizza .iforma .contePrecio .precio,
+.menuPizza .caja_estilos .producEnsalada .iforma .contePrecio .precio,
+.menuPizza .caja_estilos .producSoda .iforma .contePrecio .precio,
+.menuPizza .caja_estilos .producAlita .iforma .contePrecio .precio,
+.menuPizza .caja_estilos .producPostre .iforma .contePrecio .precio, .menu .pizzas .producPizza .iforma .contePrecio .precio,
+.menu .pizzas .producEnsalada .iforma .contePrecio .precio,
+.menu .pizzas .producSoda .iforma .contePrecio .precio,
+.menu .pizzas .producAlita .iforma .contePrecio .precio,
+.menu .pizzas .producPostre .iforma .contePrecio .precio,
+.menu .caja_estilos .producPizza .iforma .contePrecio .precio,
+.menu .caja_estilos .producEnsalada .iforma .contePrecio .precio,
+.menu .caja_estilos .producSoda .iforma .contePrecio .precio,
+.menu .caja_estilos .producAlita .iforma .contePrecio .precio,
+.menu .caja_estilos .producPostre .iforma .contePrecio .precio {
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    height: 30%;
+    text-align: center;
+    border-bottom: 0.5px solid #efae45;
+  }
+  .menuPizza .pizzas .producPizza .iforma .contePrecio .buttonAgregar,
+.menuPizza .pizzas .producEnsalada .iforma .contePrecio .buttonAgregar,
+.menuPizza .pizzas .producSoda .iforma .contePrecio .buttonAgregar,
+.menuPizza .pizzas .producAlita .iforma .contePrecio .buttonAgregar,
+.menuPizza .pizzas .producPostre .iforma .contePrecio .buttonAgregar,
+.menuPizza .caja_estilos .producPizza .iforma .contePrecio .buttonAgregar,
+.menuPizza .caja_estilos .producEnsalada .iforma .contePrecio .buttonAgregar,
+.menuPizza .caja_estilos .producSoda .iforma .contePrecio .buttonAgregar,
+.menuPizza .caja_estilos .producAlita .iforma .contePrecio .buttonAgregar,
+.menuPizza .caja_estilos .producPostre .iforma .contePrecio .buttonAgregar, .menu .pizzas .producPizza .iforma .contePrecio .buttonAgregar,
+.menu .pizzas .producEnsalada .iforma .contePrecio .buttonAgregar,
+.menu .pizzas .producSoda .iforma .contePrecio .buttonAgregar,
+.menu .pizzas .producAlita .iforma .contePrecio .buttonAgregar,
+.menu .pizzas .producPostre .iforma .contePrecio .buttonAgregar,
+.menu .caja_estilos .producPizza .iforma .contePrecio .buttonAgregar,
+.menu .caja_estilos .producEnsalada .iforma .contePrecio .buttonAgregar,
+.menu .caja_estilos .producSoda .iforma .contePrecio .buttonAgregar,
+.menu .caja_estilos .producAlita .iforma .contePrecio .buttonAgregar,
+.menu .caja_estilos .producPostre .iforma .contePrecio .buttonAgregar {
+    width: 100%;
+    background-color: rgba(143, 135, 135, 0.158);
+    height: 50%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+  }
+  .menuPizza .pizzas .producPizza .iforma .contePrecio .buttonAgregar:hover,
+.menuPizza .pizzas .producEnsalada .iforma .contePrecio .buttonAgregar:hover,
+.menuPizza .pizzas .producSoda .iforma .contePrecio .buttonAgregar:hover,
+.menuPizza .pizzas .producAlita .iforma .contePrecio .buttonAgregar:hover,
+.menuPizza .pizzas .producPostre .iforma .contePrecio .buttonAgregar:hover,
+.menuPizza .caja_estilos .producPizza .iforma .contePrecio .buttonAgregar:hover,
+.menuPizza .caja_estilos .producEnsalada .iforma .contePrecio .buttonAgregar:hover,
+.menuPizza .caja_estilos .producSoda .iforma .contePrecio .buttonAgregar:hover,
+.menuPizza .caja_estilos .producAlita .iforma .contePrecio .buttonAgregar:hover,
+.menuPizza .caja_estilos .producPostre .iforma .contePrecio .buttonAgregar:hover, .menu .pizzas .producPizza .iforma .contePrecio .buttonAgregar:hover,
+.menu .pizzas .producEnsalada .iforma .contePrecio .buttonAgregar:hover,
+.menu .pizzas .producSoda .iforma .contePrecio .buttonAgregar:hover,
+.menu .pizzas .producAlita .iforma .contePrecio .buttonAgregar:hover,
+.menu .pizzas .producPostre .iforma .contePrecio .buttonAgregar:hover,
+.menu .caja_estilos .producPizza .iforma .contePrecio .buttonAgregar:hover,
+.menu .caja_estilos .producEnsalada .iforma .contePrecio .buttonAgregar:hover,
+.menu .caja_estilos .producSoda .iforma .contePrecio .buttonAgregar:hover,
+.menu .caja_estilos .producAlita .iforma .contePrecio .buttonAgregar:hover,
+.menu .caja_estilos .producPostre .iforma .contePrecio .buttonAgregar:hover {
+    background-color: rgba(143, 135, 135, 0.339);
+  }
+  .menuPizza .pizzas .producPizza .iforma .contePrecio .buttonAgregar i,
+.menuPizza .pizzas .producEnsalada .iforma .contePrecio .buttonAgregar i,
+.menuPizza .pizzas .producSoda .iforma .contePrecio .buttonAgregar i,
+.menuPizza .pizzas .producAlita .iforma .contePrecio .buttonAgregar i,
+.menuPizza .pizzas .producPostre .iforma .contePrecio .buttonAgregar i,
+.menuPizza .caja_estilos .producPizza .iforma .contePrecio .buttonAgregar i,
+.menuPizza .caja_estilos .producEnsalada .iforma .contePrecio .buttonAgregar i,
+.menuPizza .caja_estilos .producSoda .iforma .contePrecio .buttonAgregar i,
+.menuPizza .caja_estilos .producAlita .iforma .contePrecio .buttonAgregar i,
+.menuPizza .caja_estilos .producPostre .iforma .contePrecio .buttonAgregar i, .menu .pizzas .producPizza .iforma .contePrecio .buttonAgregar i,
+.menu .pizzas .producEnsalada .iforma .contePrecio .buttonAgregar i,
+.menu .pizzas .producSoda .iforma .contePrecio .buttonAgregar i,
+.menu .pizzas .producAlita .iforma .contePrecio .buttonAgregar i,
+.menu .pizzas .producPostre .iforma .contePrecio .buttonAgregar i,
+.menu .caja_estilos .producPizza .iforma .contePrecio .buttonAgregar i,
+.menu .caja_estilos .producEnsalada .iforma .contePrecio .buttonAgregar i,
+.menu .caja_estilos .producSoda .iforma .contePrecio .buttonAgregar i,
+.menu .caja_estilos .producAlita .iforma .contePrecio .buttonAgregar i,
+.menu .caja_estilos .producPostre .iforma .contePrecio .buttonAgregar i {
+    font-size: 1.7em;
+    color: #cb8617;
+  }
+  /*portada*/
+  .contenedorPortada {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 85vh;
+    background-color: #ffffff;
+    transition: 0.5s;
+  }
+  .contenedorPortada .portada {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .contenedorPortada .portada h1 {
+    font-size: 5em;
+    font-style: italic;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #cb8617;
+  }
+  .contenedorPortada .portada h1 span {
+    color: #000;
+    font-size: 0.2em;
+    letter-spacing: 3px;
+  }
+  .contenedorPortada .portada i {
+    font-size: 5em;
+    margin: 10px;
+    color: #e88431;
+    filter: drop-shadow(10px 20px 6px #857253);
+  }
+  .contenedorPortada .portada p {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    font-style: italic;
+    margin: 10px;
+    letter-spacing: 3px;
+    color: rgb(4, 3, 3);
+  }
+  .contenedorPortada .portada .ocultar {
+    font-size: 1.2em;
+    width: 150px;
+    height: 30px;
+    background-color: black;
+    border: none;
+    outline: none;
+    margin: 0;
+    margin: 8px auto;
+    cursor: pointer;
+    font-family: "Roboto Mono", monospace;
+    font-style: italic;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #efae45;
+  }
+  .contenedorPortada .portada .ocultar:active {
+    color: #fff;
+    border: 1px solid #e88431;
+  }
+  .contenedorPortada .portada .ocultar:active a {
+    color: #fff;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 18vh;
+  }
+  footer div {
+    background-color: #e88431;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #000;
+  }
+  footer div h4 {
+    margin: 10px auto 0;
+    color: #000;
+  }
+  footer div ul {
+    margin: 10px;
+    width: 50%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: -10px auto auto;
+  }
+  footer div ul li {
+    list-style: none;
+  }
+  footer div ul li a i {
+    color: #000;
+    margin: 5px;
+  }
+  /*estilos formulario*/
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transform: translateY(-100%);
+    transition: 0.5s;
+  }
+  .overlay .popup {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .overlay .popup .contentBtn {
+    border-radius: 10px;
+    width: 90%;
+    height: 70px;
+    background-color: #e88431;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .overlay .popup .contentBtn button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    border: none;
+    margin-right: 20px;
+    outline: none;
+    box-shadow: 0px 0px 5px 2px #cb8617;
+  }
+  .overlay .popup .contentBtn button i {
+    color: #276967;
+  }
+  .overlay .popup .formulario {
+    width: 90%;
+    height: 80%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 5px auto auto;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
+  }
+  .overlay .popup .formulario h1 {
+    margin-top: 20px;
+  }
+  .overlay .popup .formulario form {
+    width: 95%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .overlay .popup .formulario form legend {
+    text-align: center;
+  }
+  .overlay .popup .formulario form label {
+    width: 60%;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+  }
+  .overlay .popup .formulario form label input {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    background-color: transparent;
+    outline: none;
+  }
+  .overlay .popup .formulario form label input::-moz-placeholder {
+    color: #000;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .overlay .popup .formulario form label input:-ms-input-placeholder {
+    color: #000;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .overlay .popup .formulario form label input::placeholder {
+    color: #000;
+    transition: 0.5s;
+  }
+  .overlay .popup .formulario form label input:focus::-moz-placeholder {
+    transform: translateY(30px);
+  }
+  .overlay .popup .formulario form label input:focus:-ms-input-placeholder {
+    transform: translateY(30px);
+  }
+  .overlay .popup .formulario form label input:focus::placeholder {
+    transform: translateY(30px);
+  }
+  .overlay .popup .formulario form .botonForm {
+    width: 70%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .overlay .popup .formulario form .botonForm input {
+    background-color: rgba(143, 135, 135, 0.158);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    width: 40%;
+    height: 80%;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: 0.2s;
+  }
+  .overlay .popup .formulario form .botonForm input:hover {
+    background-color: #efae45;
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    color: #fff;
+  }
+  /*---------------cards de ususario*/
+  .cajaCards {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    visibility: hidden;
+  }
+  .cajaCards .containBtnCerrar {
+    width: 90%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .cajaCards .containBtnCerrar button {
+    width: 50px;
+    height: 50px;
+    background-color: #cb8617;
+    border: none;
+    border-radius: 50%;
+  }
+  .cajaCards .containBtnCerrar button i {
+    font-size: 1.5em;
+  }
+  .cajaCards .cards {
+    width: 90vw;
+    height: auto;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+  .cajaCards .cards .icono {
+    width: 100px;
+    height: 100px;
+    background-color: #e8a63b;
+    display: flex;
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  .cajaCards .cards .icono i {
+    font-size: 4em;
+  }
+  .cajaCards .cards .date {
+    width: 80%;
+    margin: 5px auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+  }
+  .cajaCards .cards .date h1 {
+    font-size: 1.3em;
+    text-align: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  .cajaCards .cards .date p {
+    display: block;
+    border-radius: 10px;
+    font-size: 0.9em;
+    text-align: center;
+    background-color: rgba(238, 238, 238, 0.9);
+    padding: 8px 0px;
+    border-bottom: 1px solid #eba63b;
+  }
+  /*OCULTAMOS LA PORTADA*/
+  .active {
+    transition: 0.5s;
+    visibility: hidden;
+    transform: translateX(-110%);
+  }
+  .activeDos {
+    visibility: visible;
+    transition: 0.5s;
+    transform: translateY(0%);
+  }
+}/*# sourceMappingURL=style.css.map */

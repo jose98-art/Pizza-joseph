@@ -1,0 +1,566 @@
+$fuenteuno:'Roboto Mono', monospace;
+$colorNaranje:#e88431;
+$colorNarLetra:#cb8617;
+$colorNarClaroLetra:#efae45;
+$colorGris:#857253;
+$colorNegLetra:#000;
+$colorBlanc:#fff;
+$colorBlackOpaci:rgba(143, 135, 135, 0.158);
+// body{
+//     background-color: #cb8617;
+// }
+
+@media screen and (min-width:320px) {
+    *{        
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;  
+    }
+    /*el primer titulo despues de nav*/
+    .titulo{
+        background-color: rgb(219, 165, 79);
+        color: white;
+        text-align: center;
+        margin-top: 10px;
+        font-family: 'Courier New', Courier, monospace;
+        font-style: italic;
+    }
+    /*contenido*/
+    .sliderProducpizza{
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        overflow: auto;
+        .cajaImage{
+            margin: auto;
+            width: 145px;
+            height: 230px;
+            border-radius: 10px;
+            background: #ebebeb;
+            box-shadow:  5px 5px 10px #5e5e5e,
+                        -5px -5px 10px #ffffff;
+            transition: .5s;
+            margin-bottom: 20px;
+            &:hover{
+                transform: scale(1.05);
+            }
+
+            
+            h4{
+                display: table;
+                padding: 2px;
+                margin: 5px 10px;
+                font-size: .8em;
+                border: 1px solid #000;
+                background-color: #000;
+                color: #fff;
+                border-radius: 0 4px 4px 4px;
+                
+            }
+            img{
+                display: block;
+                width: 90%;
+                height: 60%;
+                margin: auto;
+                border-radius: 50%;
+                box-shadow: 0px 0px 10px rgb(146, 148, 142);
+            }
+            .btnVer{
+                display: block;
+                outline: none;
+                border: none;
+                margin: 15px auto;
+                font-size: .7em;
+                padding: 2px 15px;
+                border-radius: 7px;
+                background-color: #000;
+                color: #fff;
+
+            }
+        }
+    
+    }
+    /*PRODUCTOS A MOSTRAR*/
+    .menuPizza,.menu{
+        background-color: rgba(0,0,0,.6);
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        .contBC{
+            width: 100%;
+            height: 60px;
+            background-color:orange;
+           display: flex;
+           align-items: center;
+           justify-content:space-around;
+           span{
+            font-size: 1.5em;
+            font-weight: 600;
+           }
+            .btnCerras{
+                width: 50px;
+                height: 50px;
+                margin-right: -40px;
+                border-radius: 50%;
+                outline: none;
+                border:none;
+                i{
+                font-size: 1.2em;
+                }  
+            }
+        }
+        .pizzas,
+        .caja_estilos{
+            width: 95%;
+            height: 90vh;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content:space-between;
+            margin: auto;
+            overflow: auto;
+            border-radius: 10px;
+            .producPizza,
+            .producEnsalada,
+            .producSoda,
+            .producAlita,
+            .producPostre{
+                width: 45%;
+                height: 40vh;
+                margin: 20px auto;
+                border-radius: 10px;
+                background: rgba(235, 235, 235,.8);
+                box-shadow:  5px 5px 10px #5e5e5e,
+                                -5px -5px 10px #ffffff;
+                backdrop-filter: 20px;
+                .imagen{
+                    width: 95%;
+                    height: 20vh;
+                    margin: auto;
+                    border-radius:10px;
+                    img{
+                        border-radius:10px;
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                .nombrePizza,.nombreEnsalada,.nombreSoda,.nombreAlita,.nombrePostre{
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 5vh;
+                    border-radius: 10px 10px 0 0;
+                    background-color: $colorBlackOpaci;
+                    h5{
+                        text-align: center;
+                    }
+                }
+                .iforma{
+                    background-color: $colorBlackOpaci;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 13vh;
+                    border-radius: 0 0 10px 10px;
+                    .contePrecio{
+                        width: 45%;
+                        height: 95%;
+                        .precio{
+                            margin: 0;
+                            border-radius: 10px 10px 0 0;
+                            height: 30%;
+                            text-align: center;   
+                            border-bottom: .5px solid $colorNarClaroLetra;
+                            
+                        }
+                        .buttonAgregar{
+                            width: 100%;
+                            background-color: $colorBlackOpaci;
+                            height: 50%;
+                            border-radius: 10px;
+                            border: none;
+                            outline: none;
+                            margin-top: 10px;
+                            &:hover{
+                                background-color: rgba(143, 135, 135, 0.339);
+                            }
+                                i{
+                                font-size: 1.7em;
+                                color: $colorNarLetra;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        visibility: hidden;
+        transform: translateX(-100%);
+        transition: .5s;
+    }
+   
+
+    /*portada*/
+    .contenedorPortada{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 85vh;  
+        background-color: #ffffff;
+        transition: .5s;
+        .portada{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            h1{
+                font-size: 5em;
+                font-style: italic;
+                margin: 10px;
+                display: flex;
+                flex-direction:column ;
+                color: $colorNarLetra;
+                span{
+                    color: $colorNegLetra;
+                    font-size: .2em;
+                    letter-spacing: 3px;
+                    
+                }
+            }
+            i{
+                font-size: 5em;
+                margin: 10px;
+                color: $colorNaranje;
+                filter: drop-shadow(10px 20px 6px $colorGris);
+            }
+            p{
+                font-family: $fuenteuno;
+                font-weight: 300;
+                font-style: italic;
+                margin: 10px;
+                letter-spacing: 3px;
+                color: rgb(4, 3, 3);
+            }
+            .ocultar{
+                font-size: 1.2em;
+                width: 150px;
+                height: 30px;
+                background-color: black;
+                border: none;
+                outline: none;
+                margin: 0;
+                margin: 8px auto;
+                cursor: pointer;
+                font-family: $fuenteuno;
+                font-style: italic;
+                border-radius: 6px;
+                text-decoration: none;
+                color: $colorNarClaroLetra;
+                &:active{
+                    color:$colorBlanc ;
+                   a{
+                       color: $colorBlanc;
+                   }
+                    border: 1px solid $colorNaranje;
+                }
+
+            }
+
+        }
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        height: 18vh;
+        div{
+            background-color: $colorNaranje;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            color: $colorNegLetra;
+            h4{
+                margin: 10px auto 0;
+                color: $colorNegLetra;
+            }
+            ul{
+                margin: 10px;
+                width: 50%;
+                height: 40px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin: -10px auto auto;
+                li{
+                    list-style: none;
+                    a{
+                        i{
+                            color: $colorNegLetra;
+                            margin: 5px;
+                            
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    /*estilos formulario*/
+    .overlay{
+        width: 100vw;
+        height: 100vh;
+        // background-color: rgba(0,0,0,.6);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .popup{
+            width: 90%;
+            height: 90%;
+            // background-color: $colorBlanc;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .contentBtn{
+                border-radius: 10px;
+                width: 90%;
+                height: 70px;
+                background-color:#e88431;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                button{
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50px;
+                    background-color:white;
+                    border: none;
+                    margin-right: 20px;
+                    outline: none;
+                    box-shadow: 0px 0px 5px 2px $colorNarLetra;
+                    i{
+                        color: #276967;
+                    }
+                }
+               
+            }
+            .formulario{
+                width: 90%;
+                height: 80%;
+                border: 1px solid rgba(255,255,255,0.5);
+                margin: 5px auto auto;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(255, 255, 255, 0.3);
+                backdrop-filter: blur(20px);
+                box-shadow: 0 10px 20px 5px rgba(0,0,0,0.05);
+                h1{
+                    margin-top: 20px;
+                }
+                form{
+                    width: 95%;
+                    height: 80%;
+                    // border: 1px solid rgba(255,255,255,0.5);
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    legend{
+                        text-align: center;
+                    }
+                    label{
+                        width: 60%;
+                        height: 40px;
+                        display: flex;
+                        overflow: hidden;
+                        input{
+                            width: 100%;
+                            height: 100%;
+                            margin: auto;
+                            border:none;
+                            border-bottom: 1px solid rgba(0,0,0,.6);
+                            background-color: transparent;
+                            outline: none;
+                        }
+                        input::placeholder{
+                            color:$colorNegLetra;
+                            transition: .5s;
+                        }
+                        input:focus::placeholder{
+                            transform: translateY(30px);
+
+                        }
+                    }
+                    .botonForm{
+                        width: 70%;
+                        height: 50px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-around;
+                        input{
+                            background-color: rgba(143, 135, 135, 0.158);
+                            backdrop-filter: blur(10px);
+                            width: 40%;
+                            height: 80%;
+                            border: none;
+                            outline: none;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            font-size: .8em;
+                            transition: .2s;
+                            &:hover{
+                                background-color: $colorNarClaroLetra;
+                                backdrop-filter: blur(10px);
+                                color: $colorBlanc;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: .5s;
+
+    }
+    /*---------------cards de ususario*/
+    .cajaCards {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255,255,255,.5);
+        backdrop-filter: blur(20px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .containBtnCerrar{
+            width: 90%;
+            height: 50px;
+            background-color: rgba(0,0,0,.4);
+            backdrop-filter: blur(20px);
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            button{
+                width: 50px;
+                height: 50px;
+                background-color: #cb8617;
+                border: none;
+                border-radius: 50%;
+                i{
+                    font-size: 1.5em;
+                }
+            }
+        }
+        .cards{
+            width: 90vw;
+            height: auto;
+            border-radius: 0 0 10px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: rgba(0,0,0,.4);
+            backdrop-filter: blur(20px);
+            .icono{
+                width: 100px;
+                height: 100px;
+                background-color: #e8a63b;
+                display: flex;
+                margin:20px auto ;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                i{
+                    font-size: 4em;
+                }
+            }
+            .date{
+                width: 80%;
+                margin: 5px auto;
+                display: flex;
+                flex-direction: column;
+                border-radius: 5px;
+                h1{
+                    font-size: 1.3em;
+                    text-align: center;
+                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                }
+                p{
+                    display: block;
+                    border-radius: 10px;
+                    font-size: .9em;
+                    text-align: center;
+                    background-color: rgba(238, 238, 238, 0.9);
+                    padding: 8px 0px;
+                    border-bottom: 1px solid #eba63b;
+                }
+            }
+        }
+        visibility: hidden;
+    }
+    
+    /*OCULTAMOS LA PORTADA*/
+    .active{
+        transition: .5s;
+        visibility: hidden;
+        transform: translateX(-110%);
+    }
+    .activeDos{
+        visibility: visible;
+        transition: .5s;
+        transform: translateY(0%);
+    }
+
+    // .titulo,
+    // .sliderProducpizza,
+    // .menuPizza,
+    // .contenedorPortada,
+    // .footerPortada,
+    // header
+    // {
+    //     visibility: hidden;
+    // }
+
+}
