@@ -57,3 +57,13 @@ btnAbrirCard.addEventListener('click',()=>{
 btnCerrarCard.addEventListener('click',()=>{
     cardCerrar.classList.remove("activeDos")
 })
+
+
+verCarrito.addEventListener('click', ()=>{
+    carritoCards.classList.add("activeDos")
+})
+
+cerrarCarrito.addEventListener('click',()=>{
+    carritoCards.classList.remove("activeDos")
+} )
+

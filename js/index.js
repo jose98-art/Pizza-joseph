@@ -1,96 +1,151 @@
-const pizzasCargar = [
-    {id:1, img:"./image/pizzaMargarita.jpg", nombre:"Margarita", precioG: 180, precioCh:210,},
-    {id:2, img:"./image/pizzaPepperoni.jpg", nombre:"Pepperoni",  precioG: 00,  precioCh:00,},
-    {id:3, img:"./image/pizzaCuatroQuesos.jpg", nombre:"Cuatro Quesos",  precioG: 00, precioCh:00,},
-    {id:4, img:"./image/pizzaChampi.jpg", nombre:"Champiñon",  precioG: 00,  precioCh:00,},
-    {id:5, img:"./image/pizzaMarinera.jpg", nombre:"Marinera",  precioG: 00,  precioCh:00,},
-    {id:6, img:"./image/pizzaNapolitao.jpg", nombre:"Napolitana",  precioG: 00,  precioCh:00,},
-    {id:7, img:"./image/pizzaNYQ.jpeg", nombre:"Neoyorquina",  precioG: 00,  precioCh:00,},
-    {id:8, img:"./image/pzzafugazza.jpg", nombre:"Fugazza",  precioG: 00,  precioCh:00,},
-    {id:9, img:"./image/pizzaCuatroEstaciones.jpg", nombre:"Cuatro Estaciones",  precioG: 00,  precioCh:00,},
-    {id:10, img:"./image/hawaiana.jpg",nombre:"Hawaiana",  precioG: 00,  precioCh:00,}
-]
-const ensaladasCargar = [
-    {id:1, img:"./image/ensaladaCaprese.jpg", nombre:"Caprese", precioG: 180, precioCh:210,},
-    {id:2, img:"./image/ensaladaCesar.jpg", nombre:"Cesar",  precioG: 00,  precioCh:00,},
-    {id:3, img:"./image/ensaladaColeslaw.jpg", nombre:"Coleslaw",  precioG: 00, precioCh:00,},
-    {id:4, img:"./image/ensaladaGrega.jpg", nombre:"Grega",  precioG: 00,  precioCh:00,},
-    {id:5, img:"./image/ensaladaMixta.jpg", nombre:"Mixta",  precioG: 00,  precioCh:00,},
-    {id:6, img:"./image/ensaladaNicoise.jpg", nombre:"Nicoise",  precioG: 00,  precioCh:00,},
-    {id:7, img:"./image/ensaladaPanzanella.jpg", nombre:"Panzanella",  precioG: 00,  precioCh:00,},
-    {id:8, img:"./image/ensaladaRusa.jpg", nombre:"Rusa",  precioG: 00,  precioCh:00,},
-    {id:9, img:"./image/ensaladaTabule.jpg", nombre:"Tabule",  precioG: 00,  precioCh:00,},
-    {id:10, img:"./image/ensaladaWaldorf.jpg",nombre:"Waldorf",  precioG: 00,  precioCh:00,}
-]
-const sodasCargar = [
-    {id:1, img:"./image/rCoca.jpg", nombre:"", precioG: 180, precioCh:210,},
-    {id:2, img:"./image/rFanta.jpg", nombre:"",  precioG: 00,  precioCh:00,},
-    {id:3, img:"./image/rPepper.jpg", nombre:"",  precioG: 00, precioCh:00,},
-    {id:4, img:"./image/rPepsi.jpg", nombre:"",  precioG: 00,  precioCh:00,},
-    {id:5, img:"./image/rSprite.jpg", nombre:"",  precioG: 00,  precioCh:00,}
-]
-const alitasCargar = [
-    {id:1, img:"./image/alitasAjillo.jpg", nombre:"", precioG: 180, precioCh:210,},
-    {id:2, img:"./image/alitasBuffalo.jpg", nombre:"",  precioG: 00,  precioCh:00,},
-    {id:3, img:"./image/alitasCitricos.jpg", nombre:"",  precioG: 00, precioCh:00,},
-    {id:4, img:"./image/alitasCurry.jpg", nombre:"",  precioG: 00,  precioCh:00,},
-    {id:5, img:"./image/alitasDeshuesadas.jpg", nombre:"",  precioG: 00,  precioCh:00,},
-    {id:6, img:"./image/alitasSoja.jpg", nombre:"",  precioG: 00,  precioCh:00,}
-]
-const postresCargar = [
-    {id:1, img:"./image/pGelato.png", nombre:"", precioG: 180, precioCh:210,},
-    {id:2, img:"./image/pMilHojas.jpg", nombre:"",  precioG: 00,  precioCh:00,},
-    {id:3, img:"./image/pPanaCotta.jpg", nombre:"",  precioG: 00, precioCh:00,},
-    {id:4, img:"./image/pTarta.jpg", nombre:"",  precioG: 00,  precioCh:00,},
-    {id:5, img:"./image/pTiramisu.jpg", nombre:"",  precioG: 00,  precioCh:00,},
-    {id:6, img:"./image/pPatafrola.jpg", nombre:"",  precioG: 00,  precioCh:00,}
-]
-
 const agregarProductoPizza = document.getElementById('pizzas')
-pizzasCargar.forEach((producto) =>{
-    agregarProductoPizza.innerHTML += `
-                                <div class="producPizza">
-                                    <div class="imagen">
-                                            <img src=${producto.img} alt="N">
-                                    </div>
-                                    <div class="nombrePizza">
-                                        <h5>${producto.nombre}</h5>
-                                    </div>
-                                    <div class="iforma">
-                                        <div class="contePrecio">
-                                                <p class="precio">G $ ${producto.precioG}</p>
-                                                <button class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
+function crearCardsPizza(){
+    pizzasCargar.forEach((producto) =>{
+        agregarProductoPizza.innerHTML += `
+                                    <div class="producPizza">
+                                        <div class="imagen">
+                                                <img src=${producto.img} alt="N">
                                         </div>
-                                        <div class="contePrecio">
-                                            <p class="precio">CH $ ${producto.precioCh}</p>
-                                            <button class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
+                                        <div class="nombrePizza">
+                                            <h5>${producto.nombre}</h5>
                                         </div>
-                                    </div>
-                                </div>`
-})
+                                        <div class="iforma">
+                                            <div class="contePrecio">
+                                                    <p class="precio"> $ ${producto.precio}</p>
+                                                    <button id="btnAgregar${producto.id}" class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>`
+    })
+}
+
+function botonAgregar(){
+    pizzasCargar.forEach(prod =>{
+        document.getElementById(`btnAgregar${prod.id}`).addEventListener('click', ()=>{
+            console.log(prod)
+            agregarCarrito(prod)
+        })
+    })
+}
+
+function agregarCarrito(prod){
+    let existe = carrito.some((productoSome) => productoSome.id === prod.id)
+    if (existe === false){
+        prod.cantidad = 1
+        carrito.push(prod)
+    }else{
+        let prodFind = carrito.find((productoFind) => productoFind.id == prod.id)
+        prodFind.cantidad++
+    }
+    // carrito.push(prod)
+    console.log(carrito)
+    presentandoCarrito()
+}
+
+function presentandoCarrito(prod){
+    seMuestraProducto.innerHTML = ""
+    carrito.forEach(prod =>{
+        seMuestraProducto.innerHTML += ` 
+        <div class="articulos">
+        <p>${prod.nombre}</p>
+        <p>${prod.precio}</p>
+        <p>${prod.cantidad}</p>
+        <p class="eliminar" id="eliminar${prod.id}"><i class="fa-solid fa-trash-can"></i></p>
+      </div>`
+    })
+    localStorage.setItem("carrito",JSON.stringify(carrito))
+    borrarProducto()
+    contadorYlocal()
+    
+}
+
+function contadorYlocal(){
+    contador.innerText = carrito.length
+    totalPagar.innerText = carrito.reduce((acc, prod)=>acc+(prod.precio * prod.cantidad),0)
+}
+
+function borrarProducto(){
+    carrito.forEach(prod =>{
+        document.getElementById(`eliminar${prod.id}`).addEventListener('click', ()=>{
+            console.log("click",prod)
+            carrito = carrito.filter((productosFilter) => productosFilter.id !== prod.id)
+            presentandoCarrito()
+            
+
+    })
+    }
+    )
+}
+
+presentandoCarrito()
+crearCardsPizza()
+botonAgregar() 
+
 
 const agregarProductoEnsalada = document.getElementById('ensalada')
-ensaladasCargar.forEach((producto) =>{
-    agregarProductoEnsalada.innerHTML += `
-                                <div class="producEnsalada">
-                                    <div class="imagen">
-                                            <img src=${producto.img} alt="N">
-                                    </div>
-                                    <div class="nombreEnsalada">
-                                        <h5>${producto.nombre}</h5>
-                                    </div>
-                                    <div class="iforma">
-                                        <div class="contePrecio">
-                                                <p class="precio">G $ ${producto.precioG}</p>
-                                                <button class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
+function crearCardsEnsalada(){
+    ensaladasCargar.forEach((producto) =>{
+        agregarProductoEnsalada.innerHTML += `
+                                    <div class="producEnsalada">
+                                        <div class="imagen">
+                                                <img src=${producto.img} alt="N">
                                         </div>
-                                        <div class="contePrecio">
-                                            <p class="precio">CH $ ${producto.precioCh}</p>
-                                            <button class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
+                                        <div class="nombreEnsalada">
+                                            <h5>${producto.nombre}</h5>
                                         </div>
-                                    </div>
-                                </div>`
-})
+                                        <div class="iforma">
+                                            <div class="contePrecio">
+                                                    <p class="precio"> $ ${producto.precio}</p>
+                                                    <button id="agregarEnsalada${producto.id}" class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>`
+    })
+}
+
+function agregarEnsalada(){
+    ensaladasCargar.forEach(prod =>{
+        document.getElementById(`agregarEnsalada${prod.id}`).addEventListener('click',()=>{
+            console.log(prod)
+            agregarCarritoEnsalada(prod)
+        })
+    })
+}
+
+function agregarCarritoEnsalada(prod){
+    let existe = carrito.some((productoSome) => productoSome.id === prod.id)
+    if (existe === false){
+        prod.cantidad = 1
+        carrito.push(prod)
+    }else{
+        let prodFind = carrito.find((productoFind) => productoFind.id == prod.id)
+        prodFind.cantidad++
+    }
+    console.log(carrito)
+    agregarEnsaladaCarrito()
+}
+function agregarEnsaladaCarrito(){
+    seMuestraProducto.innerHTML = ""
+    carrito.forEach(prod =>{
+        seMuestraProducto.innerHTML += ` 
+        <div class="articulos">
+        <p>${prod.nombre}</p>
+        <p>${prod.precio}</p>
+        <p>${prod.cantidad}</p>
+        <p class="eliminar" id="eliminar${prod.id}"><i class="fa-solid fa-trash-can"></i></p>
+      </div>`
+    })
+    localStorage.setItem("carrito",JSON.stringify(carrito))
+    borrarProducto()
+    contadorYlocal()
+}
+
+
+crearCardsEnsalada()
+agregarEnsalada()
+
 
 const agregarProductoSoda = document.getElementById('soda')
 sodasCargar.forEach((producto) =>{
@@ -104,13 +159,10 @@ sodasCargar.forEach((producto) =>{
                                     </div>
                                     <div class="iforma">
                                         <div class="contePrecio">
-                                                <p class="precio">G $ ${producto.precioG}</p>
+                                                <p class="precio">G $ ${producto.precio}</p>
                                                 <button class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
                                         </div>
-                                        <div class="contePrecio">
-                                            <p class="precio">CH $ ${producto.precioCh}</p>
-                                            <button class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
-                                        </div>
+                                       
                                     </div>
                                 </div>`
 })
@@ -127,13 +179,10 @@ alitasCargar.forEach((producto) =>{
                                     </div>
                                     <div class="iforma">
                                         <div class="contePrecio">
-                                                <p class="precio">G $ ${producto.precioG}</p>
+                                                <p class="precio">G $ ${producto.precio}</p>
                                                 <button class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
                                         </div>
-                                        <div class="contePrecio">
-                                            <p class="precio">CH $ ${producto.precioCh}</p>
-                                            <button class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
-                                        </div>
+                                       
                                     </div>
                                 </div>`
 })
@@ -150,13 +199,10 @@ postresCargar.forEach((producto) =>{
                                     </div>
                                     <div class="iforma">
                                         <div class="contePrecio">
-                                                <p class="precio">G $ ${producto.precioG}</p>
+                                                <p class="precio">G $ ${producto.precio}</p>
                                                 <button class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
                                         </div>
-                                        <div class="contePrecio">
-                                            <p class="precio">CH $ ${producto.precioCh}</p>
-                                            <button class="buttonAgregar"><i class="fa-solid fa-cart-shopping"></i></button>
-                                        </div>
+                                       
                                     </div>
                                 </div>`
 })
@@ -203,6 +249,5 @@ function crearCards(){
     })
 }
 
-btnGenerar.addEventListener('click',registroUsuario)
 btnGuardar.addEventListener('click',guardarDatosUsuario)
 crearCards()

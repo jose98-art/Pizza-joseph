@@ -23,7 +23,7 @@
               <a class="nav-link text-bg-dark m-2" href="#">Dark´s Pizza</a>
             </li>
             <li class="nav-item">
-                <i class="fa-solid fa-cart-shopping  text-bg-dark p-3" id="verCarrito"> <sub>0</sub> </i>
+                <i class="fa-solid fa-cart-shopping  text-bg-dark p-3" id="verCarrito"> <sub id="contador">0</sub> </i>
             </li>
             <li>
               <i class="fa-solid fa-clipboard-list text-bg-dark p-3" id="registro"></i>
@@ -41,7 +41,7 @@
         Dark´s PIZZA
     </h1>
     <!--MENU PRINCIPAL DE PRODUCTOS-->
-    <div class="sliderProducpizza">
+    <div class="sliderProducpizza" id="principal">
           <div class="cajaImage">
             <h4>PIZZA</h4>
             <img src="./image/pizza1.png" alt="pizzaPeperoni">
@@ -124,8 +124,38 @@
       </div>
 
 <!-------CARRITO------------>
-  <div class="carrito">
 
+
+
+  <div class="carritoCards" id="carritoCards">
+    
+    <div class="btnCerrarCarrito">
+      <h1></h1>
+      <button id="btnCerrarCarrito"><i class="fa-solid fa-xmark"></i></button>    
+    </div>
+    <!-- <p>tu carrito esta vacio</p> -->
+    <div class="carritoAgregado">
+      <div class="cabeceraCarrito">
+        <p>Nombre</p>
+        <p>Precio</p>
+        <p>Cantidad de productos</p>
+        <p>Eliminar</p>
+      </div>
+      <div class="productosCarrito" id="seMuestraProducto">
+       
+       
+      </div>
+      <div class="productosCarrito" id="seMuestraProductoEnsalda">
+       
+       
+      </div>
+  <p class="total">Total: $ <span id="total">00.00</span> </p>
+  <button class="btnPagar" id="btnPagar" value="PAGAR">Pagar</button>
+    </div>
+
+
+    
+    
   </div>
 
 <!--PORTADA-->
@@ -182,7 +212,6 @@
 
                 <div class="botonForm">
 
-                    <input id="capturar"  type="button" value="REGISTRAR">
 
                     <input  type="reset" value="GUARDAR" id="guardar">
 
@@ -202,6 +231,7 @@
   
 <!--SCRIPTS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/bdt.js"></script>
 <script src="js/varCons.js"></script>
 <script src="js/eventos.js"></script>
 <script src="js/index.js"></script>

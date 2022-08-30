@@ -93,6 +93,7 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
         bottom: 0;
         left: 0;
         right: 0;
+        z-index: 100;
         .contBC{
             width: 100%;
             height: 60px;
@@ -125,6 +126,7 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
             left: 0;
             bottom: 0;
             right: 0;
+            padding-bottom:70px ;
             background-color: rgb(255, 255, 255);
             display: flex;
             flex-direction: row;
@@ -139,8 +141,8 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
             .producSoda,
             .producAlita,
             .producPostre{
-                width: 45%;
-                height: 40vh;
+                width: 40%;
+                height: 30vh;
                 margin: 20px auto;
                 border-radius: 10px;
                 background: rgba(235, 235, 235,.8);
@@ -149,7 +151,7 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                 backdrop-filter: 20px;
                 .imagen{
                     width: 95%;
-                    height: 20vh;
+                    height: 15vh;
                     margin: auto;
                     border-radius:10px;
                     img{
@@ -161,10 +163,11 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                 .nombrePizza,.nombreEnsalada,.nombreSoda,.nombreAlita,.nombrePostre{
                     margin-top: 10px;
                     width: 100%;
-                    height: 5vh;
+                    height: 3vh;
                     border-radius: 10px 10px 0 0;
                     background-color: $colorBlackOpaci;
                     h5{
+                        font-size: .8em;
                         text-align: center;
                     }
                 }
@@ -174,12 +177,13 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
-                    height: 13vh;
+                    height: 10vh;
                     border-radius: 0 0 10px 10px;
                     .contePrecio{
                         width: 45%;
                         height: 95%;
                         .precio{
+                            font-size: .8em;
                             margin: 0;
                             border-radius: 10px 10px 0 0;
                             height: 30%;
@@ -199,7 +203,7 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                                 background-color: rgba(143, 135, 135, 0.339);
                             }
                                 i{
-                                font-size: 1.7em;
+                                font-size: 1.3em;
                                 color: $colorNarLetra;
                             }
                         }
@@ -540,6 +544,131 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
         }
         visibility: hidden;
     }
+
+    /*-----CARRIITO--------*/
+    .carritoCards{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 10px 20px 5px rgba(0,0,0,0.05);        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+        overflow: auto;
+        .btnCerrarCarrito{
+            width: 100vw;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius:10px ;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.188);
+            backdrop-filter: blur(20px);
+            h1{
+                margin-left: 20px;
+            }
+            button{
+                width: 35px;
+                height: 35px;
+                border: none;
+                border-radius: 50%;
+                background-color: #276967;
+                margin-right: 20px;
+                i{
+                    font-size: 1.1em;
+                }
+            }
+        }
+        .carritoAgregado{
+            width: 90vw;
+            height: auto;
+            margin-top:50px ;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.188);
+            backdrop-filter: blur(20px);
+            .cabeceraCarrito{
+                width: 100%;
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                background-color: $colorNaranje;
+                color: $colorBlanc;
+                border-radius: 5px;
+
+                p{
+                    width: 25%;
+                    height: 100%;
+                    margin: 0;
+                    text-align: center;
+                    font-size: .9em;
+                    font-weight: bold;
+                }
+            }
+            .productosCarrito{
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                
+                .articulos{
+                    display: flex;
+                    p{
+                        width: 25%;
+                        padding: 2px;
+                        height: 50px;
+                        font-size: .8em;
+                        word-wrap: break-word;
+                        border-right: 1px solid rgba(255,255,255,.5);
+                        
+                    }
+                    .eliminar{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            i{
+                                font-size: 1.3em;
+    
+                            }
+                        }
+                }
+            }
+
+                
+            .total{
+                margin-left:10px ;
+                font-weight: bold;
+                span{
+                    font-style: italic;
+                    font-weight: 400;
+                }
+            }
+            .btnPagar{
+                width: 70px;
+                height: 25px;
+                font-size: .8em;
+                border-radius: 5px;
+                margin-left: 30px;
+                margin-bottom: 10px;
+                background-color: #000;
+                color: white;
+                border: none;
+                outline: none;
+                &:hover{
+                    background-color: rgba(0,0,0,.7);
+                }
+            }
+
+        }
+        visibility: hidden;
+    }
     
     /*OCULTAMOS LA PORTADA*/
     .active{
@@ -547,18 +676,22 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
         visibility: hidden;
         transform: translateX(-110%);
     }
-    .activeDos{
+    .activeDos
+    {
         visibility: visible;
         transition: .5s;
         transform: translateY(0%);
     }
 
-    // .titulo,
+    // .titulo,   .carritoCards,
+    // .contenedorPortada,
     // .sliderProducpizza,
-    // .menuPizza,
+    // .menuPizza
     // .contenedorPortada,
     // .footerPortada,
     // header
+    
+
     // {
     //     visibility: hidden;
     // }
