@@ -31,17 +31,12 @@ const totalPagar = document.getElementById("total")
 const btnAbrirCard = document.getElementById("verCard")
 const btnCerrarCard = document.getElementById("btnCerrarCard")
 const cardCerrar = document.getElementById("cards")
-
 const btnGuardar = document.getElementById("guardar")
-
-let datosCompletos = JSON.parse(localStorage.getItem("datos")) || []
-
-let carrito = JSON.parse(localStorage.getItem("carrito")) || []
-
-const carritoCards = document.getElementById("carritoCards")
-
 const seMuestraProducto = document.getElementById("seMuestraProducto")
-const seMuestraProductoEnsalada = document.getElementById("seMuestraProductoEnsalda")
-
 const verCarrito = document.getElementById("verCarrito")
 const cerrarCarrito = document.getElementById("btnCerrarCarrito")
+let datosCompletos = JSON.parse(localStorage.getItem("datos")) || []
+let carrito = JSON.parse(localStorage.getItem("carrito")) || []
+const carritoCards = document.getElementById("carritoCards")
+
+
