@@ -25,204 +25,8 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
         font-family: 'Courier New', Courier, monospace;
         font-style: italic;
     }
-    /*contenido*/
-    .sliderProducpizza{
-        width: 100vw;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        overflow: auto;
-        .cajaImage{
-            margin: auto;
-            width: 145px;
-            height: 230px;
-            border-radius: 10px;
-            background: #ebebeb;
-            box-shadow:  5px 5px 10px #5e5e5e,
-                        -5px -5px 10px #ffffff;
-            transition: .5s;
-            margin-bottom: 20px;
-            &:hover{
-                transform: scale(1.05);
-            }
-
-            
-            h4{
-                display: table;
-                padding: 2px;
-                margin: 5px 10px;
-                font-size: .8em;
-                border: 1px solid #000;
-                background-color: #000;
-                color: #fff;
-                border-radius: 0 4px 4px 4px;
-                
-            }
-            img{
-                display: block;
-                width: 90%;
-                height: 60%;
-                margin: auto;
-                border-radius: 50%;
-                box-shadow: 0px 0px 10px rgb(146, 148, 142);
-            }
-            .btnVer{
-                display: block;
-                outline: none;
-                border: none;
-                margin: 15px auto;
-                font-size: .7em;
-                padding: 2px 15px;
-                border-radius: 7px;
-                background-color: #000;
-                color: #fff;
-
-            }
-        }
     
-    }
-    /*PRODUCTOS A MOSTRAR*/
-    .menuPizza,.menu{
-        background-color: rgba(0,0,0,.6);
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-        .contBC{
-            width: 100%;
-            height: 60px;
-            background-color:orange;
-           display: flex;
-           align-items: center;
-           justify-content:space-around;
-           span{
-            font-size: 1.5em;
-            font-weight: 600;
-           }
-            .btnCerras{
-                width: 50px;
-                height: 50px;
-                margin-right: -40px;
-                border-radius: 50%;
-                outline: none;
-                border:none;
-                i{
-                font-size: 1.2em;
-                }  
-            }
-        }
-        .pizzas,
-        .caja_estilos{
-            width: 95%;
-            height: 90vh;
-            position: fixed;
-            top: 60px;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            padding-bottom:70px ;
-            background-color: rgb(255, 255, 255);
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content:space-between;
-            margin: auto;
-            overflow: auto;
-            border-radius: 10px;
-            .producPizza,
-            .producEnsalada,
-            .producSoda,
-            .producAlita,
-            .producPostre{
-                width: 35%;
-                height: 30vh;
-                margin: 20px auto;
-                border-radius: 10px;
-                background: rgba(235, 235, 235,.8);
-                box-shadow:  5px 5px 10px #5e5e5e,
-                                -5px -5px 10px #ffffff;
-                backdrop-filter: blur(20px);
-                .imagen{
-                    width: 95%;
-                    height: 15vh;
-                    margin: auto;
-                    border-radius:10px;
-                    img{
-                        cursor: pointer;
-                        border-radius:10px;
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-                .nombrePizza,.nombreEnsalada,.nombreSoda,.nombreAlita,.nombrePostre{
-                    margin-top: 10px;
-                    width: 100%;
-                    height: 3vh;
-                    border-radius: 10px 10px 0 0;
-                    background-color: $colorBlackOpaci;
-                    h5{
-                        font-size: .8em;
-                        text-align: center;
-                    }
-                }
-                .iforma{
-                    background-color: $colorBlackOpaci;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-around;
-                    height: 10vh;
-                    border-radius: 0 0 10px 10px;
-                    .contePrecio{
-                        width: 45%;
-                        height: 95%;
-                        .precio{
-                            font-size: .8em;
-                            margin: 0;
-                            border-radius: 10px 10px 0 0;
-                            height: 30%;
-                            text-align: center;   
-                            border-bottom: .5px solid $colorNarClaroLetra;
-                            
-                        }
-                        .buttonAgregar{
-                            width: 100%;
-                            background-color: $colorBlackOpaci;
-                            height: 50%;
-                            border-radius: 10px;
-                            border: none;
-                            outline: none;
-                            margin-top: 10px;
-                            &:hover{
-                                background-color: rgba(143, 135, 135, 0.339);
-                            }
-                                i{
-                                font-size: 1.3em;
-                                color: $colorNarLetra;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        visibility: hidden;
-        transform: translateX(-100%);
-        transition: .5s;
-    }
-   .swal-p{
-    font-size: .7em;
-    word-wrap:break-word;
-    text-align: center;
-    color: rgb(0, 0, 0);
-   }
-
+    
     /*portada*/
     .contenedorPortada{
         position: fixed;
@@ -283,8 +87,11 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                 font-family: $fuenteuno;
                 font-style: italic;
                 border-radius: 6px;
-                text-decoration: none;
-                color: $colorNarClaroLetra;
+                a{
+                    text-decoration: none;
+                    color: $colorNarClaroLetra;
+
+                }
                 &:active{
                     color:$colorBlanc ;
                    a{
@@ -326,6 +133,7 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                 margin: -10px auto auto;
                 li{
                     list-style: none;
+                    transition: .5s;
                     a{
                         i{
                             color: $colorNegLetra;
@@ -333,225 +141,133 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                             
                         }
                     }
+                    &:hover{
+                        transform: scale(1.5);
+                    }
                 }
             }
 
         }
     }
-    /*estilos formulario*/
-    .overlay{
-        width: 100vw;
-        height: 100vh;
-        // background-color: rgba(0,0,0,.6);
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        .popup{
-            width: 90%;
-            height: 90%;
-            // background-color: $colorBlanc;
-            border-radius: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .contentBtn{
-                border-radius: 10px;
-                width: 90%;
-                height: 70px;
-                background-color:#e88431;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                button{
-                    width: 50px;
-                    height: 50px;
-                    border-radius: 50px;
-                    background-color:white;
-                    border: none;
-                    margin-right: 20px;
-                    outline: none;
-                    box-shadow: 0px 0px 5px 2px $colorNarLetra;
-                    i{
-                        color: #276967;
-                    }
-                }
-               
-            }
-            .formulario{
-                width: 90%;
-                height: 80%;
-                border: 1px solid rgba(255,255,255,0.5);
-                margin: 5px auto auto;
-                border-radius: 15px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                background-color: rgba(255, 255, 255, 0.3);
-                backdrop-filter: blur(20px);
-                box-shadow: 0 10px 20px 5px rgba(0,0,0,0.05);
-                h1{
-                    margin-top: 20px;
-                }
-                form{
-                    width: 95%;
-                    height: 80%;
-                    // border: 1px solid rgba(255,255,255,0.5);
-                    margin: auto;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-around;
-                    legend{
-                        text-align: center;
-                    }
-                    label{
-                        width: 60%;
-                        height: 40px;
-                        display: flex;
-                        overflow: hidden;
-                        input{
-                            width: 100%;
-                            height: 100%;
-                            margin: auto;
-                            border:none;
-                            border-bottom: 1px solid rgba(0,0,0,.6);
-                            background-color: transparent;
-                            outline: none;
-                        }
-                        input::placeholder{
-                            color:$colorNegLetra;
-                            transition: .5s;
-                        }
-                        input:focus::placeholder{
-                            transform: translateY(30px);
-
-                        }
-                    }
-                    .botonForm{
-                        width: 70%;
-                        height: 50px;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: center;
-                        justify-content: space-around;
-                        input{
-                            background-color: rgba(143, 135, 135, 0.158);
-                            backdrop-filter: blur(10px);
-                            width: 40%;
-                            height: 80%;
-                            border: none;
-                            outline: none;
-                            border-radius: 10px;
-                            cursor: pointer;
-                            font-size: .8em;
-                            transition: .2s;
-                            &:hover{
-                                background-color: $colorNarClaroLetra;
-                                backdrop-filter: blur(10px);
-                                color: $colorBlanc;
-                            }
-                        }
-                    }
-
-                }
-            }
-        }
-        visibility: hidden;
-        transform: translateY(-100%);
-        transition: .5s;
-
+    .title{
+        background-color: rgb(219, 165, 79);
+        color: white;
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-style: italic;
+        width: 100%;
     }
-    /*---------------cards de ususario*/
-    .cajaCards {
+    
+    .uno{
+        position: absolute;
+        top: 8vh;
+    }
+    .dos{
+        position: absolute;
+        top: 190vh;
+    }
+    .tres{
+        position: absolute;
+        top: 370vh;
+    }
+    .cuatro{
+        position: absolute;
+        top: 510vh;
+    }
+    .cinco{
+        position: absolute;
+        top: 630vh;
+    }
+    .productos{
+        overflow: auto;
         width: 100vw;
-        height: 100vh;
-        position: fixed;
-        top:0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(255,255,255,.5);
-        backdrop-filter: blur(20px);
+        height: auto;
         display: flex;
-        align-items: center;
-        justify-content: center;
         flex-direction: column;
-        .containBtnCerrar{
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 15vh;
+        .card{
+            border: none;
+            background: rgba(235, 235, 235, 0);
+            box-shadow:  5px 5px 10px #5e5e5e,
+                            -5px -5px 10px #ffffff;
             width: 90%;
-            height: 50px;
-            background-color: rgba(0,0,0,.4);
-            backdrop-filter: blur(20px);
-            border-radius: 10px 10px 0 0;
+            height: 13vh;
             display: flex;
+            flex-direction: row;
             align-items: center;
-            justify-content: flex-end;
-            button{
-                width: 50px;
-                height: 50px;
-                background-color: #cb8617;
-                border: none;
-                border-radius: 50%;
-                i{
-                    font-size: 1.5em;
-                }
-            }
-        }
-        .cards{
-            width: 90vw;
-            height: auto;
-            border-radius: 0 0 10px 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            background-color: rgba(0,0,0,.4);
-            backdrop-filter: blur(20px);
-            .icono{
-                width: 100px;
-                height: 100px;
-                background-color: #e8a63b;
-                display: flex;
-                margin:20px auto ;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                i{
-                    font-size: 4em;
-                }
-            }
-            .date{
-                width: 80%;
-                margin: 5px auto;
-                display: flex;
-                flex-direction: column;
-                border-radius: 5px;
-                h1{
-                    font-size: 1.3em;
-                    text-align: center;
-                    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            justify-content: space-around;
+            margin-top: 7vh;
+            
+            .contentImage{
+                width: 35%;
+                height: 90%;
+                border-radius: 5px ;
+                img{
+                    width: 100%;
+                    height: 75%;
+                    object-fit: cover;
+                    border-radius: 5px ;
                 }
                 p{
+                    border-radius: 5px;
                     display: block;
-                    border-radius: 10px;
-                    font-size: .9em;
+                    width: 100%;
+                    height: 25%;
                     text-align: center;
-                    background-color: rgba(238, 238, 238, 0.9);
-                    padding: 8px 0px;
-                    border-bottom: 1px solid #eba63b;
+                    font-size: .9em;
                 }
             }
-        }
-        visibility: hidden;
-    }
+            .contentInfor{
+                width: 60%;
+                height: 95%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                .precio{
+                    width: 30%;
+                    height: 30%;
+                    margin: auto;
+                    font-size: 1em;
+                    border-radius: 5px;
+                    margin: auto;
+                }
+                .ver{
+                    width: 30%;
+                    height: 40%;
+                    background-color: $colorBlackOpaci;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    margin: auto;
+                    font-size: 1em;
+                    transition: .5s;
 
-    /*-----CARRIITO--------*/
+                    &:hover{
+                        transform: scale(1.099);
+                    }
+                }
+                .agregarCarrito{
+                    width: 30%;
+                    height: 40%;
+                    background-color: $colorBlackOpaci;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    font-size: 1.3em;
+                    margin: auto;
+                    color: #000000;
+                    transition: .5s;
+                    &:hover{
+                        transform: scale(1.099);
+                    }
+                }
+
+            }
+        }
+    }
     .carritoCards{
         width: 100vw;
         height: 100vh;
@@ -577,6 +293,7 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
             margin-top: 20px;
             background-color: rgba(255, 255, 255, 0.188);
             backdrop-filter: blur(20px);
+            
             h1{
                 margin-left: 20px;
             }
@@ -587,6 +304,7 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                 border-radius: 50%;
                 background-color: #276967;
                 margin-right: 20px;
+                outline: none;
                 i{
                     font-size: 1.1em;
                 }
@@ -625,6 +343,13 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                 
                 .articulos{
                     display: flex;
+                    .precioUnitario{
+                        width: 30%;
+                        display: flex;
+                        flex-direction: column;
+                        font-size: .9em;
+                        text-align: center;
+                    }
                     p{
                         width: 25%;
                         padding: 2px;
@@ -644,10 +369,27 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
     
                             }
                         }
+                        .botones{
+                            height: 30px;
+                            width: 27%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-around;
+                            .boton{
+                                width: 25px;
+                                height: 25px;
+                                border: none;
+                                outline: none;
+                                border-radius: 4px;
+                                background-color:#276967;
+                                font-size: .7em;
+                            }
+                        }
                 }
+                
             }
 
-                
+            
             .total{
                 margin-left:10px ;
                 font-weight: bold;
@@ -675,31 +417,8 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
         }
         visibility: hidden;
     }
-    
-    /*OCULTAMOS LA PORTADA*/
-    .active{
-        transition: .5s;
-        visibility: hidden;
-        transform: translateX(-110%);
-    }
-    .activeDos
-    {
+    .ver{
         visibility: visible;
-        transition: .5s;
-        transform: translateY(0%);
     }
-
-    // .titulo,   .carritoCards,
-    // .contenedorPortada,
-    // .sliderProducpizza,
-    // .menuPizza
-    // .contenedorPortada,
-    // .footerPortada,
-    // header
-    
-
-    // {
-    //     visibility: hidden;
-    // }
 
 }
