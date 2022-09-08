@@ -92,12 +92,7 @@ function presentandoCarrito(){
           <span>${prod.precio}</span>
           <span>Total</span>
         </div>
-
-        <div class="botones">
-          <button class="decr boton" id="decr"><i class="fa-solid fa-minus"></i></button>
-          <span class="contar" id="contar">0</span>
-          <button class="incr boton" id="incr"><i class="fa-solid fa-plus"></i></button>
-        </div>
+        <p>${prod.cantidad}</p>
         <p class="eliminar" id="eliminar${prod.id}"><i class="fa-solid fa-trash-can"></i></p>
       </div>`
     })
