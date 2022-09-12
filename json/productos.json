@@ -1,0 +1,262 @@
+[
+    {
+        "id":1, 
+        "img":"../image/pizzaMargarita.jpg", 
+        "descripcion":"Masa de pizza italiana, Queso mozzarella, Hojas de albahaca fresca, Salsa de tomate, Aceite de oliva virgen",
+        "tipo":"pizza",
+        "nombre":"Pizza Margarita", 
+        "precio": 82
+    },
+    {
+        "id":2,
+        "img":"../image/pizzaPepperoni.jpg",
+        "descripcion":"Pepperoni, Salami, Queso mozzarella, Salsa de tomate, Queso parmesano",
+        "nombre":"Pizza Pepperoni",
+        "precio": 145
+    },
+    {
+        "id":3,
+        "img":"../image/pizzaCuatroQuesos.jpg",
+        "descripcion":"Salsa de tomate, Queso mozzarella, Queso azul, Queso parmesano, Queso de cabra",
+        "nombre":"Pizza Cuatro Quesos",
+        "precio": 85
+    },
+    {
+        "id":4,
+        "img":"../image/pizzaChampi.jpg",
+        "descripcion":"Queso mozzarella, Cebolla, Champiñones, Aceitunas, Queso parmesano",
+        "nombre":"Pizza Champiñon",
+        "precio": 100
+    }, 
+    {
+        "id":5,
+        "img":"../image/pizzaMarinera.jpg",
+        "descripcion":"Langostino, Aceitunas verdes, Alcaparras, Salsa de tomate, Albahaca, Tomates cherry",
+        "nombre":"Pizza Marinera",
+        "precio": 149
+    },
+    {
+        "id":6,
+        "img":"../image/pizzaNapolitao.jpg",
+        "descripcion":"Salsa de tomate, Queso mozzarella, Albahaca",
+        "nombre":"Pizza Napolitana",
+        "precio": 270
+    },
+    {
+        "id":7,
+        "img":"../image/pizzaNYQ.jpeg",
+        "descripcion":"Salsa tomate, Queso mozzarella, Aceite de olivo virgen extra",
+        "nombre":"Pizza Neoyorquina",
+        "precio": 260
+    },
+    {
+        "id":8,
+        "img":"../image/pzzafugazza.jpg",
+        "descripcion":"Aceitunas, Aceite de olivo virgen estra, Queso Mozzarella",
+        "nombre":"Pizza Fugazza",
+        "precio": 169
+    },
+    {
+        "id":9,
+        "img":"../image/pizzaCuatroEstaciones.jpg",
+        "descripcion":"Alcachofa, Aceitunas, Salami, Champiñones, Albahaca, Queso mozzarella, Salsa de tomate",
+        "nombre":"Pizza Cuatro Estaciones",
+        "precio": 130
+    },
+    {
+        "id":10,
+        "img":"../image/hawaiana.jpg",
+        "descripcion":"Salsa de tomate, Queso asadero, Jamon, Piña",
+        "nombre":"Pizza Hawaiana",
+         "precio": 84
+    },
+    {
+        "id":11,
+        "img":"../image/ensaladaCaprese.jpg",
+        "descripcion":"Queso mozzarella, Albahaca, Aceite de oliva, Vinagre balsámico, Jitomate",
+        "nombre":"Ensalada Caprese",
+        "precio": 125
+    },
+    {
+        "id":12,
+        "img":"../image/ensaladaCesar.jpg",
+        "descripcion":"Lechuga Romana, Queso Parmesano, Vinagre de Manzana, Salsa Perrins, Limón, Picatostes, Yema de Huevo, Ajo",
+        "nombre":"Ensalada Cesar",
+        "precio": 54
+    },
+    {
+        "id":13,
+        "img":"../image/ensaladaColeslaw.jpg",
+        "descripcion":"Col Blanca, Zanahoria, Manzana, Mayonesa, Crema Agria, Mostaza Dijon, Vinagre, Cebolla",
+        "nombre":"Ensalada Coleslaw",
+        "precio": 34
+    },
+    {
+        "id":14,
+        "img":"../image/ensaladaGrega.jpg",
+        "descripcion":"Tomate, Cebolla, Queso Feta, Aceite, Sal, Pepino, Aceitunas, Oregano, Vinagre de vino tinto, Miel",
+        "nombre":"Ensalada Griega",
+        "precio": 56
+    },
+    {
+        "id":15,
+        "img":"../image/ensaladaMixta.jpg",
+        "descripcion":"Aceite de oliva, Jugo Maggi, Jugo Inglesa, Jugo de limón, Lechuga Romana, Granos de elote, Tomates Cherry, Aceitunas, Semillas de girasol",
+        "nombre":"Ensalada Mixta",
+        "precio": 40
+    },
+    {
+        "id":16,
+        "img":"../image/ensaladaNicoise.jpg",
+        "descripcion":"Tomate, Cebolleta, Pimiento rojo, Huevo, Atún, Anchoas, Aceitunas negras, Papa, Alcaparras, Lechuga, Mostaza Dijon, Aceite Oliva, Vinagre",
+        "nombre":"Ensalada Nicoise",
+        "precio": 60
+    },
+    {
+        "id":17,
+        "img":"../image/ensaladaPanzanella.jpg",
+        "descripcion":"Pan duro, Cebolla, Vinagre Blanco, Tomates, Pepinos, Albahaca, Aceite Oliva",
+        "nombre":"Ensalada Panzanella",
+        "precio": 55
+    },
+    {
+        "id":18,
+        "img":"../image/ensaladaRusa.jpg",
+        "descripcion":"Zanahoria, Papas, Chicharo, Cebolla, Mayonesa, Perejil",
+        "nombre":"Ensalada Rusa",
+        "precio": 40
+    },
+    {
+        "id":19,
+        "img":"../image/ensaladaTabule.jpg",
+        "descripcion":"Bulgur, Cebolleta, Perejil, Hierbabuena, Tomates, Jugo de limón, Aceite Oliva",
+        "nombre":"Ensalada Tabule",
+        "precio": 180
+    },
+    {
+        "id":20,
+        "img":"../image/ensaladaWaldorf.jpg",
+        "descripcion":"Manzana Roja, Apio, Pasa, Lechuga Francesa, Nuez, Yogurt Natural, Mayonesa",
+        "nombre":"Ensalada Waldorf",
+         "precio": 160
+    },
+    {
+        "id":21,
+        "img":"../image/rCoca.jpg",
+        "descripcion":"355ml",
+        "nombre":"Coca 355ml",
+        "precio": 18
+    },
+    {
+        "id":22,
+        "img":"../image/rFanta.jpg",
+        "descripcion":"355ml",
+        "nombre":"Fanta 355ml",
+        "precio": 15
+    },
+    {
+        "id":23,
+        "img":"../image/rPepper.jpg",
+        "descripcion":"355ml",
+        "nombre":"Dr Pepper 355ml",
+        "precio": 13
+    },
+    {
+        "id":24,
+        "img":"../image/rPepsi.jpg",
+        "descripcion":"355ml",
+        "nombre":"Pepsi 355ml",
+        "precio": 12
+    },
+    {
+        "id":25,
+        "img":"../image/rSprite.jpg",
+        "descripcion":"355ml",
+        "nombre":"Sprite 355ml",
+        "precio": 15
+    },
+    {
+        "id":26,
+        "img":"../image/alitasAjillo.jpg",
+        "descripcion":"Oregano, Mantequilla, Consome, Ajo, Aceite Oliva",
+        "nombre":"Alitas-Ajillo",
+        "precio": 110
+    },
+    {
+        "id":27,
+        "img":"../image/alitasBuffalo.jpg",
+        "descripcion":"Salsa Picante, Mantequilla, Chile molido, Paprika, Vinagre, Ajo, Azúcar",
+        "nombre":"Alitas-Buffalo",
+        "precio": 85
+    },
+    {
+        "id":28,
+        "img":"../image/alitasCitricos.jpg",
+        "descripcion":"Naranja, Limón, Miel, Salsa Perrins, Piñones, Aceite Oliva",
+        "nombre":"Alitas-Citricos",
+        "precio": 120
+    },
+    {
+        "id":29,
+        "img":"../image/alitasCurry.jpg",
+        "descripcion":"Curry, Ajo, Paprika, Limón, Aceite Oliva, Cebollin",
+        "nombre":"Alitas-Curry",
+        "precio": 90
+    },
+    {
+        "id":30,
+        "img":"../image/alitasDeshuesadas.jpg",
+        "descripcion":"Ajo, Aceite Oliva, Huevo, Papa, Mantequilla, Pimienta negra",
+        "nombre":"Alitas-Deshuesado Con Pure",
+        "precio": 130
+    },
+    {
+        "id":31,
+        "img":"../image/alitasSoja.jpg",
+        "descripcion":"Miel, Soja",
+        "nombre":"Alitas-Soja",
+        "precio": 90
+    },
+    {
+        "id":32,
+        "img":"../image/pGelato.png",
+        "descripcion":"Helado Cremoso",
+        "nombre":"Postre-Gelato",
+        "precio": 50
+    },  
+    {
+        "id":33,
+        "img":"../image/pMilHojas.jpg",
+        "descripcion":"Pasta ojaldre, crema pastelera",
+        "nombre":"Postre-Mil hojas",
+        "precio": 70
+    },   
+    {
+        "id":34,
+        "img":"../image/pPanaCotta.jpg",
+        "descripcion":"Nata cremosa, sabor vainilla",
+        "nombre":"Postre-Pana Cotta",
+        "precio": 40
+    },  
+    {
+        "id":35,
+        "img":"../image/pTarta.jpg",
+        "descripcion":"Chocolate Negro, Nata, Mantequilla",
+        "nombre":"Postre-Tarta Chocolate",
+        "precio": 28
+    },
+    {
+        "id":36,
+        "img":"../image/pTiramisu.jpg",
+        "descripcion":"Cafe, Amaretto, Huevo, Crema, Galletas",
+        "nombre":"Postre-Tiramisú",
+        "precio": 30
+    },
+    {
+        "id":37,
+        "img":"../image/pPatafrola.jpg",
+        "descripcion":"Pastelito relleno de delce de membrillo",
+        "nombre":"Postre-Pastafrola",
+        "precio": 60
+    }
+]
