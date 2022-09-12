@@ -419,9 +419,9 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
         
             .formulario{
                 width: 90%;
-                height: 80%;
+                height: 100%;
                 border: 1px solid rgba(255,255,255,0.5);
-                margin: 65px auto auto;
+                margin: 10px auto auto;
                 border-radius: 15px;
                 display: flex;
                 flex-direction: column;
@@ -435,19 +435,20 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                 }
                 form{
                     width: 95%;
-                    height: 80%;
-                    // border: 1px solid rgba(255,255,255,0.5);
+                    height: 95%;
+                    border: 1px solid rgba(255,255,255,0.5);
                     margin: auto;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-around;
+                    overflow: auto;
                     legend{
                         text-align: center;
                     }
                     label{
                         width: 60%;
-                        height: 40px;
+                        height: 80px;
                         display: flex;
                         overflow: hidden;
                         input{
@@ -503,9 +504,9 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                 }
             }
         }
-        visibility: hidden;
-        transform: translateY(-100%);
-        transition: .5s;
+        // visibility: hidden;
+        // transform: translateY(-100%);
+        // transition: .5s;
 
     }
     .activeDos
@@ -564,6 +565,7 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
             }
         }
         .btnContinuar{
+            display: none;
             border: none;
             outline: none;
             padding: 5px 8px;
@@ -575,6 +577,9 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                 background: #74737230;
             }
         }
+    }
+    .verBoton{
+        display: block;
     }
       
 

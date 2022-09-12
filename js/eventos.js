@@ -24,7 +24,9 @@ btnPagar.addEventListener('click', ()=>{
 btnGuardar.addEventListener('click', ()=>{
     datosInput()
     formulario.classList.remove("activeDos")
+    btnContinuar.style.display ="block"
 })
+
 
 btnContinuar.addEventListener('click',()=>{
     if(carrito.length > 0  && arrayInput.length > 0){
@@ -35,8 +37,7 @@ btnContinuar.addEventListener('click',()=>{
             },3000)
         })
 
-    }
-    else if(carrito.length == 0 || arrayInput.length == 0 ){
+    }else if(carrito.length == 0 || arrayInput.length == 0 ){
         Swal.fire({
             icon:'warning',
             toast:true,
@@ -46,7 +47,7 @@ btnContinuar.addEventListener('click',()=>{
         })
         
     }
-   
+
 })
 
 

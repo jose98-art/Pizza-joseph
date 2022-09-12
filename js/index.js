@@ -91,6 +91,7 @@ function botonAgregar(){
             agregarCarrito(prod)
             contadorProductos()
             alertAgregar()
+
         })
     })
 }
@@ -152,14 +153,23 @@ function datosInput(){
     datosValuar = [].map.call(valuarInputs, (datosInput)=>{
         arrayInput.push(datosInput.value)
         mostramosDatos()
-    })
-    console.table(arrayInput)
 
-    
+    })
+    console.log(arrayInput)
+
 }
 
+function vaciarArray(){
+    for(let i = arrayInput.length; i > 0; i--){
+        arrayInput.pop()
+    }
+
+}
+
+
 function mostramosDatos(){
-    arrayInput.innerHTML =""
+
+    cardInfor.innerHTML =""
     arrayInput.forEach(() =>{
         cardInfor.innerHTML = `
         <h1>Datos</h1>
@@ -178,13 +188,12 @@ function mostramosDatos(){
         <p>Num Tarjeta: ${arrayInput[9]}</p>
         <p>Nombre: ${arrayInput[10]}</p>
         <p>Fecha: ${arrayInput[11]}</p>
-        <p>CVV: ${arrayInput[12]}</p>
-       
-                                `
+        <p>CVV: ${arrayInput[12]}</p>`
     })
     localStorage.setItem("datos",JSON.stringify(arrayInput))
-   
+
 }
+
 
 const procesandoCompra = ()=>{
     Swal.fire({
@@ -206,10 +215,13 @@ const procesandoCompra = ()=>{
 function eliminarCarrito(){
     cardInfor.innerHTML =""
     carrito.length = 0
+    localStorage.removeItem("datos")
     localStorage.clear("datos")
     presentandoCarrito()
     contadorProductos()
     alerExito()
+    vaciarArray()
+    btnContinuar.style.display ="none"
 }
 
 function alerExito(){
@@ -249,5 +261,4 @@ function contadorProductos(){
 }
 
 presentandoCarrito()
-mostramosDatos()
 cargando()

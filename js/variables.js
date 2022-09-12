@@ -20,4 +20,4 @@ let numero = 0
 let carrito = JSON.parse(localStorage.getItem("carrito")) || []
 let almacenar =  []
 let renderizarProducto = ""
-let arrayInput = JSON.parse(localStorage.getItem("datos")) || []
+let arrayInput =  []
