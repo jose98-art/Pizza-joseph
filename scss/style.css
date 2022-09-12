@@ -2,16 +2,15 @@
   * {
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
   }
   /*el primer titulo despues de nav*/
   .titulo {
-    background-color: #dba54f;
+    background-color: rgb(219, 165, 79);
     color: white;
     text-align: center;
     margin-top: 10px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
     font-style: italic;
   }
   /*portada*/
@@ -24,50 +23,34 @@
     width: 100vw;
     height: 85vh;
     background-color: #ffffff;
-    -webkit-transition: .5s;
-    transition: .5s;
+    transition: 0.5s;
   }
   .contenedorPortada .portada {
     width: 100%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .contenedorPortada .portada h1 {
     font-size: 5em;
     font-style: italic;
     margin: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     color: #cb8617;
   }
   .contenedorPortada .portada h1 span {
     color: #000;
-    font-size: .2em;
+    font-size: 0.2em;
     letter-spacing: 3px;
   }
   .contenedorPortada .portada i {
     font-size: 5em;
     margin: 10px;
     color: #e88431;
-    -webkit-filter: drop-shadow(10px 20px 6px #857253);
-            filter: drop-shadow(10px 20px 6px #857253);
+    filter: drop-shadow(10px 20px 6px #857253);
   }
   .contenedorPortada .portada p {
     font-family: "Roboto Mono", monospace;
@@ -75,7 +58,7 @@
     font-style: italic;
     margin: 10px;
     letter-spacing: 3px;
-    color: #040303;
+    color: rgb(4, 3, 3);
   }
   .contenedorPortada .portada .ocultar {
     font-size: 1.2em;
@@ -110,19 +93,10 @@
   }
   footer div {
     background-color: #e88431;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     color: #000;
@@ -135,71 +109,43 @@
     margin: 10px;
     width: 50%;
     height: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     margin: -10px auto auto;
   }
   footer div ul li {
     list-style: none;
-    -webkit-transition: .5s;
-    transition: .5s;
+    transition: 0.5s;
   }
   footer div ul li a i {
     color: #000;
     margin: 5px;
   }
   footer div ul li:hover {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    transform: scale(1.5);
   }
   .productos {
     overflow: auto;
     width: 100vw;
     height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     padding-bottom: 15vh;
   }
   .productos .card {
     border: none;
     background: rgba(235, 235, 235, 0);
-    -webkit-box-shadow: 5px 5px 10px #5e5e5e, -5px -5px 10px #ffffff;
-            box-shadow: 5px 5px 10px #5e5e5e, -5px -5px 10px #ffffff;
+    box-shadow: 5px 5px 10px #5e5e5e, -5px -5px 10px #ffffff;
     width: 90%;
     height: 14vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     margin-top: 7vh;
   }
   .productos .card .contentImage {
@@ -220,23 +166,15 @@
     width: 100%;
     height: 30%;
     text-align: center;
-    font-size: .7em;
+    font-size: 0.7em;
   }
   .productos .card .contentInfor {
     width: 60%;
     height: 95%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
   .productos .card .contentInfor .precio {
     width: 30%;
@@ -255,12 +193,10 @@
     border-radius: 5px;
     margin: auto;
     font-size: 1em;
-    -webkit-transition: .5s;
-    transition: .5s;
+    transition: 0.5s;
   }
   .productos .card .contentInfor .ver:hover {
-    -webkit-transform: scale(1.099);
-            transform: scale(1.099);
+    transform: scale(1.099);
   }
   .productos .card .contentInfor .agregarCarrito {
     width: 30%;
@@ -272,12 +208,10 @@
     font-size: 1.3em;
     margin: auto;
     color: #000000;
-    -webkit-transition: .5s;
-    transition: .5s;
+    transition: 0.5s;
   }
   .productos .card .contentInfor .agregarCarrito:hover {
-    -webkit-transform: scale(1.099);
-            transform: scale(1.099);
+    transform: scale(1.099);
   }
   .carritoCards {
     width: 100vw;
@@ -290,36 +224,20 @@
     background-color: rgba(255, 255, 255, 0.3);
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
-    -webkit-box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
-            box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
-    display: -webkit-box;
-    display: -ms-flexbox;
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
     overflow: auto;
     visibility: hidden;
   }
   .carritoCards .btnCerrarCarrito {
     width: 100vw;
     height: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
     border-radius: 10px;
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.188);
@@ -353,13 +271,8 @@
   .carritoCards .carritoAgregado .cabeceraCarrito {
     width: 100%;
     height: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     background-color: #e88431;
     color: #fff;
     border-radius: 5px;
@@ -369,55 +282,37 @@
     height: 100%;
     margin: 0;
     text-align: center;
-    font-size: .9em;
+    font-size: 0.9em;
     font-weight: bold;
   }
   .carritoCards .carritoAgregado .productosCarrito {
     width: 100%;
     height: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .carritoCards .carritoAgregado .productosCarrito .articulos {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .carritoCards .carritoAgregado .productosCarrito .articulos .precioUnitario {
     width: 30%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    font-size: .9em;
+    flex-direction: column;
+    font-size: 0.9em;
     text-align: center;
   }
   .carritoCards .carritoAgregado .productosCarrito .articulos p {
     width: 25%;
     padding: 2px;
     height: 50px;
-    font-size: .8em;
+    font-size: 0.8em;
     word-wrap: break-word;
     border-right: 1px solid rgba(255, 255, 255, 0.5);
   }
   .carritoCards .carritoAgregado .productosCarrito .articulos .eliminar {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
     text-align: center;
   }
   .carritoCards .carritoAgregado .productosCarrito .articulos .eliminar i {
@@ -426,14 +321,9 @@
   .carritoCards .carritoAgregado .productosCarrito .articulos .botones {
     height: 30px;
     width: 27%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    align-items: center;
+    justify-content: space-around;
   }
   .carritoCards .carritoAgregado .productosCarrito .articulos .botones .boton {
     width: 25px;
@@ -442,7 +332,7 @@
     outline: none;
     border-radius: 4px;
     background-color: #276967;
-    font-size: .7em;
+    font-size: 0.7em;
   }
   .carritoCards .carritoAgregado .total {
     margin-left: 10px;
@@ -455,7 +345,7 @@
   .carritoCards .carritoAgregado .btnPagar {
     width: 70px;
     height: 25px;
-    font-size: .8em;
+    font-size: 0.8em;
     border-radius: 5px;
     margin-left: 30px;
     margin-bottom: 10px;
@@ -482,77 +372,45 @@
     right: 0;
     bottom: 0;
     left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
   .overlay .popup {
     width: 90%;
     height: 90%;
     border-radius: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
   .overlay .popup .formulario {
     width: 90%;
-    height: 100%;
+    height: 95%;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    margin: 10px auto auto;
+    margin: 25px auto auto;
     border-radius: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(255, 255, 255, 0.3);
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
-    -webkit-box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
-            box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.05);
   }
   .overlay .popup .formulario h1 {
     margin-top: 20px;
   }
   .overlay .popup .formulario form {
     width: 95%;
-    height: 95%;
+    height: 85%;
     border: 1px solid rgba(255, 255, 255, 0.5);
     margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    overflow: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
   }
   .overlay .popup .formulario form legend {
     text-align: center;
@@ -560,71 +418,50 @@
   .overlay .popup .formulario form label {
     width: 60%;
     height: 80px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     overflow: hidden;
   }
   .overlay .popup .formulario form label input {
     width: 100%;
     height: 100%;
-    font-size: .8em;
+    font-size: 0.8em;
     margin: auto;
     border: none;
     border-bottom: 1px solid #e88431;
     background-color: transparent;
     outline: none;
   }
-  .overlay .popup .formulario form label input::-webkit-input-placeholder {
-    color: #898686;
-    -webkit-transition: .5s;
-    transition: .5s;
+  .overlay .popup .formulario form label input::-moz-placeholder {
+    color: rgb(137, 134, 134);
+    -moz-transition: 0.5s;
+    transition: 0.5s;
   }
   .overlay .popup .formulario form label input:-ms-input-placeholder {
-    color: #898686;
-    -webkit-transition: .5s;
-    transition: .5s;
-  }
-  .overlay .popup .formulario form label input::-ms-input-placeholder {
-    color: #898686;
-    -webkit-transition: .5s;
-    transition: .5s;
+    color: rgb(137, 134, 134);
+    -ms-transition: 0.5s;
+    transition: 0.5s;
   }
   .overlay .popup .formulario form label input::placeholder {
-    color: #898686;
-    -webkit-transition: .5s;
-    transition: .5s;
+    color: rgb(137, 134, 134);
+    transition: 0.5s;
   }
-  .overlay .popup .formulario form label input:focus::-webkit-input-placeholder {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+  .overlay .popup .formulario form label input:focus::-moz-placeholder {
+    transform: translateY(30px);
   }
   .overlay .popup .formulario form label input:focus:-ms-input-placeholder {
     transform: translateY(30px);
   }
-  .overlay .popup .formulario form label input:focus::-ms-input-placeholder {
-    transform: translateY(30px);
-  }
   .overlay .popup .formulario form label input:focus::placeholder {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px);
+    transform: translateY(30px);
   }
   .overlay .popup .formulario form .botonForm {
     margin-top: 10px;
     width: 70%;
     height: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
   }
   .overlay .popup .formulario form .botonForm .btnDatos {
     background-color: rgba(143, 135, 135, 0.158);
@@ -637,9 +474,8 @@
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
-    font-size: .8em;
-    -webkit-transition: .2s;
-    transition: .2s;
+    font-size: 0.8em;
+    transition: 0.2s;
   }
   .overlay .popup .formulario form .botonForm .btnDatos:hover {
     background-color: #efae45;
@@ -649,29 +485,18 @@
   }
   .activeDos {
     visibility: visible;
-    -webkit-transition: .5s;
-    transition: .5s;
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    transition: 0.5s;
+    transform: translateY(0%);
   }
   /*---------------cards de ususario*/
   .cards {
     width: 90vw;
     height: auto;
     border-radius: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background-color: rgba(255, 255, 255, 0.188);
     -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
@@ -682,16 +507,10 @@
     width: 100px;
     height: 100px;
     background-color: #e8a63b;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     margin: 20px auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     border-radius: 50%;
   }
   .cards .icono i {
@@ -700,24 +519,19 @@
   .cards .date {
     width: 80%;
     margin: 5px auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     border-radius: 5px;
   }
   .cards .date h1 {
     font-size: 1.3em;
     text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   }
   .cards .date p {
     display: block;
     border-radius: 10px;
-    font-size: .9em;
+    font-size: 0.9em;
     text-align: center;
     background-color: rgba(238, 238, 238, 0.9);
     padding: 8px 0px;
@@ -730,15 +544,13 @@
     padding: 5px 8px;
     border-radius: 5px;
     margin-bottom: 5px;
-    font-size: .7em;
-    -webkit-transition: .5s;
-    transition: .5s;
+    font-size: 0.7em;
+    transition: 0.5s;
   }
   .cards .btnContinuar:hover {
-    background: #74737230;
+    background: rgba(116, 115, 114, 0.1882352941);
   }
   .verBoton {
     display: block;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
