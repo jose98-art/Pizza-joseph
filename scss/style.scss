@@ -416,12 +416,13 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
             display: flex;
             flex-direction: column;
             align-items: center;
-        
+            overflow: auto;
             .formulario{
                 width: 90%;
-                height: 95%;
-                border: 1px solid rgba(255,255,255,0.5);
-                margin: 25px auto auto;
+                height: 100%;
+                // border: 1px solid rgba(255,255,255,0.5);
+                margin: 10px auto auto;
+                padding-bottom: 30px;
                 border-radius: 15px;
                 display: flex;
                 flex-direction: column;
@@ -435,13 +436,14 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                 }
                 form{
                     width: 95%;
-                    height: 85%;
+                    height: 95%;
                     border: 1px solid rgba(255,255,255,0.5);
                     margin: auto;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-around;
+                    overflow: auto;
                     legend{
                         text-align: center;
                     }
@@ -503,9 +505,9 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
                 }
             }
         }
-        // visibility: hidden;
-        // transform: translateY(-100%);
-        // transition: .5s;
+        visibility: hidden;
+        transform: translateY(-100%);
+        transition: .5s;
 
     }
     .activeDos
@@ -528,6 +530,7 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
         backdrop-filter: blur(20px);
         margin-top: 10px;
         margin-bottom: 30px;
+        padding-bottom: 70px;
 
         .icono{
             width: 100px;
@@ -583,3 +586,5 @@ $colorBlackOpaci:rgba(143, 135, 135, 0.158);
       
 
 }
+
+//cambiar el color del botonn ver y el carrito 
