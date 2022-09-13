@@ -121,7 +121,7 @@ function presentandoCarrito(){
         seMuestraProducto.innerHTML += ` <div class="articulos">
         <p>${prod.nombre}</p>
         <div class="precioUnitario">
-          <span>${prod.precio}</span>
+          <span>$ ${prod.precio}</span>
         </div>
         <p>${prod.cantidad}</p>
         <p class="eliminar" id="eliminar${prod.id}"><i class="fa-solid fa-trash-can"></i></p>

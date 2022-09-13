@@ -5,6 +5,9 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
+  .navDos {
+    display: none;
+  }
   /*el primer titulo despues de nav*/
   .titulo {
     background-color: #dba54f;
@@ -249,7 +252,7 @@
   .productos .card .contentInfor .ver {
     width: 30%;
     height: 40%;
-    background-color: rgba(143, 135, 135, 0.158);
+    background-color: rgba(242, 236, 236, 0.418);
     border: none;
     outline: none;
     border-radius: 5px;
@@ -257,6 +260,7 @@
     font-size: 1em;
     -webkit-transition: .5s;
     transition: .5s;
+    color: black;
   }
   .productos .card .contentInfor .ver:hover {
     -webkit-transform: scale(1.099);
@@ -265,7 +269,7 @@
   .productos .card .contentInfor .agregarCarrito {
     width: 30%;
     height: 40%;
-    background-color: rgba(143, 135, 135, 0.158);
+    background-color: rgba(242, 236, 236, 0.418);
     border: none;
     outline: none;
     border-radius: 5px;
@@ -407,6 +411,7 @@
     font-size: .8em;
     word-wrap: break-word;
     border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid red;
   }
   .carritoCards .carritoAgregado .productosCarrito .articulos .eliminar {
     display: -webkit-box;
@@ -419,6 +424,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
+    border-right: 1px solid red;
   }
   .carritoCards .carritoAgregado .productosCarrito .articulos .eliminar i {
     font-size: 1.3em;
@@ -740,12 +746,150 @@
     font-size: .7em;
     -webkit-transition: .5s;
     transition: .5s;
+    color: #000;
   }
   .cards .btnContinuar:hover {
     background: #74737230;
   }
   .verBoton {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .navDos {
+    display: block;
+  }
+  .navUno {
+    display: none;
+  }
+  .contenedorPortada {
+    width: 100vw;
+    height: 85vh;
+    background-color: #fffdfd;
+  }
+  .contenedorPortada .portada {
+    width: 100%;
+    height: 100%;
+  }
+  .contenedorPortada .portada h1 {
+    font-size: 9rem;
+    font-style: italic;
+  }
+  .contenedorPortada .portada i {
+    font-size: 7em;
+    margin: 10px;
+    color: #e88431;
+    -webkit-filter: drop-shadow(10px 20px 6px #857253);
+            filter: drop-shadow(10px 20px 6px #857253);
+  }
+  .contenedorPortada .portada p {
+    font-size: 1.5em;
+    letter-spacing: 9px;
+  }
+  footer div ul li a i {
+    font-size: 2em;
+  }
+  .contenedorDisplayDesktop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 99vw;
+    height: 90vh;
+  }
+  .contenedorDisplayDesktop .productos {
+    width: 70%;
+    height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .contenedorDisplayDesktop .productos .card {
+    border-radius: 3px;
+    margin-top: 100px;
+    width: 210px;
+    height: 260px;
+    margin-left: 100px;
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contenedorDisplayDesktop .productos .card .contentImage {
+    width: 95%;
+    height: 80%;
+    margin: 0;
+  }
+  .contenedorDisplayDesktop .productos .card .contentImage img {
+    height: 80%;
+  }
+  .contenedorDisplayDesktop .productos .card .contentImage p {
+    height: 15%;
+    margin: 5px 0;
+    font-size: 1.1em;
+  }
+  .contenedorDisplayDesktop .productos .card .contentInfor {
+    width: 95%;
+    margin: 0;
+    height: 15%;
+  }
+  .contenedorDisplayDesktop .productos .card .contentInfor .precio {
+    height: 80%;
+  }
+  .contenedorDisplayDesktop .productos .card .contentInfor .ver {
+    height: 80%;
+  }
+  .contenedorDisplayDesktop .productos .card .contentInfor .agregarCarrito {
+    height: 80%;
+  }
+  .contenedorDisplayDesktop .carritoCards {
+    position: relative;
+    visibility: visible;
+    width: 30%;
+    height: 90vh;
+    overflow: auto;
+  }
+  .contenedorDisplayDesktop .carritoCards .btnCerrarCarrito {
+    display: none;
+  }
+  .contenedorDisplayDesktop .carritoCards .carritoAgregado {
+    width: 90%;
+  }
+  .contenedorDisplayDesktop .carritoCards .carritoAgregado .cabeceraCarrito {
+    margin-top: -45px;
+  }
+  .contenedorDisplayDesktop .carritoCards .productosCarrito .articulos p {
+    text-align: center;
+  }
+  .cajaCards {
+    width: 100%;
+  }
+  .cajaCards .cards {
+    width: 95%;
+    margin: auto;
+  }
+  .cajaCards .cards .date {
+    width: 95%;
   }
 }
 /*# sourceMappingURL=style.css.map */

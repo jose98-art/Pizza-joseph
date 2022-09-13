@@ -21,3 +21,10 @@ let carrito = JSON.parse(localStorage.getItem("carrito")) || []
 let almacenar =  []
 let renderizarProducto = ""
 let arrayInput =  []
+
+const registro = document.getElementById("verCard")
+
+registro.addEventListener('click',()=>{
+    formulario.classList.add("activeDos")
+
+})
