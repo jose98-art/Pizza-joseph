@@ -25,8 +25,15 @@ btnGuardar.addEventListener('click', ()=>{
     datosInput()
     formulario.classList.remove("activeDos")
     btnContinuar.style.display ="block"
-})
+    btnEditar.style.display ="block"
 
+})
+btnEditar.addEventListener('click',()=>{
+    formulario.classList.add("activeDos")
+    vaciarArray()
+    localStorage.removeItem("datos")
+    localStorage.clear("datos")
+})
 
 btnContinuar.addEventListener('click',()=>{
     if(carrito.length > 0  && arrayInput.length > 0){

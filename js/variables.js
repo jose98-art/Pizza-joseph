@@ -14,17 +14,12 @@ const btnPagar = document.getElementById("btnPagar")
 const contador = document.getElementById("contar")
 const btnSumar = document.getElementById("incr")
 const btnRestar = document.getElementById("decr")
+const btnEditar = document.getElementById('editar')
 
 const url = "../json/productos.json"
 let numero = 0
 let carrito = JSON.parse(localStorage.getItem("carrito")) || []
 let almacenar =  []
 let renderizarProducto = ""
-let arrayInput =  []
+let arrayInput =  JSON.parse(localStorage.getItem("datos")) || []
 
-const registro = document.getElementById("verCard")
-
-registro.addEventListener('click',()=>{
-    formulario.classList.add("activeDos")
-
-})

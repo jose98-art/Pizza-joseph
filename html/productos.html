@@ -25,15 +25,6 @@
             <li class="nav-item">
                 <i class="fa-solid fa-cart-shopping  text-bg-dark p-3" id="verCarrito"> <sub id="contador">0</sub> </i>
             </li>
-            <!-- <li>
-              <i class="fa-solid fa-clipboard-list text-bg-dark p-3" id="registro"></i>
-            </li> -->
-            <li class="nav-item" >
-              <i class="fa-solid fa-user-large text-bg-dark p-3" id="verCard"></i>
-            </li>
-
-            
-            
           </ul>
   </header>
     <header class="navDos">
@@ -41,18 +32,6 @@
             <li class="nav-item w-75 p-3">
               <a class="nav-link text-bg-dark fs-2" href="#">Dark´s Pizza</a>
             </li>
-            <!-- <li class="nav-item">
-                <i class="fa-solid fa-cart-shopping  text-bg-dark p-3" id="verCarrito"> <sub id="contador">0</sub> </i>
-            </li> -->
-            <!-- <li>
-              <i class="fa-solid fa-clipboard-list text-bg-dark p-3" id="registro"></i>
-            </li> -->
-            <!-- <li class="nav-item" >
-              <i class="fa-solid fa-user-large text-bg-dark p-3" id="verCard"></i>
-            </li> -->
-
-            
-            
           </ul>
   </header>
   
@@ -61,30 +40,6 @@
 
 
   <section class="productos" id="productos">
-   
-<!-- 
-   <div class="card" id="card">
-
-    <div class="contentImage">
-      <img id="" src="/image/ensaladaRusa.jpg" alt="">
-      <p>Cuatro Estaciones</p>
-    </div>
-
-    <div class="contentInfor" id="contentInfor">
-
-      <p class="precio" id="precio">
-        $00,00
-      </p>
-      <button class="ver" id="ver">
-        ver
-      </button>
-        <button class="agregarCarrito" id="agregarCarrito">
-          <i class="fa-sharp fa-solid fa-cart-plus"></i>
-        </button>
-    </div>
-
-   </div>
-    -->
 
   </section>
 
@@ -114,26 +69,11 @@
    <div class="cards" id="cardUsuario">
     <div class="icono"><i class="fa-solid fa-user-large"></i></div>
     <div class="date" id="date">
-        <!-- <h1>Datos:</h1>
-        <span>Datos del usuario</span>
-        <p>Nombre: </p>
-        <p>Apellido: </p>
-        <p>Correo electrónico: </p>
-        <p>Cel: </p>
-        <span>Domicilio de entrega</span>
-        <p>Calle: </p>
-        <p>CP: </p>
-        <p>Colonia: </p>
-        <p>Estado: </p>
-        <p>Municipio: </p>
-        <span>Forma de pago</span>
-        <p>Num Tarjeta: </p>
-        <p>Nombre: </p>
-        <p>Fecha: </p>
-        <p>CVV: </p> -->
+   
     </div>
     <div>
       <button id="continuar" class="btnContinuar">Terminar compra</button>
+      <button id="editar" class="btnEditar">Editar</button>
     </div>
    </div>
  </section>
@@ -147,60 +87,60 @@
             <form action="" class="conntenidoDtos" id="miForm">
                <legend>Datos:</legend>
                <label for="nombre">
-                    <input id="nombre" class="datos" type="text"   placeholder="Nombre" required >
+                  <input value="José" name="nombre" id="nombre" class="datos" type="text"   placeholder="Nombre" required >
                 </label>
 
                 <label for="apellido">
-                  <input class="datos" type="text" id="apellido" placeholder="Apellido" >
+                  <input value="Santiago" name=" apellido " class="datos" type="text" id="apellido" placeholder="Apellido" >
                 </label>
 
-                <label for="correo">
-                    <input id="correo"  class="datos" type="email"  placeholder="Correo electrónico" required >
+                <label for="correo" id="cajaCorreo">
+                    <input value="email@gmail.com"  name=" correo " id="correo"  class="datos" type="email"  placeholder="Correo electrónico" required >
                 </label>
 
                 <label for="tel">
-                    <input id="telef"  class="datos" type="tel" placeholder="Cel:" maxlength="14" required >
+                    <input value="+52 55 55 55 55 55" name=" telefono " id="telef"  class="datos" type="tel" placeholder="Cel:" maxlength="14" required >
                 </label>
                 <p>Domicilio de entrega</p>
                 <label for="calle">
-                    <input id="calle" type="text" placeholder="Calle/Num Ext/Num Int"
+                    <input value="calle de las calles num 55" name=" calle " id="calle" type="text" placeholder="Calle/Num Ext/Num Int"
                     class="datos" required >
                 </label>
 
                 <label for="cp">
-                    <input id="cp" type="text" placeholder="Código Postal"
+                    <input value="55555" name=" codigoP " id="cp" type="text" placeholder="Código Postal"
                     class="datos" required >
                 </label>
 
                 <label for="colonia">
-                    <input id="colonia" type="text" placeholder="Colonia"
+                    <input value="colonia de las colonias" name=" colonia " id="colonia" type="text" placeholder="Colonia"
                     class="datos" required >
                 </label>
 
                 <label for="estado">
-                    <input id="estado" type="text" placeholder="Estado"
+                    <input value="EDOMEX" name=" estado " id="estado" type="text" placeholder="Estado"
                     class="datos" required >
                 </label>
 
                 <label for="municipio">
-                    <input id="municipio" type="text" placeholder="Ciudad o Municipio"
+                    <input value="CDMX" name=" municipio " id="municipio" type="text" placeholder="Ciudad o Municipio"
                     class="datos" required >
                 </label>
                 <p>Forma de pago</p>
                 <p>Solo tarjeta de credito</p>
                 <label for="tarjeta">
-                    <input class="datos" type="text" id="tarjeta" maxlength="18" required placeholder="Numero Tarjeta" >
+                    <input value="564 564 654 985 369" name=" numTarjeta " class="datos" type="text" id="tarjeta" maxlength="18" required placeholder="Numero Tarjeta" >
                 </label>
 
                 <label for="nombreTarjeta">
-                  <input class="datos" type="text" id="nombreTarjeta" required placeholder="Nombre Completo">
+                  <input value="Jose Santiago " name=" nombreTarjeta " class="datos" type="text" id="nombreTarjeta" required placeholder="Nombre Completo">
                 </label>
                 <p>¿Cuando vence?</p>
                 <label for="mesAño">
-                  <input class="datos" type="text" id="mesAño" required placeholder="MM/YY" >
+                  <input value="05/23" name=" vencimiento " class="datos" type="text" id="mesAño" required placeholder="MM/YY" >
                 </label>
                 <label for="codigo">
-                  <input class="datos" type="text" id="codigo" required placeholder="Código CVV" >
+                  <input value="564" name=" cvv " class="datos" type="text" id="codigo" required placeholder="Código CVV" >
                 </label>
 
                 <div class="botonForm">

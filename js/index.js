@@ -44,8 +44,7 @@ function verInfo(){
             Swal.fire({
                 imageUrl:prod.img,
                 text:prod.descripcion,
-                width:'70%',
-                padding:'10px 10px 30px 10px',
+                toast:true,
                 allowOutsideClick:false,
                 alowEscapekey:false,
                 allowEnterkey:false,
@@ -112,7 +111,6 @@ function agregarCarrito(prod){
 function precioTotal(){
     const precioT =carrito.reduce((acc, {cantidad,precio}) => acc + cantidad * precio,0)
     totalPagar.innerText = precioT
-    console.log(precioT)
 }
 
 function presentandoCarrito(){
@@ -133,13 +131,9 @@ function presentandoCarrito(){
     
 }
 
-
-    
-
 function eliminarProducto(){
     carrito.forEach(element =>{
         document.getElementById(`eliminar${element.id}`).addEventListener('click',(e)=>{
-            console.log(e.target)
             carrito = carrito.filter((productosFilter) => productosFilter.id !== element.id)
             presentandoCarrito()
             contadorProductos()
@@ -159,16 +153,7 @@ function datosInput(){
 
 }
 
-function vaciarArray(){
-    for(let i = arrayInput.length; i > 0; i--){
-        arrayInput.pop()
-    }
-
-}
-
-
 function mostramosDatos(){
-
     cardInfor.innerHTML =""
     arrayInput.forEach(() =>{
         cardInfor.innerHTML = `
@@ -191,9 +176,7 @@ function mostramosDatos(){
         <p>CVV: ${arrayInput[12]}</p>`
     })
     localStorage.setItem("datos",JSON.stringify(arrayInput))
-
 }
-
 
 const procesandoCompra = ()=>{
     Swal.fire({
@@ -212,16 +195,22 @@ const procesandoCompra = ()=>{
     })
 }
 
+function vaciarArray(){
+    for(let i = arrayInput.length; i > 0; i--){
+        arrayInput.pop()
+    }
+
+}
+
 function eliminarCarrito(){
     cardInfor.innerHTML =""
     carrito.length = 0
-    localStorage.removeItem("datos")
-    localStorage.clear("datos")
     presentandoCarrito()
     contadorProductos()
     alerExito()
-    vaciarArray()
     btnContinuar.style.display ="none"
+    btnEditar.style.display ="none"
+
 }
 
 function alerExito(){
@@ -259,6 +248,6 @@ function alertAgregar(){
 function contadorProductos(){
     contadorCarrito.innerText = carrito.length
 }
-
+mostramosDatos()
 presentandoCarrito()
 cargando()
